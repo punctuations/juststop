@@ -1,0 +1,28 @@
+a { 
+  color: #8A9CF6;
+}
+
+a:hover {
+  color: #a48af6; text-decoration: none;
+}
+
+strong {
+  color: #5a77e3;
+}
+
+.link-hover:hover {
+  color: #8A9CF6;
+}
+
+.finale-link:hover {
+  color: #ff5e4c;
+}
+
+underline {
+  color: #71f17a;
+}
+
+h1 {
+  color: #eeec67;
+}
+
