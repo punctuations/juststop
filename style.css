@@ -25,4 +25,6 @@ underline {
 h1 {
   color: #eeec67;
 }
-
+.rainbow-but-im-not-gay { 
+  background: linear-gradient(to right, #11998E 0%, #38ef7d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: rainbow 5s ease infinite; 
+}
