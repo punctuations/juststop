@@ -46,15 +46,32 @@ li a:hover {
     box-sizing: border-box;
 }
 
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* yup, i took this. */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
 .rainbow-but-im-not-gay {
     background: linear-gradient(to right, #11998E 0%, #38ef7d 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: rainbow 5s ease infinite;
-}
-
-/* Shamelessly stolen from a random codepen, but I don't think they would care. */
-@keyframes rainbow {
-    from{filter: hue-rotate(0deg);}
-    to{filter: hue-rotate(-360deg);}
 }
