@@ -1,6 +1,6 @@
 
 ## Why Me?
-Because I am, well, me. You can see my past experiences on [the website.](https://punctuation.cf/)
+Because I am, well, me. You can see my past experiences on [the website.](https://punctuation.cf/experiences)
 
 ## Team
 The awesome **Utile Developers Team** is formed by:
