@@ -10,7 +10,7 @@ The awesome **Utile Developers Team** is formed by:
 <p align="center">just me</a>
 
 ## Contributing
-If you seem to notice something wrong or think something is to be added you can make a [Issue](https://github.com/punctuations/juststop/issues) and I will fix it as soon as I can. Or send a message to me on my socials <a href="http://punctuation.cf/contact">Here</a>
+If you seem to notice something wrong or think something is to be added you can make a [Issue](https://github.com/punctuations/juststop/issues) and I will fix it as soon as I can, or send a message to me on my socials <a href="http://punctuation.cf/contact">Here</a>
 
 ##### Credit
 I got a lot of help from:
