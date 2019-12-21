@@ -7,7 +7,7 @@ The awesome **Utile Developers Team** is formed by:
 
 - **Punctuations** | <a href="https://github.com/punctuations" rel="some text"><img href="example.com" src="https://ialex11.github.io/assets/github.svg" width="16" height="16" title="500px" alt="500px"></a> <a href="https://www.reddit.com/u/yetanothersemicolon" rel="some text"><img href="example.com" src="https://ialex11.github.io/assets/reddit.svg" width="16" height="16" title="500px" alt="500px"></a>
 <br>
-just me
+<p align="center">**just me**</a>
 
 ## Contributing
 If you seem to notice something wrong or think something is to be added you can make a [Issue](https://github.com/punctuations/juststop/issues) and I will fix it as soon as I can. Or send a message to me on my socials [Here]()
