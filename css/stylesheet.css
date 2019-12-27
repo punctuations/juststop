@@ -20,7 +20,7 @@ body {
 
 ::selection {
   color: white;
-  background-color: #f69259;
+  background: orange;
 }
 
 ul {
