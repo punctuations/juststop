@@ -13,6 +13,16 @@ body {
     color: white;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #f69259;
+}
+
+::selection {
+  color: white;
+  background: #f69259;
+}
+
 ul {
     list-style-type: square;
     padding: 0 1em;
