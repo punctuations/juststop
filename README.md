@@ -1,6 +1,6 @@
 
 ## Why Me?
-Because I am, well, me. You can see my past experiences on [the website.](https://punctuation.cf/experience)
+Because I am, well, me. You can see my past experiences on [the website.](https://punctuation.cf/projects)
 
 ## Team
 This website was made by:
