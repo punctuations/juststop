@@ -79,7 +79,7 @@ li a:hover {
   50% { border-color: orange; }
 }
 
-.rainbow {
+.colour-text {
     background: linear-gradient(to right, #11998E 0%, #38ef7d 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
