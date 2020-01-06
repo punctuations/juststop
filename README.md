@@ -1,4 +1,4 @@
-<img align="center" src="https://photos.google.com/search/_tra_/photo/AF1QipPaUtFolqMMA8Ehk8noRqPnjHvq4gCGSRjmdx06" />
+<img align="center" src="https://postimg.cc/7ff5LRGd" />
 
 <br>
 
