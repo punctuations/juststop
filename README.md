@@ -1,3 +1,6 @@
+<img align="center" src="https://photos.google.com/search/_tra_/photo/AF1QipPaUtFolqMMA8Ehk8noRqPnjHvq4gCGSRjmdx06" />
+
+<br>
 
 ## Why Me?
 Because I am, well, me. You can see my past experiences on [the website.](https://punctuation.cf/projects)
