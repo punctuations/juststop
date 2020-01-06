@@ -85,3 +85,8 @@ li a:hover {
     -webkit-text-fill-color: transparent;
     animation: rainbow 5s ease infinite;
 }
+
+@keyframes rainbow { 
+    from{filter: hue-rotate(0deg);}
+    to{filter: hue-rotate(-360deg);}
+}
