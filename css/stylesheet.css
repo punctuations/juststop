@@ -67,6 +67,10 @@ li button:hover {
   text-decoration: none;
 }
 
+.card a:visited{
+  color: #FFD042;
+}
+
 a:link {
   text-decoration: none;
 }
