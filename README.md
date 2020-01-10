@@ -9,8 +9,7 @@ Because I am, well, me. You can see my past experiences on [the website.](https:
 This website was made by:
 
 - **Punctuations** | <a href="https://github.com/punctuations" rel="some text"><img href="example.com" src="https://ialex11.github.io/assets/github.svg" width="16" height="16" title="500px" alt="500px"></a> <a href="https://www.reddit.com/u/yetanothersemicolon" rel="some text"><img href="example.com" src="https://ialex11.github.io/assets/reddit.svg" width="16" height="16" title="500px" alt="500px"></a>
-<br>
-<p align="center">just me</a>
+<p align="left">just me</p>
 
 ## Contributing
 If you seem to notice something wrong or think something is to be added you can make a [issue](https://github.com/punctuations/juststop/issues) and I will fix it as soon as I can, or send a message to me on my socials <a href="http://punctuation.cf/contact">here</a>
