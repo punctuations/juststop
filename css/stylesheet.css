@@ -40,6 +40,57 @@ li a:hover {
     background: #212530;
 }
 
+li button {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding-left: 0.5em;
+    border-radius: 0.15em;
+    background-color: #0d1326;
+    border: hidden;
+}
+
+li button:hover {
+    background: #212530;
+}
+
+.card a {
+  color: #FFD042;
+  background-color: #1b1e26;
+  font-size: 11px;
+  display: inline-flex;
+  position: relative;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #e8d138;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #f7c42a;
+}
+
+a:active {
+  color: #e3b222;
+  text-decoration: none;
+}
+
+.card {
+  background-color: #1b1e26;
+  font-size: 11px;
+  display: flow-root;
+}
+
+.card-body {
+  max-width: 295px;
+}
+
 @media (max-width: 500px) {
     html,
     body {
