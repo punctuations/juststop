@@ -23,6 +23,10 @@ body {
   background: #FFD042;
 }
 
+h1 {
+  font: 16/2 'Roboto Mono';
+}
+
 ul {
     list-style-type: square;
     padding: 0 1em;
