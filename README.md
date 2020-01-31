@@ -8,7 +8,7 @@ Because I am, well, me. You can see my past experiences on [the website.](https:
 ## Team
 This website was made by:
 
-- **Punctuations** | <a href="https://github.com/punctuations" rel="some text"><img href="example.com" src="https://i.ibb.co/qMd86h7/github.png" width="16" height="16" title="500px" alt="500px"></a> <a href="https://www.reddit.com/u/yetanothersemicolon" rel="some text"><img href="example.com" src="https://ibb.co/9rZWxvb/reddit.png" width="16" height="16" title="500px" alt="500px"></a>
+- **Punctuations** | <a href="https://github.com/punctuations" rel="some text"><img href="example.com" src="https://i.ibb.co/qMd86h7/github.png" width="16" height="16" title="500px" alt="500px"></a> <a href="https://www.reddit.com/u/yetanothersemicolon" rel="some text"><img href="example.com" src="https://i.ibb.co/rwdHBtx/reddit.png" width="16" height="16" title="500px" alt="500px"></a>
 <p align="left">just me</p>
 
 ## Contributing
@@ -16,8 +16,8 @@ If you seem to notice something wrong or think something is to be added you can 
 
 ##### Credit
 I got a lot of help from:
-- **Tilda** | <a href="https://github.com/tilda" rel="some text"><img href="example.com" src="https://ialex11.github.io/assets/github.svg" width="16" height="16" title="500px" alt="500px"></a> <a href="https://www.reddit.com/u/RShotZz" rel="some text"><img href="example.com" src="https://ialex11.github.io/assets/reddit.svg" width="16" height="16" title="500px" alt="500px"></a>
-- **Miscord Repository** | <a href="https://github.com/utilefordiscord/Miscord" rel="some text"><img href="example.com" src="https://ialex11.github.io/assets/github.svg" width="16" height="16" title="500px" alt="500px"></a>
+- **Tilda** | <a href="https://github.com/tilda" rel="some text"><img href="example.com" src="https://i.ibb.co/qMd86h7/github.png" width="16" height="16" title="500px" alt="500px"></a> <a href="https://www.reddit.com/u/RShotZz" rel="some text"><img href="example.com" src="https://i.ibb.co/rwdHBtx/reddit.png" width="16" height="16" title="500px" alt="500px"></a>
+- **Miscord Repository** | <a href="https://github.com/utilefordiscord/Miscord" rel="some text"><img href="example.com" src="https://i.ibb.co/qMd86h7/github.png" width="16" height="16" title="500px" alt="500px"></a>
 
 <hr>
 
