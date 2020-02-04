@@ -1,3 +1,25 @@
+canvas {
+  background: inherit
+}
+
+#snowflakeContainer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+
+.snowflake {
+  position: fixed;
+  background-color: #CCC;
+  user-select: none;
+  z-index: 1000;
+  pointer-events: none;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
 html,
 body {
     display: flex;
@@ -8,7 +30,7 @@ body {
     scroll-behavior: smooth;
 
     width: 100%;
-    height: 100%;
+    height: 80%;
     font: 16px/2 'Roboto Mono';
     background-color: #0d1326;
     color: white;
@@ -55,6 +77,12 @@ h1 {
 
 .bina {
   color: #0d1326;
+}
+
+span.party {
+  transform: rotate(20deg);
+  top: 80%
+  left: 10%;
 }
 
 ul {
