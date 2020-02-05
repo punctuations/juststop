@@ -214,3 +214,8 @@ var d = new Date();
 		$( "span.party-proj" ).hide();
 		$( "span.subtitle-proj" ).hide();
 	}
+	if (d.getMonth() == new Date('Oct 31, 2020 00:00:00').getMonth() && d.getDay() == new Date('Oct 31, 2020 00:00:00').getDay()) {
+		$( 'span.spooky' ).show();
+	} else {
+		$( 'span.spooky' ).hide();
+	}

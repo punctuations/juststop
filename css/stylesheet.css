@@ -135,6 +135,14 @@ span.subtitle-proj {
   left: -31%;
 }
 
+span.spooky {
+  font-size: 65%;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 ul {
     list-style-type: square;
     padding: 0 1em;
