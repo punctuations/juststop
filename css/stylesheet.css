@@ -90,10 +90,49 @@ span.party {
   left: -7%;
 }
 
+span.party-sub {
+  position: absolute;
+  transform: rotate(32deg);
+  top: -1%;
+  left: -3.5%;
+}
+
+span.party-exp {
+  position: absolute;
+  transform: rotate(32deg);
+  top: -1%;
+  left: -4%;
+}
+
+span.party-proj {
+  position: absolute;
+  transform: rotate(35deg);
+  top: -1.5%;
+  left: -4%;
+}
+
 span.subtitle {
   position: absolute;
   top: 15%;
   left: -18%;
+}
+
+span.subtitle-sub {
+  position: absolute;
+  top: 10%;
+  left: -27%;
+}
+
+span.subtitle-exp {
+  position: absolute;
+  top: 10%;
+  left: -30.5%;
+}
+
+span.subtitle-proj {
+  position: absolute;
+  top: 10%;
+  left: -31%;
 }
 
 ul {

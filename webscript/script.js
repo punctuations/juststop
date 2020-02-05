@@ -179,12 +179,38 @@ var d = new Date();
 	if (d.getMonth() == new Date('June 28, 2020 00:000:00').getMonth() && d.getDay() == new Date('June 28, 2020 00:00:00').getDay()) {
 		$( "span.party" ).show();
 		$( "span.subtitle" ).show();
+		$( "span.party-sub" ).show();
+		$( "span.subtitle-sub" ).show();
+		$( "span.party-exp" ).show();
+		$( "span.subtitle-exp" ).show();
+		$( "span.party-proj" ).show();
+		$( "span.subtitle-proj" ).show();
 	} else {
 		$( "span.party" ).hide();
 		$( "span.subtitle" ).hide();
+		$( "span.party-sub" ).hide();
+		$( "span.subtitle-sub" ).hide();
+		$( "span.party-exp" ).hide();
+		$( "span.subtitle-exp" ).hide();
+		$( "span.party-proj" ).hide();
+		$( "span.subtitle-proj" ).hide();
 	}
 	if (d.getMonth() == new Date('Dec 21, 2020 00:00:00').getMonth() && d.getDay() == new Date('Dec 21, 2020 00:00:00').getDay()) {
-		$( "span.webbday" ).show();
+		$( "span.party" ).show();
+		$( "span.subtitle" ).show();
+		$( "span.party-sub" ).show();
+		$( "span.subtitle-sub" ).show();
+		$( "span.party-exp" ).show();
+		$( "span.subtitle-exp" ).show();
+		$( "span.party-proj" ).show();
+		$( "span.subtitle-proj" ).show();
 	} else {
-		$( "span.webbday" ).show();
+		$( "span.party" ).hide();
+		$( "span.subtitle" ).hide();
+		$( "span.party-sub" ).hide();
+		$( "span.subtitle-sub" ).hide();
+		$( "span.party-exp" ).hide();
+		$( "span.subtitle-exp" ).hide();
+		$( "span.party-proj" ).hide();
+		$( "span.subtitle-proj" ).hide();
 	}
