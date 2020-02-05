@@ -36,6 +36,10 @@ body {
     color: white;
 }
 
+main {
+  position: relative;
+}
+
 ::-moz-selection { /* Code for Firefox */
   color: white;
   background: orange;
@@ -80,9 +84,16 @@ h1 {
 }
 
 span.party {
+  position: absolute;
   transform: rotate(20deg);
-  top: 80%
-  left: 10%;
+  top: 3%;
+  left: -7%;
+}
+
+span.subtitle {
+  position: absolute;
+  top: 15%;
+  left: -18%;
 }
 
 ul {

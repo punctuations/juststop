@@ -173,15 +173,15 @@ var d = new Date();
   // var targetDate = new Date('Feb 03, 2020 00:00:00');
 	if (d.getMonth() == new Date('Dec 03, 2020 00:00:00').getMonth()) {
 	  $( "span.snowflake" ).show();
-		console.log("ran");
 	} else {
 	  $( "span.snowflake" ).hide();
-		console.log("not ran");
 	}
 	if (d.getMonth() == new Date('June 28, 2020 00:000:00').getMonth() && d.getDay() == new Date('June 28, 2020 00:00:00').getDay()) {
-	//	$( "span.party" ).show();
+		$( "span.party" ).show();
+		$( "span.subtitle" ).show();
 	} else {
-	//	$( "span.party" ).hide();
+		$( "span.party" ).hide();
+		$( "span.subtitle" ).hide();
 	}
 	if (d.getMonth() == new Date('Dec 21, 2020 00:00:00').getMonth() && d.getDay() == new Date('Dec 21, 2020 00:00:00').getDay()) {
 		$( "span.webbday" ).show();
