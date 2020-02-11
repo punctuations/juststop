@@ -1,5 +1,6 @@
 canvas {
-  background: inherit
+  position: absolute;
+  display: flex;
 }
 
 #snowflakeContainer {
