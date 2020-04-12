@@ -1,8 +1,6 @@
 <img align="center" src="https://i.ibb.co/LhDJzWy/header.png" />
-
-<br>
 <img src="https://img.shields.io/github/last-commit/punctuations/juststop">
-<hr>
+<br>
 
 ## Why Me?
 Because I am, well, me. You can see my past experiences on [the website.](https://punctuation.cf/projects)
