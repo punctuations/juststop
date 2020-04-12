@@ -1,9 +1,9 @@
-<h1 style="font-size:64px"> punctuation </h1>
+<img align="center" src="https://i.ibb.co/LhDJzWy/header.png" />
 <img src="https://img.shields.io/github/last-commit/punctuations/juststop">
 <br>
 
 ## Why Me?
-¯\_(ツ)_/¯ I mean you can always see my past experiences on [the website.](https://punctuation.cf/projects)
+ ¯\_(ツ)_/¯ I mean you can always see my past experiences on [the website.](https://punctuation.cf/projects)
 
 ## Team
 This website was made by:
