@@ -1,7 +1,5 @@
 <img align="center" src="https://i.ibb.co/LhDJzWy/header.png" />
-<span align="center">
- <img src="https://img.shields.io/github/last-commit/punctuations/juststop">
-</span>
+<img src="https://img.shields.io/github/last-commit/punctuations/juststop">
 <br>
 
 ## Why Me?
