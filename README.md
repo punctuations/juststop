@@ -3,7 +3,7 @@
 <br>
 
 ## Why Me?
- ¯\_(ツ)_/¯ I mean you can always see my past experiences on [the website.](https://punctuation.cf/projects)
+ 🤷‍♂️ *I mean you can always see my past experiences on [the website.](https://punctuation.cf/projects)*
 
 ## Team
 This website was made by:
