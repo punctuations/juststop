@@ -1,0 +1,26 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss src/css/style.css -o src/build/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatdeveloper/landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whatdeveloper/landing/issues"
+  },
+  "homepage": "https://github.com/whatdeveloper/landing#readme"
+}

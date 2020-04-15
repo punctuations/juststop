@@ -1,0 +1,320 @@
+/* tailwind imports */
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* themes */
+
+:root {
+  --text: #fff;
+  --select: #ef7274;
+  --hover: #2a2a2a;
+  --bg: #2a2a2a;
+  --first-card: #212121;
+  --second-card: #1d1d1d;
+  --third-card: #1a1a1a;
+  --fourth-card: #171717;
+  --card-button: #a2a2a2;
+  --footer: #525252;
+}
+
+.dark {
+  --text: #fff;
+  --select: #ef7274;
+  --hover: #2a2a2a;
+  --bg: #2a2a2a;
+  --first-card: #212121;
+  --second-card: #1d1d1d;
+  --third-card: #1a1a1a;
+  --fourth-card: #171717;
+  --card-button: #a2a2a2;
+  --footer: #525252;
+}
+
+/* .light {
+  --text: #000;
+  --select: #108d8b;
+  --hover: #d5d5d5;
+  --bg: #d5d5d5;
+  --first-card: #dedede;
+  --second-card: #c7c7c7;
+  --third-card: #b3b3b3;
+  --fourth-card: #a1a1a1;
+  --card-button: #5d5d5d;
+  --footer: #adadad;
+} */
+
+/* loading */
+
+#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.loading-component {
+  background-color: var(--first-card);
+}
+
+/* mouse track */
+
+#cursor-circle {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  opacity: 0;
+}
+
+/* normal css */
+
+html,
+body,
+:root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  margin: 0;
+  scroll-behavior: smooth;
+
+  width: 100%;
+  height: 80%;
+  font: 16px/2 "Roboto";
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+::selection {
+  background: var(--select);
+  color: var(--text);
+}
+
+::-moz-selection {
+  background: var(--select);
+  color: var(--text);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  position: relative;
+}
+
+a {
+  padding-left: 1em;
+}
+
+i {
+  margin-right: 1em;
+  width: 2em;
+  text-align: center;
+}
+
+a:hover {
+  display: block;
+  background: var(--hover);
+  border-radius: 0.15em;
+}
+
+.intro-landing {
+  background-color: var(--first-card);
+}
+
+.cards {
+  background-color: var(--second-card);
+  height: 320px;
+  top: -15px;
+}
+
+#card-2 {
+  background-color: var(--second-card);
+  z-index: 4;
+  margin-left: 0.75rem;
+}
+
+#card-3 {
+  background-color: var(--third-card);
+  z-index: 3;
+  margin-left: 1.5rem;
+}
+
+#card-4 {
+  background-color: var(--fourth-card);
+  z-index: 2;
+  margin-left: 2.3rem;
+}
+
+#side-info {
+  background-color: var(--second-card);
+  opacity: 0;
+}
+
+.info-link {
+  color: #4bc2c5;
+  cursor: pointer;
+}
+
+.info-link:hover {
+  color: #78fee0;
+}
+
+.discriminator {
+  font-size: 0.75rem;
+}
+
+.card-bottom {
+  grid-template-columns: 80% 10%;
+}
+
+.return {
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  justify-self: start;
+  opacity: 0;
+}
+
+.return:hover {
+  color: var(--card-button);
+  border-radius: 0.15em;
+}
+
+.flip {
+  width: 1px;
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  justify-self: end;
+  opacity: 0;
+}
+
+.flip:hover {
+  display: flex;
+  color: var(--card-button);
+  border-radius: 0.15em;
+}
+
+.bottom-full {
+  bottom: 100%;
+}
+
+.top-full {
+  top: 100%;
+}
+
+.tooltip-pos-left {
+  left: -80%;
+  top: -16%;
+}
+
+.tooltip-info-pos-left {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.tooltip-triangle-left {
+  left: 26.5%;
+  top: 40%;
+}
+
+.tooltip-left-visible {
+  opacity: 0;
+}
+
+.tooltip-pos-right {
+  left: 80%;
+  top: -27.5%;
+}
+
+.tooltip-info-pos-right {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.tooltip-triangle-right {
+  left: -26.5%;
+  top: 40%;
+}
+
+.tooltip-right-visible {
+  opacity: 0;
+}
+
+.footer {
+  color: var(--footer);
+  position: fixed;
+}
+
+.legacy {
+  color: var(--footer);
+  position: fixed;
+}
+
+.fa-history {
+  margin-right: 0.5em;
+  width: 1em;
+}
+
+.errorname {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+  font-size: 8vw;
+  position: relative;
+  text-align: center;
+  mix-blend-mode: difference;
+}
+
+.error {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 4vw;
+  position: relative;
+  top: -5vw;
+  text-align: center;
+  mix-blend-mode: difference;
+}
+
+.errordesc {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2vw;
+  position: relative;
+  top: -6vw;
+  text-align: center;
+  word-wrap: break-word;
+  mix-blend-mode: exclusion;
+}
+
+.back-button:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.back-button {
+  background-color: var(--first-card);
+  padding-right: 1em;
+  transition: 0.5s;
+}

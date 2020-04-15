@@ -1,0 +1,333 @@
+<!-- Woah, this is a really cool place huh? Mr. Inspect element (or miss, I don't discriminate)-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, Bootstrap, Punctuation, JavaScript, Matt, Matthew, Tailwind"
+    />
+    <meta name="description" content="maaatt" />
+    <meta property="og:title" content="C:&#92;&gt;" />
+    <meta property="og:image" content="https://ibb.co/6wQ8RRM" />
+    <meta property="og:description" content="Front End Web Developer." />
+    <meta name="twitter:image" content="https://ibb.co/6wQ8RRM" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="matt.css" />
+    <meta name="twitter:creator" content="@alloutofmatt" />
+    <meta name="twitter:site" content="@alloutofmatt" />
+    <meta name="theme-color" content="#2f3136" />
+    <canvas id="spacer"></canvas>
+    <title>matt.css</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/build/style.css" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="cursor-circle" class="bg-white z-50"></div>
+    <div id="loading">
+      <div
+        id="comp-1"
+        class="loading-component relative text-center rounded-lg shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:-2xl border-white p-4"
+      ></div>
+
+      <div
+        id="comp-2"
+        class="loading-component relative text-center rounded-lg shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:-2xl border-white p-4"
+      ></div>
+
+      <div
+        id="comp-3"
+        class="loading-component relative text-center rounded-lg shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:-2xl border-white p-4"
+      ></div>
+    </div>
+
+    <main id="full-load">
+      <div
+        id="card-1"
+        class="container relative z-10 text-center rounded-lg intro-landing shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:shadow-2xl border-white p-4"
+      >
+        <img
+          id="profile-picture"
+          class="h-24 w-24 rounded-full mx-auto"
+          src="https://i.ibb.co/6yTBsZK/laptop.jpg"
+          alt="Me"
+        />
+        <div class="container mt-2">
+          <div class="header text-xl font-bold cursor-default">
+            Hi, I'm Matt!
+          </div>
+          <div class="subtitle text-md font-medium cursor-default">
+            I'm a Front-End Web Developer!
+          </div>
+        </div>
+        <div class="fields mt-4 text-left align-center overflow-auto">
+          <div>
+            <a onclick="langButton();" class="block" href="#"
+              ><i class="fas fa-laptop-code"></i>languages</a
+            >
+          </div>
+          <div>
+            <a onclick="projButton();" class="block" href="#"
+              ><i class="fas fa-briefcase"></i>projects</a
+            >
+          </div>
+          <div>
+            <a onclick="contactButton();" class="block" href="#"
+              ><i class="fas fa-user"></i>contacts/socials</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="card-2"
+        class="absolute card-target container rounded-lg border-white p-4 cards shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:shadow-2xl"
+      >
+        <div class="container mt-2 card-2-front">
+          <div class="header text-xl font-bold text-center cursor-default">
+            Languages
+          </div>
+          <div class="fields mt-4 text-left align-center overflow-auto">
+            <div>
+              <a class="block py-button" href="#"
+                ><i class="fab fa-python"></i>python</a
+              >
+            </div>
+            <div>
+              <a class="block html-button" href="#"
+                ><i class="fab fa-html5"></i>html</a
+              >
+            </div>
+            <div>
+              <a class="block css-button" href="#"
+                ><i class="fab fa-css3-alt"></i>css</a
+              >
+            </div>
+            <div>
+              <a class="block js-button" href="#"
+                ><i class="fab fa-js-square"></i>javascript</a
+              >
+            </div>
+            <div>
+              <a class="block lua-button" href="#"
+                ><i class="fas fa-file-alt"></i>lua</a
+              >
+            </div>
+          </div>
+          <div class="fields mt-8 card-bottom text-left grid overflow-auto">
+            <div>
+              <span
+                onmouseout="unTooltip();"
+                onmouseover="tooltipLeft();"
+                onclick="homeCard();"
+                class="return"
+                href="#"
+                ><i class="fas fa-long-arrow-alt-left"></i
+              ></span>
+            </div>
+            <div class="cursor-not-allowed">
+              <!-- onclick="langFlip();" -->
+              <span
+                onmouseout="unTooltip();"
+                onmouseover="tooltipRight();"
+                class="flip"
+                href="#"
+                ><i class="fas fa-undo-alt"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="card-3"
+        class="absolute card-target ml-10 -mt-3 container rounded-lg border-white p-4 cards shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:shadow-2xl"
+      >
+        <div class="container mt-2">
+          <div class="header text-xl font-bold text-center cursor-default">
+            Projects
+          </div>
+          <div class="fields mt-4 text-left align-center overflow-auto">
+            <div>
+              <a class="block utile-button" href="#"
+                ><i class="fas fa-robot"></i>utile bot</a
+              >
+            </div>
+            <div>
+              <a class="block miscord-button" href="#"
+                ><i class="fas fa-robot"></i>miscord bot</a
+              >
+            </div>
+            <div>
+              <a class="block" href="#"><i class="fas fa-globe"></i>JustStop</a>
+            </div>
+            <div>
+              <a class="block github-proj-button" href="#"
+                ><i class="fab fa-github"></i>github projects</a
+              >
+            </div>
+          </div>
+          <div class="fields mt-16 card-bottom text-left grid overflow-auto">
+            <div>
+              <span
+                onmouseout="unTooltip();"
+                onmouseover="tooltipLeft();"
+                onclick="homeCard();"
+                class="return"
+                href="#"
+                ><i class="fas fa-long-arrow-alt-left"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="card-4"
+        class="absolute card-target ml-15 -mt-6 container rounded-lg border-white p-4 cards shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:shadow-2xl"
+      >
+        <div class="container mt-2">
+          <div class="header text-xl font-bold text-center cursor-default">
+            Contact
+          </div>
+          <div class="fields mt-4 text-left align-center overflow-auto">
+            <div>
+              <a class="block" href="mailto:semi@programmer.net" target="_blank"
+                ><i class="fas fa-envelope"></i>semi<span class="text-xs"
+                  >@programmer.net</span
+                ></a
+              >
+            </div>
+            <div>
+              <a
+                class="block"
+                href="https://twitter.com/alloutofmatt"
+                target="_blank"
+                ><i class="fab fa-twitter"></i>alloutofmatt</a
+              >
+            </div>
+            <div>
+              <a class="block" href="https://discord.gg/SK53UMK" target="_blank"
+                ><i class="fab fa-discord"></i>YetAnotherMatt<span
+                  class="text-xs"
+                  >#0001</span
+                ></a
+              >
+            </div>
+            <div>
+              <a
+                class="block"
+                href="https://reddit.com/u/yetanothersemi"
+                target="_blank"
+                ><i class="fab fa-reddit-alien"></i
+                ><span class="text-xs">/u/</span>yetanothersemi</a
+              >
+            </div>
+            <div>
+              <a
+                class="block"
+                href="https://github.com/punctuations"
+                target="_blank"
+                ><i class="fab fa-github"></i>punctuations</a
+              >
+            </div>
+          </div>
+          <div class="fields mt-8 card-bottom text-left grid overflow-auto">
+            <div>
+              <span
+                onmouseout="unTooltip();"
+                onmouseover="tooltipLeft();"
+                onclick="homeCard();"
+                class="return"
+                href="#"
+                ><i class="fas fa-long-arrow-alt-left"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="side-info"
+        class="absolute container rounded-lg border-white p-4 ml-78 -mt-70 shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:shadow-2xl"
+      >
+        <i class="fas fa-times text-right cursor-pointer side-exit"></i>
+        <span id="info" class="text-sm cursor-default">
+          Lorem ipsum dolor sit amet.
+        </span>
+      </div>
+
+      <div class="relative mx-2 tooltip-pos-left">
+        <div
+          class="text-center max-w-xs tooltip-info-pos-left bg-black text-white text-xs rounded py-1 px-4 right-0 bottom-full tooltip-left-visible"
+        >
+          Return Home
+          <svg
+            class="absolute text-black h-2 w-full left-0 top-full tooltip-triangle-left"
+            x="0px"
+            y="0px"
+            viewBox="0 0 255 255"
+            xml:space="preserve"
+            transform="rotate(270)"
+          >
+            <polygon class="fill-current" points="0,0 127.5,127.5 255,0" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="relative mx-2 tooltip-pos-right">
+        <div
+          class="text-center max-w-xs tooltip-info-pos-right bg-black text-white text-xs rounded py-1 px-4 right-0 bottom-full tooltip-right-visible"
+        >
+          See More
+          <svg
+            class="absolute text-black h-2 w-full left-0 top-full tooltip-triangle-right"
+            x="0px"
+            y="0px"
+            viewBox="0 0 255 255"
+            xml:space="preserve"
+            transform="rotate(90)"
+          >
+            <polygon class="fill-current" points="0,0 127.5,127.5 255,0" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="noscript">
+        <noscript><strong>Please enable JavaScript.</strong></noscript>
+      </div>
+
+      <div class="legacy left-0 top-0 cursor-pointer">
+        <a href="v1"><i class="fas fa-history"></i>JustStop Legacy</a>
+      </div>
+
+      <div class="footer px-2 left-0 bottom-0 cursor-default">
+        © Matt, 2020
+        <a
+          class="footer px-2 right-0 bottom-0 cursor-pointer"
+          href="https://github.com/punctuations/juststop"
+          target="_blank"
+          >JustStop v2</a
+        >
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="/src/app.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  </body>
+</html>
