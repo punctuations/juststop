@@ -19900,6 +19900,16 @@ main {
   position: relative;
 }
 
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#spacer {
+  position: relative;
+}
+
 a {
   padding-left: 1em;
 }
