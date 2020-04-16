@@ -390,7 +390,7 @@ if (
 // screen detection
 
 if (window.screen.width > 828) {
-  window.location.replace("/public/");
+  window.location.replace("../");
 }
 
 // card switching

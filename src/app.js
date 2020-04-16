@@ -1499,7 +1499,7 @@ function unTooltip() {
 // mobile detection -----------------------------------------------------------------------------------------------
 
 if (window.screen.width <= 828) {
-  window.location.replace("mobile/");
+  window.location.replace("/mobile/");
 }
 
 // end of mobile detection, start of loading sequence -------------------------------------------------------------
