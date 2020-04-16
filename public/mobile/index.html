@@ -1,0 +1,268 @@
+<!-- Woah, this is a really cool place huh? Mr. Inspect element (or miss, I don't discriminate)-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <link rel="icon" href="/public/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, Bootstrap, Punctuation, JavaScript, Matt, Matthew, Tailwind"
+    />
+    <meta name="description" content="maaatt" />
+    <meta property="og:title" content="C:&#92;&gt;" />
+    <meta property="og:image" content="https://i.ibb.co/Rv3WqfT/download.png" />
+    <meta property="og:description" content="Front End Web Developer." />
+    <meta
+      name="twitter:image"
+      content="https://i.ibb.co/Rv3WqfT/download.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="matt.css" />
+    <meta name="twitter:creator" content="@alloutofmatt" />
+    <meta name="twitter:site" content="@alloutofmatt" />
+    <meta name="theme-color" content="#2f3136" />
+    <title>matt.css - mobile</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/build/style.css" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div
+        id="mobile-1"
+        class="container h-screen w-screen text-center relative z-50 rounded-lg"
+      >
+        <img
+          id="profile-picture"
+          class="h-24 w-24 rounded-full mx-auto mt-50vh"
+          src="https://i.ibb.co/6yTBsZK/laptop.jpg"
+          alt="Me"
+        />
+        <div class="container mt-2">
+          <div class="header text-xl font-bold cursor-default">
+            Hi, I'm Matt!
+          </div>
+          <div class="subtitle text-md font-medium cursor-default">
+            I'm a Front-End Web Developer!
+          </div>
+        </div>
+        <div class="mt-4 text-left align-center ml-15vw mr-20vw overflow-auto">
+          <div>
+            <a onclick="mobileLang();" class="block hover:shadow-lg" href="#"
+              ><i class="fas fa-laptop-code"></i>languages</a
+            >
+          </div>
+          <div>
+            <a
+              onclick="mobileProjects();"
+              class="block hover:shadow-lg"
+              href="#"
+              ><i class="fas fa-briefcase"></i>projects</a
+            >
+          </div>
+          <div>
+            <a onclick="mobileContact();" class="block hover:shadow-lg" href="#"
+              ><i class="fas fa-user"></i>contacts/socials</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-2"
+        class="container h-screen w-screen text-center hidden relative z-40 rounded-lg"
+      >
+        <div class="container mt-2 mt-50vh">
+          <div class="header text-xl font-bold text-center cursor-default">
+            Languages
+          </div>
+          <div class="mt-4 text-left align-center overflow-auto">
+            <div>
+              <a class="block ml-15vw mr-20vw hover:shadow-lg py" href="#"
+                ><i class="fab fa-python"></i>python</a
+              >
+            </div>
+            <div>
+              <a class="block ml-15vw mr-20vw hover:shadow-lg html" href="#"
+                ><i class="fab fa-html5"></i>html</a
+              >
+            </div>
+            <div>
+              <a class="block ml-15vw mr-20vw hover:shadow-lg css" href="#"
+                ><i class="fab fa-css3-alt"></i>css</a
+              >
+            </div>
+            <div>
+              <a class="block ml-15vw mr-20vw hover:shadow-lg js" href="#"
+                ><i class="fab fa-js-square"></i>javascript</a
+              >
+            </div>
+            <div>
+              <a class="block ml-15vw mr-20vw hover:shadow-lg lua" href="#"
+                ><i class="fas fa-file-alt"></i>lua</a
+              >
+            </div>
+            <div>
+              <a
+                class="block ml-15vw mr-20vw hover:shadow-lg"
+                onclick="back();"
+                href="#"
+                ><i class="fas fa-caret-left"></i>go back</a
+              >
+            </div>
+          </div>
+          <hr class="shadow-2xl mt-10vw" />
+          <div
+            class="container bg-gray-800 h-screen w-screen rounded-lg bottom-info"
+          ></div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-3"
+        class="container h-screen w-screen text-center hidden relative z-30 rounded-lg"
+      >
+        <div class="container mt-2 mt-50vh">
+          <div class="header text-xl font-bold text-center cursor-default">
+            Projects
+          </div>
+          <div class="mt-4 text-left align-center overflow-auto">
+            <div>
+              <a class="block ml-15vw mr-20vw hover:shadow-lg utile" href="#"
+                ><i class="fas fa-robot"></i>utile</a
+              >
+            </div>
+            <div>
+              <a class="block ml-15vw mr-20vw hover:shadow-lg miscord" href="#"
+                ><i class="fas fa-robot"></i>miscord</a
+              >
+            </div>
+            <div>
+              <a
+                class="block ml-15vw mr-20vw hover:shadow-lg"
+                href="https://github.com/punctuations/juststop"
+                target="_blank"
+                ><i class="fas fa-globe"></i>JustStop</a
+              >
+            </div>
+            <div>
+              <a
+                class="block ml-15vw mr-20vw hover:shadow-lg github-projects"
+                href="#"
+                ><i class="fab fa-github"></i>github projects</a
+              >
+            </div>
+            <div>
+              <a
+                class="block ml-15vw mr-20vw hover:shadow-lg"
+                onclick="back();"
+                href="#"
+                ><i class="fas fa-caret-left"></i>go back</a
+              >
+            </div>
+          </div>
+          <hr class="shadow-2xl mt-10vw" />
+          <div
+            class="container bg-gray-800 h-screen w-screen rounded-lg bottom-info"
+          ></div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-4"
+        class="container h-screen w-screen text-center hidden relative z-20 rounded-lg"
+      >
+        <div class="container mt-2 mt-50vh">
+          <div class="header text-xl font-bold text-center cursor-default">
+            Projects
+          </div>
+          <div class="mt-4 text-left align-center overflow-auto">
+            <div>
+              <a
+                class="block ml-15vw mr-20vw hover:shadow-lg"
+                href="mailto:semi@programmer.net"
+                target="_blank"
+                ><i class="fas fa-envelope"></i>semi<span class="text-xs"
+                  >@programmer.net</span
+                ></a
+              >
+            </div>
+            <div>
+              <a
+                class="block ml-15vw mr-20vw hover:shadow-lg"
+                href="#"
+                target="_blank"
+                ><i class="fab fa-twitter"></i
+                ><span class="text-xs">@</span>alloutofmatt</a
+              >
+            </div>
+            <div>
+              <a
+                class="block ml-15vw mr-20vw hover:shadow-lg"
+                href="https://discord.gg/SK53UMK"
+                target="_blank"
+                ><i class="fab fa-discord"></i>YetAnotherMatt<span
+                  class="text-xs"
+                  >#0596</span
+                ></a
+              >
+            </div>
+            <div>
+              <a
+                class="block ml-15vw mr-20vw hover:shadow-lg"
+                href="https://reddit.com/u/yetanothersemi"
+                target="_blank"
+                ><i class="fab fa-reddit-alien"></i
+                ><span class="text-xs">/u/</span>yetanothersemi</a
+              >
+            </div>
+            <div>
+              <a
+                class="block ml-15vw mr-20vw hover:shadow-lg"
+                href="https://github.com/punctuations"
+                target="_blank"
+                ><i class="fab fa-github"></i>punctuations</a
+              >
+            </div>
+            <div>
+              <a
+                class="block ml-15vw mr-20vw hover:shadow-lg"
+                onclick="back();"
+                href="#"
+                ><i class="fas fa-caret-left"></i>go back</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legacy left-0 top-0 cursor-pointer">
+        <a href="/public/v1/"><i class="fas fa-history"></i>JustStop Legacy</a>
+      </div>
+
+      <div class="footer px-2 left-0 bottom-0 cursor-default z-50">
+        © Matt, 2020
+        <a
+          class="footer px-2 right-0 bottom-0 cursor-pointer"
+          href="https://github.com/punctuations/juststop"
+          target="_blank"
+          >JustStop v2</a
+        >
+      </div>
+    </main>
+
+    <script src="/src/app.mobile.js"></script>
+  </body>
+</html>

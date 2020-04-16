@@ -6,8 +6,8 @@ permalink: /index.html
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <link rel="icon" href="/public/favicon.ico" />
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -19,9 +19,12 @@ permalink: /index.html
     />
     <meta name="description" content="maaatt" />
     <meta property="og:title" content="C:&#92;&gt;" />
-    <meta property="og:image" content="https://ibb.co/6wQ8RRM" />
+    <meta property="og:image" content="https://i.ibb.co/Rv3WqfT/download.png" />
     <meta property="og:description" content="Front End Web Developer." />
-    <meta name="twitter:image" content="https://ibb.co/6wQ8RRM" />
+    <meta
+      name="twitter:image"
+      content="https://i.ibb.co/Rv3WqfT/download.png"
+    />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="matt.css" />
     <meta name="twitter:creator" content="@alloutofmatt" />
@@ -57,6 +60,9 @@ permalink: /index.html
         id="comp-3"
         class="loading-component relative text-center rounded-lg shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:-2xl border-white p-4"
       ></div>
+      <div>
+        <noscript><strong>Please enable JavaScript.</strong></noscript>
+      </div>
     </div>
 
     <main id="full-load">
@@ -78,7 +84,7 @@ permalink: /index.html
             I'm a Front-End Web Developer!
           </div>
         </div>
-        <div class="fields mt-4 text-left align-center overflow-auto">
+        <div class="mt-4 text-left align-center overflow-auto">
           <div>
             <a onclick="langButton();" class="block" href="#"
               ><i class="fas fa-laptop-code"></i>languages</a
@@ -105,7 +111,7 @@ permalink: /index.html
           <div class="header text-xl font-bold text-center cursor-default">
             Languages
           </div>
-          <div class="fields mt-4 text-left align-center overflow-auto">
+          <div class="mt-4 text-left align-center overflow-auto">
             <div>
               <a class="block py-button" href="#"
                 ><i class="fab fa-python"></i>python</a
@@ -132,7 +138,7 @@ permalink: /index.html
               >
             </div>
           </div>
-          <div class="fields mt-8 card-bottom text-left grid overflow-auto">
+          <div class="mt-8 card-bottom text-left grid overflow-auto">
             <div>
               <span
                 onmouseout="unTooltip();"
@@ -165,7 +171,7 @@ permalink: /index.html
           <div class="header text-xl font-bold text-center cursor-default">
             Projects
           </div>
-          <div class="fields mt-4 text-left align-center overflow-auto">
+          <div class="mt-4 text-left align-center overflow-auto">
             <div>
               <a class="block utile-button" href="#"
                 ><i class="fas fa-robot"></i>utile bot</a
@@ -177,7 +183,12 @@ permalink: /index.html
               >
             </div>
             <div>
-              <a class="block" href="#"><i class="fas fa-globe"></i>JustStop</a>
+              <a
+                class="block"
+                href="https://github.com/punctuations/juststop"
+                target="_blank"
+                ><i class="fas fa-globe"></i>JustStop</a
+              >
             </div>
             <div>
               <a class="block github-proj-button" href="#"
@@ -185,7 +196,7 @@ permalink: /index.html
               >
             </div>
           </div>
-          <div class="fields mt-16 card-bottom text-left grid overflow-auto">
+          <div class="mt-16 card-bottom text-left grid overflow-auto">
             <div>
               <span
                 onmouseout="unTooltip();"
@@ -208,7 +219,7 @@ permalink: /index.html
           <div class="header text-xl font-bold text-center cursor-default">
             Contact
           </div>
-          <div class="fields mt-4 text-left align-center overflow-auto">
+          <div class="mt-4 text-left align-center overflow-auto">
             <div>
               <a class="block" href="mailto:semi@programmer.net" target="_blank"
                 ><i class="fas fa-envelope"></i>semi<span class="text-xs"
@@ -221,14 +232,15 @@ permalink: /index.html
                 class="block"
                 href="https://twitter.com/alloutofmatt"
                 target="_blank"
-                ><i class="fab fa-twitter"></i>alloutofmatt</a
+                ><i class="fab fa-twitter"></i
+                ><span class="text-xs">@</span>alloutofmatt</a
               >
             </div>
             <div>
               <a class="block" href="https://discord.gg/SK53UMK" target="_blank"
                 ><i class="fab fa-discord"></i>YetAnotherMatt<span
                   class="text-xs"
-                  >#0001</span
+                  >#0596</span
                 ></a
               >
             </div>
@@ -250,7 +262,7 @@ permalink: /index.html
               >
             </div>
           </div>
-          <div class="fields mt-8 card-bottom text-left grid overflow-auto">
+          <div class="mt-8 card-bottom text-left grid overflow-auto">
             <div>
               <span
                 onmouseout="unTooltip();"
@@ -270,7 +282,10 @@ permalink: /index.html
         class="absolute container rounded-lg border-white p-4 ml-78 -mt-70 shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:shadow-2xl"
       >
         <i class="fas fa-times text-right cursor-pointer side-exit"></i>
-        <span id="info" class="text-sm cursor-default">
+        <span
+          id="info"
+          class="text-sm cursor-default cursor-pointer pointer-events-none"
+        >
           Lorem ipsum dolor sit amet.
         </span>
       </div>
@@ -311,7 +326,7 @@ permalink: /index.html
         </div>
       </div>
 
-      <div class="noscript">
+      <div>
         <noscript><strong>Please enable JavaScript.</strong></noscript>
       </div>
 

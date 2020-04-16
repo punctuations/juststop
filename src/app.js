@@ -242,12 +242,12 @@ var confetti = {
 })();
 
 var d = new Date();
-// var targetDate = new Date('Feb 03, 2020 00:00:00'); | old code.
-if (d.getMonth() == new Date("Dec 03, 2020 00:00:00").getMonth()) {
-  $("span.snowflake").show();
-} else {
-  $("span.snowflake").hide();
-} //June 28																										  	//June 28
+// // var targetDate = new Date('Feb 03, 2020 00:00:00'); | old code.
+// if (d.getMonth() == new Date("Dec 03, 2020 00:00:00").getMonth()) {
+//   $("span.snowflake").show();
+// } else {
+//   $("span.snowflake").hide();
+// } //June 28																										  	//June 28
 if (
   d.getMonth() == new Date("June 28, 2020 00:000:00").getMonth() &&
   d.getDay() == new Date("June 28, 2020 00:00:00").getDay()
@@ -1373,8 +1373,13 @@ function unTooltip() {
     opacity: 0,
   });
 }
+// mobile detection -----------------------------------------------------------------------------------------------
 
-// End of card mechanics, start of loading sequence ---------------------------------------------------------------
+if (window.screen.width <= 828) {
+  window.location.replace("mobile/");
+}
+
+// end of mobile detection, start of loading sequence -------------------------------------------------------------
 
 const sqr1 = document.getElementById("comp-1");
 const sqr2 = document.getElementById("comp-2");
@@ -1582,196 +1587,232 @@ function sideClose() {
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-none";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-none";
 }
 
 function utInfo() {
   override = 1;
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "The Utile project is a discord bot made by <span class='info-link' href='https://github.com/tilda/' target='_blank'>tilda</span>, <span class='info-link' href='https://github.com/iAlex11/' target='_blank'>alex</span>, and <span class='info-link' href='https://github.com/punctuations/' target='_blank'>me</span>.";
+    "The Utile project is a discord bot made by <a class='info-link' href='https://github.com/tilda/' target='_blank'>tilda</a>, <a class='info-link' href='https://github.com/iAlex11/' target='_blank'>alex</a>, and <a class='info-link' href='https://github.com/punctuations/' target='_blank'>me</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function utHover() {
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "The Utile project is a discord bot made by <span class='info-link' href='https://github.com/tilda/' target='_blank'>tilda</span>, <span class='info-link' href='https://github.com/iAlex11/' target='_blank'>alex</span>, and <span class='info-link' href='https://github.com/punctuations/' target='_blank'>me</span>.";
+    "The Utile project is a discord bot made by <a class='info-link' href='https://github.com/tilda/' target='_blank'>tilda</a>, <a class='info-link' href='https://github.com/iAlex11/' target='_blank'>alex</a>, and <a class='info-link' href='https://github.com/punctuations/' target='_blank'>me</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function misInfo() {
   override = 1;
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    'The Miscord Project is a project that was developed during discord\'s <span class="info-link" href="https://blog.discord.com/discord-community-hack-week-category-winners-bd0364360f92" target=\'_blank\'>Hack Week</span>, which is the reason we made this other discord bot, Miscord has lots of features which you can see <span class="info-link" href="https://miscord.utile.cf/" target=\'_blank\'>here</span>. Miscord was made by <span class="info-link" href="https://github.com/ifisq" target=\'_blank\'>blue</span>, <span class="info-link" href="https://github.com/iAlex11/" target=\'_blank\'>alex</span>, <span class="info-link" href="https://github.com/tilda/" target=\'_blank\'>tilda</span>, and <span class="info-link" href="https://github.com/punctuations/" target=\'_blank\'>me</span>.';
+    'The Miscord Project is a project that was developed during discord\'s <a class="info-link" href="https://blog.discord.com/discord-community-hack-week-category-winners-bd0364360f92" target=\'_blank\'>Hack Week</a>, which is the reason we made this other discord bot, Miscord has lots of features which you can see <a class="info-link" href="https://miscord.utile.cf/" target=\'_blank\'>here</a>. Miscord was made by <a class="info-link" href="https://github.com/ifisq" target=\'_blank\'>blue</a>, <a class="info-link" href="https://github.com/iAlex11/" target=\'_blank\'>alex</a>, <a class="info-link" href="https://github.com/tilda/" target=\'_blank\'>tilda</a>, and <a class="info-link" href="https://github.com/punctuations/" target=\'_blank\'>me</a>.';
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function misHover() {
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    'The Miscord Project is a project that was developed during discord\'s <span class="info-link" href="https://blog.discord.com/discord-community-hack-week-category-winners-bd0364360f92" target=\'_blank\'>Hack Week</span>, which is the reason we made this other discord bot, Miscord has lots of features which you can see <span class="info-link" href="https://miscord.utile.cf/" target=\'_blank\'>here</span>. Miscord was made by <span class="info-link" href="https://github.com/ifisq" target=\'_blank\'>blue</span>, <span class="info-link" href="https://github.com/iAlex11/" target=\'_blank\'>alex</span>, <span class="info-link" href="https://github.com/tilda/" target=\'_blank\'>tilda</span>, and <span class="info-link" href="https://github.com/punctuations/" target=\'_blank\'>me</span>.';
+    'The Miscord Project is a project that was developed during discord\'s <a class="info-link" href="https://blog.discord.com/discord-community-hack-week-category-winners-bd0364360f92" target=\'_blank\'>Hack Week</a>, which is the reason we made this other discord bot, Miscord has lots of features which you can see <a class="info-link" href="https://miscord.utile.cf/" target=\'_blank\'>here</a>. Miscord was made by <a class="info-link" href="https://github.com/ifisq" target=\'_blank\'>blue</a>, <a class="info-link" href="https://github.com/iAlex11/" target=\'_blank\'>alex</a>, <a class="info-link" href="https://github.com/tilda/" target=\'_blank\'>tilda</a>, and <a class="info-link" href="https://github.com/punctuations/" target=\'_blank\'>me</a>.';
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function gitPrInfo() {
   override = 1;
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "Using github I have tons of my projects open source and easily avaliabe to me, I have most if not all of my projects hosted <span class='info-link' href='https://github.com/punctuations/' target='_blank'>there</span>.";
+    "Using github I have tons of my projects open source and easily avaliabe to me, I have most if not all of my projects hosted <a class='info-link' href='https://github.com/punctuations/' target='_blank'>there</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function gitPrHover() {
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "Using github I have tons of my projects open source and easily avaliabe to me, I have most if not all of my projects hosted <span class='info-link' href='https://github.com/punctuations/' target='_blank'>there</span>.";
+    "Using github I have tons of my projects open source and easily avaliabe to me, I have most if not all of my projects hosted <a class='info-link' href='https://github.com/punctuations/' target='_blank'>there</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function pyInfo() {
   override = 1;
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "Using <span class='info-link' href='https://docs.python.org/3/' target='_blank'>python</span> I have made tons of projects, an example would be <span class='info-link' href='' target='https://github.com/utilefordiscord'>Utile</span> the discord bot, and a few others you can see <span class='info-link' href='https://github.com/punctuations' target='_blank'>here</span>.";
+    "Using <a class='info-link' href='https://docs.python.org/3/' target='_blank'>python</a> I have made tons of projects, an example would be <a class='info-link' href='https://github.com/utilefordiscord' target='https://github.com/utilefordiscord'>Utile</a> the discord bot, and a few others you can see <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function pyHover() {
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "Using <span class='info-link' href='https://docs.python.org/3/' target='_blank'>python</span> I have made tons of projects, an example would be <span class='info-link' href='' target='https://github.com/utilefordiscord'>Utile</span> the discord bot, and a few others you can see <span class='info-link' href='https://github.com/punctuations' target='_blank'>here</span>.";
+    "Using <a class='info-link' href='https://docs.python.org/3/' target='_blank'>python</a> I have made tons of projects, an example would be <a class='info-link' href='https://github.com/utilefordiscord' target='https://github.com/utilefordiscord'>Utile</a> the discord bot, and a few others you can see <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function htmlInfo() {
   override = 1;
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "Using <span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</span> I was able to basically layout what I'd call the framework of the website with all the text and things. An example of things I've done with this would be on <span class='info-link' href='https://github.com/punctuations' target='_blank'>Github</span>.";
+    "Using <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</a> I was able to basically layout what I'd call the framework of the website with all the text and things. An example of things I've done with this would be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function htmlHover() {
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "Using <span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</span> I was able to basically layout what I'd call the framework of the website with all the text and things. An example of things I've done with this would be on <span class='info-link' href='https://github.com/punctuations' target='_blank'>Github</span>.";
+    "Using <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</a> I was able to basically layout what I'd call the framework of the website with all the text and things. An example of things I've done with this would be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function cssInfo() {
   override = 1;
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "<span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</span> is like the fancy wallpaper added to a building where html is the blank wall and framework, <span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</span> is what makes it look fancy and nice. To see some of my work with <span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</span> it'd be on <span class='info-link' href='https://github.com/punctuations' target='_blank'>Github</span>.";
+    "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is like the fancy wallpaper added to a building where html is the blank wall and framework, <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is what makes it look fancy and nice. To see some of my work with <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> it'd be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function cssHover() {
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "<span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</span> is like the fancy wallpaper added to a building where html is the blank wall and framework, <span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</span> is what makes it look fancy and nice. To see some of my work with <span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</span> it'd be on <span class='info-link' href='https://github.com/punctuations' target='_blank'>Github</span>.";
+    "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is like the fancy wallpaper added to a building where html is the blank wall and framework, <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is what makes it look fancy and nice. To see some of my work with <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> it'd be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function jsInfo() {
   override = 1;
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "<span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</span> is a great language with tons of libraries and capabilities to utilize, I used a lot of <span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</span> in this project, overall <span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</span> is a great language to see some of it in action go <span class='info-link' href='https://github.com/punctuations' target='_blank'>here</span>.";
+    "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language with tons of libraries and capabilities to utilize, I used a lot of <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> in this project, overall <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language to see some of it in action go <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function jsHover() {
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "<span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</span> is a great language with tons of libraries and capabilities to utilize, I used a lot of <span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</span> in this project, overall <span class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</span> is a great language to see some of it in action go <span class='info-link' href='https://github.com/punctuations' target='_blank'>here</span>.";
+    "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language with tons of libraries and capabilities to utilize, I used a lot of <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> in this project, overall <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language to see some of it in action go <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function luaInfo() {
   override = 1;
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "<span class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</span> is a language that I used quite a bit, it is a great language, however I have not personally used <span class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</span> in a long time.";
+    "<a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> is a language that I used quite a bit, it is a great language, however I have not personally used <a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> in a long time.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function luaHover() {
   const tl = new TimelineMax();
   sideDesc.innerHTML =
-    "<span class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</span> is a language that I used quite a bit, it is a great language, however I have not personally used <span class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</span> in a long time.";
+    "<a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> is a language that I used quite a bit, it is a great language, however I have not personally used <a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> in a long time.";
   tl.to(sideInfo, 0.4, {
     opacity: 1,
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+  sideDesc.classList =
+    "text-sm cursor-default cursor-pointer pointer-events-auto";
 }
 
 function sideHide() {
   if (override == 0) {
     sideExit[0].classList =
       "fas fa-times text-right cursor-pointer side-exit pointer-events-none";
+    sideDesc.classList =
+      "text-sm cursor-default cursor-pointer pointer-events-none";
     const tl = new TimelineMax();
     tl.to(sideInfo, 0.4, {
       opacity: 0,

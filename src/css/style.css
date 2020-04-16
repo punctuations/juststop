@@ -174,10 +174,14 @@ a:hover {
 .info-link {
   color: #4bc2c5;
   cursor: pointer;
+  padding-left: 0;
 }
 
 .info-link:hover {
+  display: inline;
+  background: none;
   color: #78fee0;
+  border-radius: 0;
 }
 
 .discriminator {
@@ -317,4 +321,39 @@ a:hover {
   background-color: var(--first-card);
   padding-right: 1em;
   transition: 0.5s;
+}
+
+/* mobile css */
+
+#mobile-1,
+#mobile-2,
+#mobile-3,
+#mobile-4 {
+  background-color: var(--first-card);
+}
+
+#mobile-2,
+#mobile-3,
+#mobile-4 {
+  opacity: 0;
+}
+
+.mobile-fadeOut {
+  animation: fadeOut 0.3s forwards ease-in-out;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+.mobile-fadeIn {
+  animation: fadeIn 0.3s forwards ease-in-out;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
