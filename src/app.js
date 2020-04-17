@@ -1,3 +1,11 @@
+// mobile detection -----------------------------------------------------------------------------------------------
+
+if (window.screen.width <= 828) {
+  window.location.replace("/mobile/");
+}
+
+// particles --
+
 var confetti = {
   maxCount: 150, //set max confetti count
   speed: 2, //set the particle animation speed
@@ -1496,13 +1504,7 @@ function unTooltip() {
     opacity: 0,
   });
 }
-// mobile detection -----------------------------------------------------------------------------------------------
-
-if (window.screen.width <= 828) {
-  window.location.replace("/mobile/");
-}
-
-// end of mobile detection, start of loading sequence -------------------------------------------------------------
+// end of card mechanics, start of loading sequence -----------------------------------------------------------
 
 const sqr1 = document.getElementById("comp-1");
 const sqr2 = document.getElementById("comp-2");

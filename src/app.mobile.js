@@ -1,3 +1,9 @@
+// screen detection
+
+if (window.screen.width > 828) {
+  window.location.replace("../");
+}
+
 var confetti = {
   maxCount: 150, //set max confetti count
   speed: 2, //set the particle animation speed
@@ -385,12 +391,6 @@ if (
     confetti.toggle();
   }
 } else {
-}
-
-// screen detection
-
-if (window.screen.width > 828) {
-  window.location.replace("../");
 }
 
 // card switching
