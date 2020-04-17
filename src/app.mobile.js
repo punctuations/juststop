@@ -4,6 +4,8 @@ if (window.screen.width > 828) {
   window.location.replace("../");
 }
 
+// particles --
+
 var confetti = {
   maxCount: 150, //set max confetti count
   speed: 2, //set the particle animation speed
