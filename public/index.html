@@ -45,7 +45,6 @@ permalink: /index.html
   </head>
 
   <body>
-    <div id="cursor-circle" class="bg-white z-50"></div>
     <div id="loading">
       <div
         id="comp-1"
@@ -61,11 +60,7 @@ permalink: /index.html
         id="comp-3"
         class="loading-component relative text-center rounded-lg shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:-2xl border-white p-4"
       ></div>
-      <div>
-        <noscript><strong>Please enable JavaScript.</strong></noscript>
-      </div>
     </div>
-
     <main id="full-load">
       <div
         id="card-1"
@@ -85,19 +80,19 @@ permalink: /index.html
             I'm a Front-End Web Developer!
           </div>
         </div>
-        <div class="mt-4 text-left align-center overflow-auto">
+        <div class="mt-4 text-left align-center overflow-auto buttons">
           <div>
-            <a onclick="langButton();" class="block" href="#"
+            <a onclick="langBtn();" class="block" href="#"
               ><i class="fas fa-laptop-code"></i>languages</a
             >
           </div>
           <div>
-            <a onclick="projButton();" class="block" href="#"
+            <a onclick="projBtn();" class="block" href="#"
               ><i class="fas fa-briefcase"></i>projects</a
             >
           </div>
           <div>
-            <a onclick="contactButton();" class="block" href="#"
+            <a onclick="contactBtn();" class="block" href="#"
               ><i class="fas fa-user"></i>contacts/socials</a
             >
           </div>
@@ -150,14 +145,14 @@ permalink: /index.html
                 ><i class="fas fa-long-arrow-alt-left"></i
               ></span>
             </div>
-            <div class="cursor-not-allowed">
+            <div>
               <!-- onclick="langFlip();" -->
               <span
                 onmouseout="unTooltip();"
                 onmouseover="tooltipRight();"
                 class="flip"
                 href="#"
-                ><i class="fas fa-undo-alt"></i
+                ><i class="fas fa-undo-alt cursor-not-allowed"></i
               ></span>
             </div>
           </div>
@@ -347,7 +342,7 @@ permalink: /index.html
     </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="/anime.min.js"></script>
     <script src="/src/app.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
   </body>
 </html>

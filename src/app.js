@@ -441,1205 +441,788 @@ function themeSwitcher() {
 const theme = localStorage.getItem("theme");
 const isDark = localStorage.getItem("isDark");
 
-// end of theme mechanics, start of card mechanics ----------------------------------------------------------------
+// end of theme mechanics, start of load mechanics ----------------------------------------------------------------
 
-let i;
-
-function langButton() {
-  i = 1;
-  startCardThrow();
-}
-
-function projButton() {
-  i = 2;
-  startCardThrow();
-}
-
-function contactButton() {
-  i = 3;
-  startCardThrow();
-}
-
-const firstCard = document.getElementById("card-1");
-const secondCard = document.getElementById("card-2");
-const thirdCard = document.getElementById("card-3");
-const fourthCard = document.getElementById("card-4");
-const returnArrow = document.getElementsByClassName("return");
-const cardFlip = document.getElementsByClassName("flip");
-
-function startCardThrow() {
-  //50 50 chance for different animation
-  let fir = Math.floor(Math.random() * 2);
-  let sr = Math.floor(Math.random() * 2);
-  let tr = Math.floor(Math.random() * 2);
-  let fur = Math.floor(Math.random() * 2);
-
-  const tl = new TimelineMax();
-
-  if (i == 1) {
-    //if lang was clicked
-    if (fir == 1) {
-      // left
-      tl.to(firstCard, 0.6, {
-        x: -500,
-        y: -500,
-        rotation: -90,
-        opacity: 0,
-      });
-      tl.to(
-        secondCard,
-        0.3,
-        {
-          x: -10,
-          y: 10,
-          backgroundColor: "#212121",
-        },
-        "-=0.4"
-      )
-        .to(
-          thirdCard,
-          0.3,
-          {
-            x: -10,
-            y: 10,
-            backgroundColor: "#1D1D1D",
-          },
-          "-=0.3"
-        )
-        .to(
-          fourthCard,
-          0.3,
-          {
-            x: -10,
-            y: 10,
-            backgroundColor: "#1A1A1A",
-          },
-          "-=0.2"
-        );
-
-      tl.to(
-        firstCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 40,
-          y: -90,
-          backgroundColor: "#171717",
-        },
-        "-=0.1"
-      )
-        .to(firstCard, 0.4, {
-          y: -40,
-          opacity: 1,
-        })
-        .to(returnArrow[0], 0.2, {
-          opacity: 1,
-        })
-        .to(cardFlip[0], 0.2, {
-          opacity: 1,
-        });
-      setTimeout(function () {
-        $("#card-1").css("z-index", "0");
-      }, 600);
-    } else {
-      // right
-      tl.to(firstCard, 0.6, {
-        x: 500,
-        y: -500,
-        rotation: 90,
-        opacity: 0,
-      });
-
-      tl.to(
-        secondCard,
-        0.3,
-        {
-          x: -10,
-          y: 10,
-          backgroundColor: "#212121",
-        },
-        "-=0.4"
-      )
-        .to(
-          thirdCard,
-          0.3,
-          {
-            x: -10,
-            y: 10,
-            backgroundColor: "#1D1D1D",
-          },
-          "-=0.3"
-        )
-        .to(
-          fourthCard,
-          0.3,
-          {
-            x: -10,
-            y: 10,
-            backgroundColor: "#1A1A1A",
-          },
-          "-=0.2"
-        );
-
-      tl.to(
-        firstCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 40,
-          y: -90,
-          backgroundColor: "#171717",
-        },
-        "-=0.1"
-      )
-        .to(firstCard, 0.4, {
-          y: -40,
-          opacity: 1,
-        })
-        .to(returnArrow[0], 0.2, {
-          opacity: 1,
-        })
-        .to(cardFlip[0], 0.2, {
-          opacity: 1,
-        });
-      setTimeout(function () {
-        $("#card-1").css("z-index", "0");
-      }, 600);
-    }
-  } else if (i == 2) {
-    //if proj was clicked
-    if (fir == 1) {
-      //left
-      tl.to(firstCard, 0.6, {
-        x: -500,
-        y: -500,
-        rotation: -90,
-        opacity: 0,
-      });
-      if (sr == 1) {
-        //left
-        tl.to(
-          secondCard,
-          0.6,
-          {
-            x: -500,
-            y: -500,
-            rotation: -90,
-            opacity: 0,
-          },
-          "-=0.4"
-        );
-      } else {
-        //right
-        tl.to(
-          secondCard,
-          0.6,
-          {
-            x: 500,
-            y: -500,
-            rotation: 90,
-            opacity: 0,
-          },
-          "-=0.4"
-        );
-      }
-      tl.to(
-        thirdCard,
-        0.3,
-        {
-          x: -25,
-          y: 30,
-          backgroundColor: "#212121",
-        },
-        "-=0.3"
-      ).to(
-        fourthCard,
-        0.3,
-        {
-          x: -25,
-          y: 25,
-          backgroundColor: "#1D1D1D",
-        },
-        "-=0.2"
-      );
-
-      tl.to(
-        firstCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 25,
-          y: -90,
-          backgroundColor: "#1A1A1A",
-        },
-        "-=0.1"
-      ).to(firstCard, 0.4, {
-        y: -30,
-        opacity: 1,
-      });
-      tl.to(
-        secondCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 25,
-          y: -90,
-          backgroundColor: "#171717",
-        },
-        "-=0.1"
-      )
-        .to(secondCard, 0.4, {
-          y: -25,
-          opacity: 1,
-        })
-        .to(returnArrow[1], 0.2, {
-          opacity: 1,
-        });
-      setTimeout(function () {
-        $("#card-3").css("z-index", "3");
-        $("#card-4").css("z-index", "2");
-        $("#card-1").css("z-index", "1");
-        $("#card-2").css("z-index", "0");
-      }, 600);
-    } else {
-      //right
-      tl.to(firstCard, 0.6, {
-        x: 500,
-        y: -500,
-        rotation: 90,
-        opacity: 0,
-      });
-      if (sr == 1) {
-        //left
-        tl.to(
-          secondCard,
-          0.6,
-          {
-            x: -500,
-            y: -500,
-            rotation: -90,
-            opacity: 0,
-          },
-          "-=0.4"
-        );
-      } else {
-        //right
-        tl.to(
-          secondCard,
-          0.6,
-          {
-            x: 500,
-            y: -500,
-            rotation: 90,
-            opacity: 0,
-          },
-          "-=0.4"
-        );
-      }
-      tl.to(
-        thirdCard,
-        0.3,
-        {
-          x: -25,
-          y: 30,
-          backgroundColor: "#212121",
-        },
-        "-=0.3"
-      ).to(
-        fourthCard,
-        0.3,
-        {
-          x: -25,
-          y: 25,
-          backgroundColor: "#1D1D1D",
-        },
-        "-=0.2"
-      );
-
-      tl.to(
-        firstCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 25,
-          y: -90,
-          backgroundColor: "#1A1A1A",
-        },
-        "-=0.1"
-      ).to(firstCard, 0.4, {
-        y: -30,
-        opacity: 1,
-      });
-      tl.to(
-        secondCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 25,
-          y: -90,
-          backgroundColor: "#171717",
-        },
-        "-=0.1"
-      )
-        .to(secondCard, 0.4, {
-          y: -25,
-          opacity: 1,
-        })
-        .to(returnArrow[1], 0.2, {
-          opacity: 1,
-        });
-      setTimeout(function () {
-        $("#card-3").css("z-index", "3");
-        $("#card-4").css("z-index", "2");
-        $("#card-1").css("z-index", "1");
-        $("#card-2").css("z-index", "0");
-      }, 600);
-    }
-  } else {
-    //if contact was clicked
-    if (fir == 1) {
-      //left
-      tl.to(firstCard, 0.6, {
-        x: -500,
-        y: -500,
-        rotation: -90,
-        opacity: 0,
-      });
-      if (sr == 1) {
-        //left
-        tl.to(
-          secondCard,
-          0.6,
-          {
-            x: -500,
-            y: -500,
-            rotation: -90,
-            opacity: 0,
-          },
-          "-=0.4"
-        );
-        if (tr == 1) {
-          //left
-          tl.to(
-            thirdCard,
-            0.6,
-            {
-              x: -500,
-              y: -500,
-              rotation: -90,
-              opacity: 0,
-            },
-            "-=0.4"
-          );
-        } else {
-          //right
-          tl.to(
-            thirdCard,
-            0.6,
-            {
-              x: 500,
-              y: -500,
-              rotation: 90,
-              opacity: 0,
-            },
-            "-=0.4"
-          );
-        }
-      } else {
-        //right
-        tl.to(
-          secondCard,
-          0.6,
-          {
-            x: 500,
-            y: -500,
-            rotation: 90,
-            opacity: 0,
-          },
-          "-=0.4"
-        );
-        if (tr == 1) {
-          //left
-          tl.to(
-            thirdCard,
-            0.6,
-            {
-              x: -500,
-              y: -500,
-              rotation: -90,
-              opacity: 0,
-            },
-            "-=0.4"
-          );
-        } else {
-          //right
-          tl.to(
-            thirdCard,
-            0.6,
-            {
-              x: 500,
-              y: -500,
-              rotation: 90,
-              opacity: 0,
-            },
-            "-=0.4"
-          );
-        }
-      }
-      tl.to(
-        fourthCard,
-        0.3,
-        {
-          x: -35,
-          y: 40,
-          backgroundColor: "#212121",
-        },
-        "-=0.3"
-      );
-
-      tl.to(
-        firstCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 15,
-          y: -90,
-          backgroundColor: "#1D1D1D",
-        },
-        "-=0.1"
-      ).to(firstCard, 0.4, {
-        y: -15,
-        opacity: 1,
-      });
-      tl.to(
-        secondCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 15,
-          y: -90,
-          backgroundColor: "#1A1A1A",
-        },
-        "-=0.1"
-      ).to(secondCard, 0.4, {
-        y: -15,
-        opacity: 1,
-      });
-      tl.to(thirdCard, 0.5, {
-        rotation: 0,
-        x: 15,
-        y: -90,
-        backgroundColor: "#171717",
-      })
-        .to(thirdCard, 0.4, {
-          y: -15,
-          opacity: 1,
-        })
-        .to(returnArrow[2], 0.2, {
-          opacity: 1,
-        });
-      setTimeout(function () {
-        $("#card-4").css("z-index", "3");
-        $("#card-1").css("z-index", "2");
-        $("#card-2").css("z-index", "1");
-        $("#card-3").css("z-index", "0");
-      }, 600);
-    } else {
-      //right
-      tl.to(firstCard, 0.6, {
-        x: 500,
-        y: -500,
-        rotation: 90,
-        opacity: 0,
-      });
-      if (sr == 1) {
-        //left
-        tl.to(
-          secondCard,
-          0.6,
-          {
-            x: -500,
-            y: -500,
-            rotation: -90,
-            opacity: 0,
-          },
-          "-=0.4"
-        );
-        if (tr == 1) {
-          //left
-          tl.to(
-            thirdCard,
-            0.6,
-            {
-              x: -500,
-              y: -500,
-              rotation: -90,
-              opacity: 0,
-            },
-            "-=0.4"
-          );
-        } else {
-          //right
-          tl.to(
-            thirdCard,
-            0.6,
-            {
-              x: 500,
-              y: -500,
-              rotation: 90,
-              opacity: 0,
-            },
-            "-=0.4"
-          );
-        }
-      } else {
-        //right
-        tl.to(
-          secondCard,
-          0.6,
-          {
-            x: 500,
-            y: -500,
-            rotation: 90,
-            opacity: 0,
-          },
-          "-=0.4"
-        );
-        if (tr == 1) {
-          //left
-          tl.to(
-            thirdCard,
-            0.6,
-            {
-              x: -500,
-              y: -500,
-              rotation: -90,
-              opacity: 0,
-            },
-            "-=0.4"
-          );
-        } else {
-          //right
-          tl.to(
-            thirdCard,
-            0.6,
-            {
-              x: 500,
-              y: -500,
-              rotation: 90,
-              opacity: 0,
-            },
-            "-=0.4"
-          );
-        }
-      }
-      tl.to(
-        fourthCard,
-        0.3,
-        {
-          x: -35,
-          y: 40,
-          backgroundColor: "#212121",
-        },
-        "-=0.3"
-      );
-
-      tl.to(
-        firstCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 15,
-          y: -90,
-          backgroundColor: "#1D1D1D",
-        },
-        "-=0.1"
-      ).to(firstCard, 0.4, {
-        y: -15,
-        opacity: 1,
-      });
-      tl.to(
-        secondCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 15,
-          y: -90,
-          backgroundColor: "#1A1A1A",
-        },
-        "-=0.1"
-      ).to(secondCard, 0.4, {
-        y: -15,
-        opacity: 1,
-      });
-      tl.to(thirdCard, 0.5, {
-        rotation: 0,
-        x: 15,
-        y: -90,
-        backgroundColor: "#171717",
-      })
-        .to(thirdCard, 0.4, {
-          y: -15,
-          opacity: 1,
-        })
-        .to(returnArrow[2], 0.2, {
-          opacity: 1,
-        });
-      setTimeout(function () {
-        $("#card-4").css("z-index", "3");
-        $("#card-1").css("z-index", "2");
-        $("#card-2").css("z-index", "1");
-        $("#card-3").css("z-index", "0");
-      }, 600);
-    }
-  }
-}
-
-//return button ------------------
-function homeCard() {
-  const tl = new TimelineMax();
-  let fir = Math.floor(Math.random() * 2);
-  let sr = Math.floor(Math.random() * 2);
-  let tr = Math.floor(Math.random() * 2);
-  let fur = Math.floor(Math.random() * 2);
-
-  tl.to(returnArrow[0], 0, {
-    opacity: 0,
-  })
-    .to(cardFlip[0], 0, {
-      opacity: 0,
-    })
-    .to(returnArrow[1], 0, {
-      opacity: 0,
-    })
-    .to(returnArrow[2], 0, {
-      opacity: 0,
-    });
-
-  if (i == 1) {
-    //on lang card
-    if (sr == 1) {
-      //left
-      tl.to(secondCard, 0.6, {
-        x: -500,
-        y: -500,
-        rotation: -90,
-        opacity: 0,
-      });
-    } else {
-      //right
-      tl.to(secondCard, 0.6, {
-        x: 500,
-        y: -500,
-        rotation: 90,
-        opacity: 0,
-      });
-    }
-    if (tr == 1) {
-      //left
-      tl.to(
-        thirdCard,
-        0.6,
-        {
-          x: -500,
-          y: -500,
-          rotation: -90,
-          opacity: 0,
-        },
-        "-=0.2"
-      );
-    } else {
-      //right
-      tl.to(
-        thirdCard,
-        0.6,
-        {
-          x: 500,
-          y: -500,
-          rotation: 90,
-          opacity: 0,
-        },
-        "-=0.2"
-      );
-    }
-    if (fur == 1) {
-      //left
-      tl.to(
-        fourthCard,
-        0.6,
-        {
-          x: -500,
-          y: -500,
-          rotation: -90,
-          opacity: 0,
-        },
-        "-=0.2"
-      );
-    } else {
-      //right
-      tl.to(
-        fourthCard,
-        0.6,
-        {
-          x: 500,
-          y: -500,
-          rotation: 90,
-          opacity: 0,
-        },
-        "-=0.2"
-      );
-    }
-  } else if (i == 2) {
-    // on proj
-    if (tr == 1) {
-      //left
-      tl.to(
-        thirdCard,
-        0.6,
-        {
-          x: -500,
-          y: -500,
-          rotation: -90,
-          opacity: 0,
-        },
-        "-=0.2"
-      );
-    } else {
-      //right
-      tl.to(
-        thirdCard,
-        0.6,
-        {
-          x: 500,
-          y: -500,
-          rotation: 90,
-          opacity: 0,
-        },
-        "-=0.2"
-      );
-    }
-    if (fur == 1) {
-      //left
-      tl.to(
-        fourthCard,
-        0.6,
-        {
-          x: -500,
-          y: -500,
-          rotation: -90,
-          opacity: 0,
-        },
-        "-=0.2"
-      );
-    } else {
-      //right
-      tl.to(
-        fourthCard,
-        0.6,
-        {
-          x: 500,
-          y: -500,
-          rotation: 90,
-          opacity: 0,
-        },
-        "-=0.2"
-      );
-    }
-  } else {
-    if (fur == 1) {
-      //left
-      tl.to(
-        fourthCard,
-        0.6,
-        {
-          x: -500,
-          y: -500,
-          rotation: -90,
-          opacity: 0,
-        },
-        "-=0.2"
-      );
-    } else {
-      //right
-      tl.to(
-        fourthCard,
-        0.6,
-        {
-          x: 500,
-          y: -500,
-          rotation: 90,
-          opacity: 0,
-        },
-        "-=0.2"
-      );
-    }
-  }
-
-  setTimeout(function () {
-    if (i == 1) {
-      // if lang was clicked
-      tl.to(
-        firstCard,
-        0.6,
-        {
-          x: 0,
-          y: 0,
-          backgroundColor: "#212121",
-        },
-        "-=0.4"
-      );
-      $("#card-1").css("z-index", "3");
-      $("#card-2").css("z-index", "2");
-      $("#card-3").css("z-index", "1");
-      $("#card-4").css("z-index", "0");
-      tl.to(
-        secondCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 0,
-          y: -90,
-          backgroundColor: "#1D1D1D",
-        },
-        "-=0.1"
-      )
-        .to(secondCard, 0.4, {
-          y: 0,
-          opacity: 1,
-        })
-        .to(
-          thirdCard,
-          0.5,
-          {
-            rotation: 0,
-            x: 0,
-            y: -90,
-            backgroundColor: "#1A1A1A",
-          },
-          "-=0.6"
-        )
-        .to(
-          thirdCard,
-          0.4,
-          {
-            y: 0,
-            opacity: 1,
-          },
-          "-=0.1"
-        )
-        .to(
-          fourthCard,
-          0.5,
-          {
-            rotation: 0,
-            x: 0,
-            y: -90,
-            backgroundColor: "#171717",
-          },
-          "-=1.2"
-        )
-        .to(
-          fourthCard,
-          0.4,
-          {
-            y: 0,
-            opacity: 1,
-          },
-          "-=0.2"
-        )
-        .to();
-    } else if (i == 2) {
-      // if proj was clicked
-      tl.to(
-        firstCard,
-        0.6,
-        {
-          x: 0,
-          y: 0,
-          backgroundColor: "#212121",
-        },
-        "-=0.4"
-      ).to(
-        secondCard,
-        0.6,
-        {
-          x: 0,
-          y: 0,
-          backgroundColor: "#1D1D1D",
-        },
-        "-=0.3"
-      );
-      $("#card-1").css("z-index", "3");
-      $("#card-2").css("z-index", "2");
-      $("#card-3").css("z-index", "1");
-      $("#card-4").css("z-index", "0");
-      tl.to(
-        thirdCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 0,
-          y: -90,
-          backgroundColor: "#1A1A1A",
-        },
-        "-=0.1"
-      )
-        .to(thirdCard, 0.4, {
-          y: 0,
-          opacity: 1,
-        })
-        .to(
-          fourthCard,
-          0.5,
-          {
-            rotation: 0,
-            x: 0,
-            y: -90,
-            backgroundColor: "#171717",
-          },
-          "-=0.6"
-        )
-        .to(
-          fourthCard,
-          0.4,
-          {
-            y: 0,
-            opacity: 1,
-          },
-          "-=0.1"
-        );
-    } else {
-      // if contact was clicked
-      tl.to(
-        firstCard,
-        0.6,
-        {
-          x: 0,
-          y: 0,
-          backgroundColor: "#212121",
-        },
-        "-=0.4"
-      )
-        .to(
-          secondCard,
-          0.6,
-          {
-            x: 0,
-            y: 0,
-            backgroundColor: "#1D1D1D",
-          },
-          "-=0.3"
-        )
-        .to(
-          thirdCard,
-          0.6,
-          {
-            x: 0,
-            y: 0,
-            backgroundColor: "#1A1A1A",
-          },
-          "-=0.2"
-        );
-      $("#card-1").css("z-index", "3");
-      $("#card-2").css("z-index", "2");
-      $("#card-3").css("z-index", "1");
-      $("#card-4").css("z-index", "0");
-      tl.to(
-        fourthCard,
-        0.5,
-        {
-          rotation: 0,
-          x: 0,
-          y: -90,
-          backgroundColor: "#171717",
-        },
-        "-=0.6"
-      ).to(
-        fourthCard,
-        0.4,
-        {
-          y: 0,
-          opacity: 1,
-        },
-        "-=0.1"
-      );
-    }
-  }, 800);
-}
-
-// flip
-
-function langFlip() {
-  const tl = new TimelineMax();
-  tl.to(secondCard, 0.3, {
-    rotationY: "180deg",
-  });
-}
-
-//hover for bottom card buttons
-
-const tooltipLeftVisible = document.querySelector(".tooltip-left-visible");
-const tooltipRightVisible = document.querySelector(".tooltip-right-visible");
-
-function tooltipLeft() {
-  const tl = new TimelineMax();
-  tl.to(tooltipLeftVisible, 0.3, {
-    opacity: 0.4,
-  });
-}
-
-function tooltipRight() {
-  const tl = new TimelineMax();
-  tl.to(tooltipRightVisible, 0.3, {
-    opacity: 0.4,
-  });
-  $(".tooltip-pos-right").css("z-index", "10");
-}
-
-function unTooltip() {
-  const tl = new TimelineMax();
-  tl.to(tooltipLeftVisible, 0.3, {
-    opacity: 0,
-  }).to(tooltipRightVisible, 0.3, {
-    opacity: 0,
-  });
-}
-// end of card mechanics, start of loading sequence -----------------------------------------------------------
-
-const sqr1 = document.getElementById("comp-1");
-const sqr2 = document.getElementById("comp-2");
-const sqr3 = document.getElementById("comp-3");
 const loadingScreen = document.getElementById("loading");
-const loadedPage = document.getElementById("full-load");
 
-window.onload = function loadingAnimation() {
-  const tl = new TimelineMax();
-  tl.to(sqr3, 0.3, {
-    y: -35,
-  })
-    .to(sqr2, 0.3, {
-      x: 32,
-    })
-    .to(sqr1, 0.3, {
-      x: 30,
-    })
-    .to(sqr3, 0.3, {
-      x: -35,
-    })
-    .to(sqr2, 0.3, {
-      y: -35,
-    })
-    .to(sqr1, 0.3, {
-      x: 64,
-    })
-    .to(sqr3, 0.3, {
-      y: 0,
-    })
-    .to(sqr2, 0.3, {
-      x: -3,
-    })
-    .to(sqr1, 0.3, {
-      y: -35,
-    })
-    .to(sqr3, 0.3, {
-      x: 0,
-    })
-    .to(sqr2, 0.3, {
-      y: 0,
-    })
-    .to(sqr1, 0.3, {
-      x: 30,
-    });
-  setTimeout(function () {
-    tl.to(loadingScreen, 0.3, {
-      opacity: 0,
-    }).to(
-      loadedPage,
-      0.3,
+window.onload = function loadingSequence() {
+  const tl = anime.timeline();
+  tl.add(
+    {
+      targets: "#comp-3",
+      translateY: "-35",
+      duration: "0900",
+    },
+    "-=550"
+  )
+    .add(
       {
-        opacity: 1,
+        targets: "#comp-2",
+        translateX: "32",
+        duration: "0900",
       },
-      "-=0.2"
+      "-=550"
+    )
+    .add(
+      {
+        targets: "#comp-1",
+        translateX: "29",
+        duration: "0900",
+      },
+      "-=550"
+    )
+    .add(
+      {
+        targets: "#comp-3",
+        translateX: "-35",
+        duration: "0900",
+      },
+      "-=550"
+    )
+    .add(
+      {
+        targets: "#comp-2",
+        translateY: "-35",
+        duration: "0900",
+      },
+      "-=550"
+    )
+    .add(
+      {
+        targets: "#comp-1",
+        translateX: "64",
+        duration: "0900",
+      },
+      "-=550"
+    )
+    .add(
+      {
+        targets: "#comp-3",
+        translateY: "0",
+        duration: "0900",
+      },
+      "-=550"
+    )
+    .add(
+      {
+        targets: "#comp-2",
+        translateX: "-2.5",
+        duration: "0900",
+      },
+      "-=550"
+    )
+    .add(
+      {
+        targets: "#comp-1",
+        translateY: "-35",
+        duration: "0900",
+      },
+      "-=550"
+    )
+    .add(
+      {
+        targets: "#comp-3",
+        translateX: "0",
+        duration: "0900",
+      },
+      "-=550"
+    )
+    .add(
+      {
+        targets: "#comp-2",
+        translateY: "0",
+        duration: "0900",
+      },
+      "-=550"
+    )
+    .add(
+      {
+        targets: "#comp-1",
+        translateX: "30",
+        duration: "0900",
+      },
+      "-=550"
     );
+  tl.add(
+    {
+      targets: "#loading",
+      opacity: "0",
+    },
+    "-=615"
+  );
+  this.setTimeout(function () {
     loadingScreen.classList = "pointer-events-none";
   }, 3600);
 };
 
-function show(id, value) {
-  document.getElementById(id).style.display = value ? "block" : "none";
+// loading mechanics above
+
+let i;
+
+const firstCardBtn = document.querySelector(".buttons");
+const returnBtn = document.getElementsByClassName("return");
+const flipBtn = document.querySelector(".flip");
+
+function langBtn() {
+  const tl = anime.timeline();
+  i = 1;
+  firstCardBtn.classList += " pointer-events-none";
+  returnBtn[0].classList += " pointer-events-none";
+  flipBtn.classList += " pointer-events-none";
+  tl.add({
+    // initial throw
+    targets: "#card-1",
+    translateX: randVal(),
+    translateY: "-500",
+    rotate: randRotate(),
+    opacity: "0",
+    duration: "2600",
+  })
+    .add(
+      {
+        // move into place
+        targets: "#card-2, #card-3, #card-4",
+        translateX: "-10",
+        translateY: "10",
+        duration: "1600",
+        delay: anime.stagger(150),
+      },
+      "-=2300"
+    )
+    .add(
+      {
+        targets: "#card-2",
+        background: "#212121",
+        zIndex: "4",
+      },
+      "-=1950"
+    )
+    .add(
+      {
+        targets: "#card-3",
+        background: "#1d1d1d",
+        zIndex: "3",
+      },
+      "-=1850"
+    )
+    .add(
+      {
+        targets: "#card-4",
+        background: "#1a1a1a",
+        zIndex: "2",
+      },
+      "-=1750"
+    )
+    .add(
+      {
+        targets: "#card-1",
+        opacity: "0",
+        rotate: "0",
+        translateX: "40",
+        translateY: "-90",
+        background: "#171717",
+        zIndex: "1",
+        easing: "linear",
+        duration: "0001",
+      },
+      "-=1750"
+    )
+    .add({
+      targets: "#card-1",
+      translateY: "-40",
+      opacity: "1",
+    })
+    .add({
+      targets: ".return",
+      opacity: "1",
+    })
+    .add(
+      {
+        targets: ".flip",
+        opacity: "1",
+      },
+      "-=1000"
+    );
+  setTimeout(function () {
+    returnBtn[0].classList = "return";
+    flipBtn.classList = "flip";
+  }, 3600);
 }
 
-// Mouse Tracking ---------------------------------------------------------------------------------------------------------
-
-const cursorCricle = document.getElementById("cursor-circle");
-
-$(document).ready(function () {
-  $(document).mousemove(function (e) {
-    const tl = new TimelineMax();
-    tl.to(cursorCricle, 0.3, {
-      left: e.pageX,
-      top: e.pageY,
-      opacity: 1,
+function projBtn() {
+  const tl = anime.timeline();
+  i = 2;
+  firstCardBtn.classList += " pointer-events-none";
+  returnBtn[1].classList += " pointer-events-none";
+  tl.add({
+    // initial throw
+    targets: "#card-1",
+    translateX: randVal(),
+    translateY: "-500",
+    rotate: randRotate(),
+    opacity: "0",
+    duration: "2600",
+  })
+    .add(
+      {
+        targets: "#card-2",
+        translateX: randVal(),
+        translateY: "-500",
+        rotate: randRotate(),
+        opacity: "0",
+        duration: "2600",
+      },
+      "-=2450"
+    )
+    .add(
+      {
+        // move into place
+        targets: "#card-3, #card-4",
+        translateX: "-25",
+        translateY: "30",
+        duration: "1600",
+        delay: anime.stagger(150),
+      },
+      "-=2300"
+    )
+    .add(
+      {
+        targets: "#card-3",
+        background: "#212121",
+        zIndex: "4",
+      },
+      "-=1950"
+    )
+    .add(
+      {
+        targets: "#card-4",
+        background: "#1d1d1d",
+        zIndex: "3",
+      },
+      "-=1850"
+    )
+    .add(
+      {
+        targets: "#card-1",
+        opacity: "0",
+        rotate: "0",
+        translateX: "25",
+        translateY: "-90",
+        background: "#1a1a1a",
+        zIndex: "2",
+        easing: "linear",
+        duration: "0001",
+      },
+      "-=1650"
+    )
+    .add(
+      {
+        targets: "#card-2",
+        opacity: "0",
+        rotate: "0",
+        translateX: "25",
+        translateY: "-90",
+        background: "#171717",
+        zIndex: "1",
+        easing: "linear",
+        duration: "0001",
+      },
+      "-=1650"
+    )
+    .add({
+      targets: "#card-1",
+      translateY: "-23",
+      opacity: "1",
+    })
+    .add({
+      targets: "#card-2",
+      translateY: "-20",
+      opacity: "1",
+    })
+    .add({
+      targets: ".return",
+      opacity: "1",
     });
+  setTimeout(function () {
+    returnBtn[1].classList = "return";
+  }, 3600);
+}
+
+function contactBtn() {
+  i = 3;
+  const tl = anime.timeline();
+  firstCardBtn.classList += " pointer-events-none";
+  returnBtn[2].classList += " pointer-events-none";
+  tl.add({
+    targets: "#card-1",
+    translateX: randVal(),
+    translateY: "-500",
+    rotate: randRotate(),
+    opacity: "0",
+    duration: "2600",
+  })
+    .add(
+      {
+        targets: "#card-2",
+        translateX: randVal(),
+        translateY: "-500",
+        rotate: randRotate(),
+        opacity: "0",
+        duration: "2600",
+      },
+      "-=2450"
+    )
+    .add(
+      {
+        targets: "#card-3",
+        translateX: randVal(),
+        translateY: "-500",
+        rotate: randRotate(),
+        opacity: "0",
+        duration: "2600",
+      },
+      "-=2450"
+    )
+    .add(
+      {
+        // move into place
+        targets: "#card-4",
+        translateX: "-25",
+        translateY: "30",
+        duration: "1600",
+      },
+      "-=2300"
+    )
+    .add(
+      {
+        targets: "#card-4",
+        background: "#212121",
+        zIndex: "4",
+      },
+      "-=1950"
+    )
+    .add(
+      {
+        targets: "#card-1",
+        opacity: "0",
+        rotate: "0",
+        translateX: "23",
+        translateY: "-90",
+        background: "#1d1d1d",
+        zIndex: "3",
+        easing: "linear",
+        duration: "0001",
+      },
+      "-=1550"
+    )
+    .add(
+      {
+        targets: "#card-2",
+        opacity: "0",
+        rotate: "0",
+        translateX: "20",
+        translateY: "-90",
+        background: "#1a1a1a",
+        zIndex: "2",
+        easing: "linear",
+        duration: "0001",
+      },
+      "-=1550"
+    )
+    .add(
+      {
+        targets: "#card-3",
+        opacity: "0",
+        rotate: "0",
+        translateX: "20",
+        translateY: "-90",
+        background: "#171717",
+        zIndex: "1",
+        easing: "linear",
+        duration: "0001",
+      },
+      "-=1550"
+    )
+    .add({
+      targets: "#card-1",
+      translateY: "-23",
+      opacity: "1",
+    })
+    .add({
+      targets: "#card-2",
+      translateY: "-20",
+      opacity: "1",
+    })
+    .add({
+      targets: "#card-3",
+      translateY: "-20",
+      opacity: "1",
+    })
+    .add({
+      targets: ".return",
+      opacity: "1",
+    });
+  setTimeout(function () {
+    returnBtn[2].classList = "return";
+  }, 3600);
+}
+
+let randr;
+
+function randVal() {
+  let rand = Math.round(Math.random());
+  randr = rand;
+  return rand ? "500" : "-500";
+}
+
+function randRotate() {
+  return randr ? "90" : "-90";
+}
+
+function homeCard() {
+  returnBtn[0].classList += " pointer-events-none";
+  returnBtn[1].classList += " pointer-events-none";
+  returnBtn[2].classList += " pointer-events-none";
+  flipBtn.classList += " pointer-events-none";
+  if (i == 1) {
+    i = 0;
+    const tl = anime.timeline();
+    tl.add({
+      targets: "#card-2",
+      translateX: randVal(),
+      translateY: "-500",
+      rotate: randRotate(),
+      opacity: "0",
+      duration: "2600",
+    })
+      .add(
+        {
+          targets: "#card-3",
+          translateX: randVal(),
+          translateY: "-500",
+          rotate: randRotate(),
+          opacity: "0",
+          duration: "2600",
+        },
+        "-=2450"
+      )
+      .add(
+        {
+          targets: "#card-4",
+          translateX: randVal(),
+          translateY: "-500",
+          rotate: randRotate(),
+          opacity: "0",
+          duration: "2600",
+        },
+        "-=2450"
+      )
+      .add(
+        {
+          // move into place
+          targets: "#card-1",
+          translateX: "0",
+          translateY: "0",
+          duration: "1600",
+        },
+        "-=2300"
+      )
+      .add(
+        {
+          targets: "#card-1",
+          background: "#212121",
+          zIndex: "4",
+        },
+        "-=1950"
+      )
+      .add(
+        {
+          targets: "#card-2",
+          opacity: "0",
+          rotate: "0",
+          translateX: "0",
+          translateY: "-90",
+          background: "#1d1d1d",
+          zIndex: "3",
+          easing: "linear",
+          duration: "0001",
+        },
+        "-=1550"
+      )
+      .add(
+        {
+          targets: "#card-3",
+          opacity: "0",
+          rotate: "0",
+          translateX: "0",
+          translateY: "-90",
+          background: "#1a1a1a",
+          zIndex: "2",
+          easing: "linear",
+          duration: "0001",
+        },
+        "-=1550"
+      )
+      .add(
+        {
+          targets: "#card-4",
+          opacity: "0",
+          rotate: "0",
+          translateX: "0",
+          translateY: "-90",
+          background: "#171717",
+          zIndex: "1",
+          easing: "linear",
+          duration: "0001",
+        },
+        "-=1550"
+      )
+      .add({
+        targets: "#card-2",
+        translateY: "0",
+        opacity: "1",
+      })
+      .add({
+        targets: "#card-3",
+        translateY: "0",
+        opacity: "1",
+      })
+      .add({
+        targets: "#card-4",
+        translateY: "0",
+        opacity: "1",
+      })
+      .add({
+        targets: ".return",
+        opacity: "0",
+      })
+      .add(
+        {
+          targets: ".flip",
+          opacity: "0",
+        },
+        "-=1000"
+      );
+    setTimeout(function () {
+      firstCardBtn.classList =
+        "mt-4 text-left align-center overflow-auto buttons";
+    }, 5000);
+  } else if (i == 2) {
+    i = 0;
+    const tl = anime.timeline();
+    tl.add({
+      targets: "#card-3",
+      translateX: randVal(),
+      translateY: "-500",
+      rotate: randRotate(),
+      opacity: "0",
+      duration: "2600",
+    })
+      .add(
+        {
+          targets: "#card-4",
+          translateX: randVal(),
+          translateY: "-500",
+          rotate: randRotate(),
+          opacity: "0",
+          duration: "2600",
+        },
+        "-=2450"
+      )
+      .add(
+        {
+          // move into place
+          targets: "#card-1, #card-2",
+          translateX: "0",
+          translateY: "0",
+          duration: "1600",
+          delay: anime.stagger(100),
+        },
+        "-=2300"
+      )
+      .add(
+        {
+          targets: "#card-1",
+          background: "#212121",
+          zIndex: "4",
+        },
+        "-=1950"
+      )
+      .add(
+        {
+          targets: "#card-2",
+          background: "#1d1d1d",
+          zIndex: "3",
+        },
+        "-=1950"
+      )
+      .add(
+        {
+          targets: "#card-3",
+          opacity: "0",
+          rotate: "0",
+          translateX: "0",
+          translateY: "-90",
+          background: "#1a1a1a",
+          zIndex: "2",
+          easing: "linear",
+          duration: "0001",
+        },
+        "-=1550"
+      )
+      .add(
+        {
+          targets: "#card-4",
+          opacity: "0",
+          rotate: "0",
+          translateX: "0",
+          translateY: "-90",
+          background: "#171717",
+          zIndex: "1",
+          easing: "linear",
+          duration: "0001",
+        },
+        "-=1550"
+      )
+      .add({
+        targets: "#card-3",
+        translateY: "0",
+        opacity: "1",
+      })
+      .add({
+        targets: "#card-4",
+        translateY: "0",
+        opacity: "1",
+      })
+      .add({
+        targets: ".return",
+        opacity: "0",
+      });
+    setTimeout(function () {
+      firstCardBtn.classList =
+        "mt-4 text-left align-center overflow-auto buttons";
+    }, 5000);
+  } else if (i == 3) {
+    i = 0;
+    const tl = anime.timeline();
+    tl.add({
+      targets: "#card-4",
+      translateX: randVal(),
+      translateY: "-500",
+      rotate: randRotate(),
+      opacity: "0",
+      duration: "2600",
+    })
+      .add(
+        {
+          // move into place
+          targets: "#card-1, #card-2, #card-3",
+          translateX: "0",
+          translateY: "0",
+          duration: "1600",
+          delay: anime.stagger(100),
+        },
+        "-=2300"
+      )
+      .add(
+        {
+          targets: "#card-1",
+          background: "#212121",
+          zIndex: "4",
+        },
+        "-=1950"
+      )
+      .add(
+        {
+          targets: "#card-2",
+          background: "#1d1d1d",
+          zIndex: "3",
+        },
+        "-=1950"
+      )
+      .add(
+        {
+          targets: "#card-3",
+          background: "#1a1a1a",
+          zIndex: "2",
+        },
+        "-=1950"
+      )
+      .add(
+        {
+          targets: "#card-4",
+          opacity: "0",
+          rotate: "0",
+          translateX: "0",
+          translateY: "-90",
+          background: "#171717",
+          zIndex: "1",
+          easing: "linear",
+          duration: "0001",
+        },
+        "-=1550"
+      )
+      .add({
+        targets: "#card-4",
+        translateY: "0",
+        opacity: "1",
+      })
+      .add({
+        targets: ".return",
+        opacity: "0",
+        easing: "easeInOutSine",
+      });
+    setTimeout(function () {
+      firstCardBtn.classList =
+        "mt-4 text-left align-center overflow-auto buttons";
+    }, 5000);
+  }
+}
+
+// card mechanics above
+
+function langFlip() {
+  const tl = anime.timeline();
+  tl.add({
+    targets: "#card-2",
+    rotateY: "180deg",
   });
-});
+}
 
-$(function () {
-  $("a").hover(
-    function () {
-      const tl = new TimelineMax();
-      tl.to(cursorCricle, 0.2, {
-        width: 24,
-        height: 24,
-      });
-    },
-    function () {
-      const tl = new TimelineMax();
-      tl.to(cursorCricle, 0.2, {
-        width: 16,
-        height: 16,
-      });
-    }
-  );
-});
+function langUnFlip() {
+  const tl = anime.timeline();
+  tl.add({
+    targets: "#card-2",
+    rotateY: "360deg",
+  });
+}
 
-$(function () {
-  $(".return").hover(
-    function () {
-      const tl = new TimelineMax();
-      tl.to(cursorCricle, 0.2, {
-        width: 24,
-        height: 24,
-      });
-    },
-    function () {
-      const tl = new TimelineMax();
-      tl.to(cursorCricle, 0.2, {
-        width: 16,
-        height: 16,
-      });
-    }
-  );
-});
+// flip mechanics above
 
-$(function () {
-  $(".flip").hover(
-    function () {
-      const tl = new TimelineMax();
-      tl.to(cursorCricle, 0.2, {
-        width: 24,
-        height: 24,
-      });
-    },
-    function () {
-      const tl = new TimelineMax();
-      tl.to(cursorCricle, 0.2, {
-        width: 16,
-        height: 16,
-      });
-    }
-  );
-});
+function tooltipLeft() {
+  const tl = anime.timeline();
+  tl.add({
+    targets: ".tooltip-left-visible",
+    opacity: "0.4",
+  });
+}
+
+function tooltipRight() {
+  const tl = anime.timeline();
+  tl.add({
+    targets: ".tooltip-right-visible",
+    opacity: "0.4",
+  });
+}
+
+function unTooltip() {
+  const tl = anime.timeline();
+  tl.add({
+    targets: ".tooltip-right-visible, .tooltip-left-visible",
+    opacity: "0",
+    easing: "easeInOutSine",
+  });
+}
 
 // 404 page return ----------------------------------------------------------------------------------------------
 
@@ -1650,15 +1233,19 @@ function goBack() {
 //arg -------------------------------------------------------------------------------------------------------------
 
 const lightbulb = document.getElementById("hint");
-const hintMessage = document.getElementsByClassName("hint-inner");
+const hintMessage = document.querySelector(".hint-inner");
 let hintUse = 0;
 
 function showHint() {
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   if (hintUse == 0) {
     lightbulb.classList = "fas fa-lightbulb cursor-not-allowed";
-    tl.to(hintMessage[0], 0.3, { opacity: 1 });
-    hintMessage[0].innerHTML = "F12";
+    tl.add({
+      targets: ".hint-message",
+      opacity: "1",
+    });
+    hintMessage.innerHTML = "F12";
+    hintMessage.classList = "hint-inner cursor-default";
   } else {
   }
 }
@@ -1706,9 +1293,11 @@ sideExit[0].addEventListener("click", sideClose);
 
 function sideClose() {
   override = 0;
-  const tl = new TimelineMax();
-  tl.to(sideInfo, 0.4, {
-    opacity: 0,
+  const tl = anime.timeline();
+  tl.add({
+    targets: "#side-info",
+    opacity: "0",
+    easing: "easeInOutSine",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-none";
@@ -1718,11 +1307,12 @@ function sideClose() {
 
 function utInfo() {
   override = 1;
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "The Utile project is a discord bot made by <a class='info-link' href='https://github.com/tilda/' target='_blank'>tilda</a>, <a class='info-link' href='https://github.com/iAlex11/' target='_blank'>alex</a>, and <a class='info-link' href='https://github.com/punctuations/' target='_blank'>me</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1731,11 +1321,12 @@ function utInfo() {
 }
 
 function utHover() {
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "The Utile project is a discord bot made by <a class='info-link' href='https://github.com/tilda/' target='_blank'>tilda</a>, <a class='info-link' href='https://github.com/iAlex11/' target='_blank'>alex</a>, and <a class='info-link' href='https://github.com/punctuations/' target='_blank'>me</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1745,11 +1336,12 @@ function utHover() {
 
 function misInfo() {
   override = 1;
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     'The Miscord Project is a project that was developed during discord\'s <a class="info-link" href="https://blog.discord.com/discord-community-hack-week-category-winners-bd0364360f92" target=\'_blank\'>Hack Week</a>, which is the reason we made this other discord bot, Miscord has lots of features which you can see <a class="info-link" href="https://miscord.utile.cf/" target=\'_blank\'>here</a>. Miscord was made by <a class="info-link" href="https://github.com/ifisq" target=\'_blank\'>blue</a>, <a class="info-link" href="https://github.com/iAlex11/" target=\'_blank\'>alex</a>, <a class="info-link" href="https://github.com/tilda/" target=\'_blank\'>tilda</a>, and <a class="info-link" href="https://github.com/punctuations/" target=\'_blank\'>me</a>.';
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1758,11 +1350,12 @@ function misInfo() {
 }
 
 function misHover() {
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     'The Miscord Project is a project that was developed during discord\'s <a class="info-link" href="https://blog.discord.com/discord-community-hack-week-category-winners-bd0364360f92" target=\'_blank\'>Hack Week</a>, which is the reason we made this other discord bot, Miscord has lots of features which you can see <a class="info-link" href="https://miscord.utile.cf/" target=\'_blank\'>here</a>. Miscord was made by <a class="info-link" href="https://github.com/ifisq" target=\'_blank\'>blue</a>, <a class="info-link" href="https://github.com/iAlex11/" target=\'_blank\'>alex</a>, <a class="info-link" href="https://github.com/tilda/" target=\'_blank\'>tilda</a>, and <a class="info-link" href="https://github.com/punctuations/" target=\'_blank\'>me</a>.';
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1772,11 +1365,12 @@ function misHover() {
 
 function gitPrInfo() {
   override = 1;
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "Using github I have tons of my projects open source and easily avaliabe to me, I have most if not all of my projects hosted <a class='info-link' href='https://github.com/punctuations/' target='_blank'>there</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1785,11 +1379,12 @@ function gitPrInfo() {
 }
 
 function gitPrHover() {
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "Using github I have tons of my projects open source and easily avaliabe to me, I have most if not all of my projects hosted <a class='info-link' href='https://github.com/punctuations/' target='_blank'>there</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1799,11 +1394,12 @@ function gitPrHover() {
 
 function pyInfo() {
   override = 1;
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "Using <a class='info-link' href='https://docs.python.org/3/' target='_blank'>python</a> I have made tons of projects, an example would be <a class='info-link' href='https://github.com/utilefordiscord' target='https://github.com/utilefordiscord'>Utile</a> the discord bot, and a few others you can see <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1812,11 +1408,12 @@ function pyInfo() {
 }
 
 function pyHover() {
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "Using <a class='info-link' href='https://docs.python.org/3/' target='_blank'>python</a> I have made tons of projects, an example would be <a class='info-link' href='https://github.com/utilefordiscord' target='https://github.com/utilefordiscord'>Utile</a> the discord bot, and a few others you can see <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1826,11 +1423,12 @@ function pyHover() {
 
 function htmlInfo() {
   override = 1;
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "Using <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</a> I was able to basically layout what I'd call the framework of the website with all the text and things. An example of things I've done with this would be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1839,11 +1437,12 @@ function htmlInfo() {
 }
 
 function htmlHover() {
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "Using <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</a> I was able to basically layout what I'd call the framework of the website with all the text and things. An example of things I've done with this would be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1853,11 +1452,12 @@ function htmlHover() {
 
 function cssInfo() {
   override = 1;
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is like the fancy wallpaper added to a building where html is the blank wall and framework, <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is what makes it look fancy and nice. To see some of my work with <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> it'd be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1866,11 +1466,12 @@ function cssInfo() {
 }
 
 function cssHover() {
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is like the fancy wallpaper added to a building where html is the blank wall and framework, <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is what makes it look fancy and nice. To see some of my work with <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> it'd be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1880,11 +1481,12 @@ function cssHover() {
 
 function jsInfo() {
   override = 1;
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language with tons of libraries and capabilities to utilize, I used a lot of <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> in this project, overall <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language to see some of it in action go <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1893,11 +1495,12 @@ function jsInfo() {
 }
 
 function jsHover() {
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language with tons of libraries and capabilities to utilize, I used a lot of <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> in this project, overall <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language to see some of it in action go <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1907,11 +1510,12 @@ function jsHover() {
 
 function luaInfo() {
   override = 1;
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "<a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> is a language that I used quite a bit, it is a great language, however I have not personally used <a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> in a long time.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1920,11 +1524,12 @@ function luaInfo() {
 }
 
 function luaHover() {
-  const tl = new TimelineMax();
+  const tl = anime.timeline();
   sideDesc.innerHTML =
     "<a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> is a language that I used quite a bit, it is a great language, however I have not personally used <a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> in a long time.";
-  tl.to(sideInfo, 0.4, {
-    opacity: 1,
+  tl.add({
+    targets: "#side-info",
+    opacity: "1",
   });
   sideExit[0].classList =
     "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
@@ -1934,14 +1539,16 @@ function luaHover() {
 
 function sideHide() {
   if (override == 0) {
+    const tl = anime.timeline();
+    tl.add({
+      targets: "#side-info",
+      opacity: "0",
+      easing: "easeInOutSine",
+    });
     sideExit[0].classList =
       "fas fa-times text-right cursor-pointer side-exit pointer-events-none";
     sideDesc.classList =
       "text-sm cursor-default cursor-pointer pointer-events-none";
-    const tl = new TimelineMax();
-    tl.to(sideInfo, 0.4, {
-      opacity: 0,
-    });
   } else if (override !== 0) {
   }
 }

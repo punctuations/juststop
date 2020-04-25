@@ -19843,21 +19843,6 @@ video {
   background-color: var(--first-card);
 }
 
-/* mouse track */
-
-#cursor-circle {
-  width: 1rem;
-  height: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  opacity: 0;
-}
-
 /* normal css */
 
 html,
@@ -20039,6 +20024,7 @@ a:hover {
 .tooltip-pos-right {
   left: 80%;
   top: -27.5%;
+  z-index: 10;
 }
 
 .tooltip-info-pos-right {

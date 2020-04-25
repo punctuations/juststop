@@ -6,7 +6,8 @@
   "dependencies": {
     "autoprefixer": "^9.7.6",
     "postcss-cli": "^7.1.0",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.2.0",
+    "animejs": "^3.2.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -15,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/whatdeveloper/landing.git"
+    "url": "git+https://github.com/toolboxxt/landing.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/whatdeveloper/landing/issues"
+    "url": "https://github.com/toolboxxt/landing/issues"
   },
-  "homepage": "https://github.com/whatdeveloper/landing#readme"
+  "homepage": "https://github.com/toolboxxt/landing#readme"
 }
