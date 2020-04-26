@@ -422,9 +422,12 @@ const themeButton = document.querySelector("#theme-switcher");
 const html = document.querySelector("html");
 const moon = document.querySelector(".fa-moon");
 
+let themes = 1;
+
 themeButton.onclick = () => {
-  if (html.classList == "dark js-focus-visible") {
-    html.classList = "light js-focus-visible";
+  if (themes == 1) {
+    themes = 2;
+    html.classList = "light";
     localStorage.setItem("theme", "light");
     moon.classList = "fas fa-moon";
     if (i == 1) {
@@ -548,8 +551,9 @@ themeButton.onclick = () => {
           0
         );
     }
-  } else if (html.classList == "light js-focus-visible") {
-    html.classList = "dark js-focus-visible";
+  } else if (themes == 2) {
+    themes = 1;
+    html.classList = "dark";
     localStorage.setItem("theme", "dark");
     moon.classList = "far fa-moon";
     if (i == 1) {
