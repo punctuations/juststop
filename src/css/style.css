@@ -34,7 +34,7 @@
   --footer: #525252;
 }
 
-/* .light {
+.light {
   --text: #000;
   --select: #108d8b;
   --hover: #d5d5d5;
@@ -45,7 +45,7 @@
   --fourth-card: #a1a1a1;
   --card-button: #5d5d5d;
   --footer: #adadad;
-} */
+}
 
 /* loading */
 
@@ -162,7 +162,7 @@ a:hover {
 }
 
 #side-info {
-  background-color: var(--second-card);
+  background-color: var(--first-card);
   opacity: 0;
 }
 

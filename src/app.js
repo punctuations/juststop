@@ -404,7 +404,7 @@ function hintScript() {
 
 //end of arg, start of page load mechanics -----------------------------------------------------------------------
 
-window.onload = function seePage() {
+function seePage() {
   let r = Math.floor(Math.random() * 1001);
   const profilePicture = document.getElementById("profile-picture");
 
@@ -413,33 +413,283 @@ window.onload = function seePage() {
     profilePicture.src =
       "https://thumbs.gfycat.com/HonorablePhysicalKatydid-size_restricted.gif";
   } else {
-    console.log("better luck next time!");
   }
-};
+}
 
 // end of page load mechanics, start of theme mechanics -----------------------------------------------------------
 
-const themeButton = document.getElementById("theme-switcher");
-const body = document.body;
+const themeButton = document.querySelector("#theme-switcher");
+const html = document.querySelector("html");
+const moon = document.querySelector(".fa-moon");
 
-function themeSwitcher() {
-  themeButton.onclick = () => {
-    if (body.classList == "dark") {
-      body.classList.replace("light", "dark");
-      localStorage.setItem("theme", "dark");
-    } else if (body.classList == "light") {
-      body.classList.replace("dark", "light");
-      localStorage.setItem("theme", "light");
+themeButton.onclick = () => {
+  if (html.classList == "dark js-focus-visible") {
+    html.classList = "light js-focus-visible";
+    localStorage.setItem("theme", "light");
+    moon.classList = "fas fa-moon";
+    if (i == 1) {
+      const tl = anime.timeline();
+      tl.add(
+        {
+          targets: "#card-2",
+          background: colour(true),
+        },
+        0
+      )
+        .add(
+          {
+            targets: "#card-3",
+            background: colour(false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-4",
+            background: colour(false, false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-1",
+            background: colour(false, false, false, true),
+          },
+          0
+        );
+    } else if (i == 2) {
+      const tl = anime.timeline();
+      tl.add(
+        {
+          targets: "#card-3",
+          background: colour(true),
+        },
+        0
+      )
+        .add(
+          {
+            targets: "#card-4",
+            background: colour(false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-1",
+            background: colour(false, false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-2",
+            background: colour(false, false, false, true),
+          },
+          0
+        );
+    } else if (i == 3) {
+      const tl = anime.timeline();
+      tl.add(
+        {
+          targets: "#card-4",
+          background: colour(true),
+        },
+        0
+      )
+        .add(
+          {
+            targets: "#card-1",
+            background: colour(false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-2",
+            background: colour(false, false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-3",
+            background: colour(false, false, false, true),
+          },
+          0
+        );
     } else {
-      break;
+      const tl = anime.timeline();
+      tl.add(
+        {
+          targets: "#card-1",
+          background: colour(true),
+        },
+        0
+      )
+        .add(
+          {
+            targets: "#card-2",
+            background: colour(false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-3",
+            background: colour(false, false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-4",
+            background: colour(false, false, false, true),
+          },
+          0
+        );
     }
-  };
-}
+  } else if (html.classList == "light js-focus-visible") {
+    html.classList = "dark js-focus-visible";
+    localStorage.setItem("theme", "dark");
+    moon.classList = "far fa-moon";
+    if (i == 1) {
+      const tl = anime.timeline();
+      tl.add(
+        {
+          targets: "#card-2",
+          background: colour(true),
+        },
+        0
+      )
+        .add(
+          {
+            targets: "#card-3",
+            background: colour(false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-4",
+            background: colour(false, false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-1",
+            background: colour(false, false, false, true),
+          },
+          0
+        );
+    } else if (i == 2) {
+      const tl = anime.timeline();
+      tl.add(
+        {
+          targets: "#card-3",
+          background: colour(true),
+        },
+        0
+      )
+        .add(
+          {
+            targets: "#card-4",
+            background: colour(false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-1",
+            background: colour(false, false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-2",
+            background: colour(false, false, false, true),
+          },
+          0
+        );
+    } else if (i == 3) {
+      const tl = anime.timeline();
+      tl.add(
+        {
+          targets: "#card-4",
+          background: colour(true),
+        },
+        0
+      )
+        .add(
+          {
+            targets: "#card-1",
+            background: colour(false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-2",
+            background: colour(false, false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-3",
+            background: colour(false, false, false, true),
+          },
+          0
+        );
+    } else {
+      const tl = anime.timeline();
+      tl.add(
+        {
+          targets: "#card-1",
+          background: colour(true),
+        },
+        0
+      )
+        .add(
+          {
+            targets: "#card-2",
+            background: colour(false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-3",
+            background: colour(false, false, true),
+          },
+          0
+        )
+        .add(
+          {
+            targets: "#card-4",
+            background: colour(false, false, false, true),
+          },
+          0
+        );
+    }
+  } else {
+  }
+};
 
 // Apply the cached theme on reload
 
 const theme = localStorage.getItem("theme");
-const isDark = localStorage.getItem("isDark");
+const isDark = localStorage.getItem("dark");
+const isLight = localStorage.getItem("light");
+
+if (theme == "dark") {
+  html.classList = "dark js-focus-visible";
+  moon.classList = "far fa-moon";
+} else if (theme == "light") {
+  html.classList = "light js-focus-visible";
+  moon.classList = "fas fa-moon";
+}
 
 // end of theme mechanics, start of load mechanics ----------------------------------------------------------------
 
@@ -552,6 +802,7 @@ window.onload = function loadingSequence() {
   );
   this.setTimeout(function () {
     loadingScreen.classList = "pointer-events-none";
+    seePage();
   }, 3600);
 };
 
@@ -562,6 +813,35 @@ let i;
 const firstCardBtn = document.querySelector(".buttons");
 const returnBtn = document.getElementsByClassName("return");
 const flipBtn = document.querySelector(".flip");
+const light = document.querySelector("html");
+
+function colour(first, second, third, fourth) {
+  if (first == true) {
+    if (light.classList == "light js-focus-visible") {
+      return "#dedede";
+    } else {
+      return "#212121";
+    }
+  } else if (second == true) {
+    if (light.classList == "light js-focus-visible") {
+      return "#c7c7c7";
+    } else {
+      return "#1d1d1d";
+    }
+  } else if (third == true) {
+    if (light.classList == "light js-focus-visible") {
+      return "#b3b3b3";
+    } else {
+      return "#1a1a1a";
+    }
+  } else if (fourth == true) {
+    if (light.classList == "light js-focus-visible") {
+      return "#a1a1a1";
+    } else {
+      return "#171717";
+    }
+  }
+}
 
 function langBtn() {
   const tl = anime.timeline();
@@ -592,7 +872,7 @@ function langBtn() {
     .add(
       {
         targets: "#card-2",
-        background: "#212121",
+        background: colour(true),
         zIndex: "4",
       },
       "-=1950"
@@ -600,7 +880,7 @@ function langBtn() {
     .add(
       {
         targets: "#card-3",
-        background: "#1d1d1d",
+        background: colour(false, true),
         zIndex: "3",
       },
       "-=1850"
@@ -608,7 +888,7 @@ function langBtn() {
     .add(
       {
         targets: "#card-4",
-        background: "#1a1a1a",
+        background: colour(false, false, true),
         zIndex: "2",
       },
       "-=1750"
@@ -620,7 +900,7 @@ function langBtn() {
         rotate: "0",
         translateX: "40",
         translateY: "-90",
-        background: "#171717",
+        background: colour(false, false, false, true),
         zIndex: "1",
         easing: "linear",
         duration: "0001",
@@ -688,7 +968,7 @@ function projBtn() {
     .add(
       {
         targets: "#card-3",
-        background: "#212121",
+        background: colour(true),
         zIndex: "4",
       },
       "-=1950"
@@ -696,7 +976,7 @@ function projBtn() {
     .add(
       {
         targets: "#card-4",
-        background: "#1d1d1d",
+        background: colour(false, true),
         zIndex: "3",
       },
       "-=1850"
@@ -708,7 +988,7 @@ function projBtn() {
         rotate: "0",
         translateX: "25",
         translateY: "-90",
-        background: "#1a1a1a",
+        background: colour(false, false, true),
         zIndex: "2",
         easing: "linear",
         duration: "0001",
@@ -722,7 +1002,7 @@ function projBtn() {
         rotate: "0",
         translateX: "25",
         translateY: "-90",
-        background: "#171717",
+        background: colour(false, false, false, true),
         zIndex: "1",
         easing: "linear",
         duration: "0001",
@@ -796,7 +1076,7 @@ function contactBtn() {
     .add(
       {
         targets: "#card-4",
-        background: "#212121",
+        background: colour(true),
         zIndex: "4",
       },
       "-=1950"
@@ -808,7 +1088,7 @@ function contactBtn() {
         rotate: "0",
         translateX: "23",
         translateY: "-90",
-        background: "#1d1d1d",
+        background: colour(false, true),
         zIndex: "3",
         easing: "linear",
         duration: "0001",
@@ -822,7 +1102,7 @@ function contactBtn() {
         rotate: "0",
         translateX: "20",
         translateY: "-90",
-        background: "#1a1a1a",
+        background: colour(false, false, true),
         zIndex: "2",
         easing: "linear",
         duration: "0001",
@@ -836,7 +1116,7 @@ function contactBtn() {
         rotate: "0",
         translateX: "20",
         translateY: "-90",
-        background: "#171717",
+        background: colour(false, false, false, true),
         zIndex: "1",
         easing: "linear",
         duration: "0001",
@@ -930,7 +1210,7 @@ function homeCard() {
       .add(
         {
           targets: "#card-1",
-          background: "#212121",
+          background: colour(true),
           zIndex: "4",
         },
         "-=1950"
@@ -942,7 +1222,7 @@ function homeCard() {
           rotate: "0",
           translateX: "0",
           translateY: "-90",
-          background: "#1d1d1d",
+          background: colour(false, true),
           zIndex: "3",
           easing: "linear",
           duration: "0001",
@@ -956,7 +1236,7 @@ function homeCard() {
           rotate: "0",
           translateX: "0",
           translateY: "-90",
-          background: "#1a1a1a",
+          background: colour(false, false, true),
           zIndex: "2",
           easing: "linear",
           duration: "0001",
@@ -970,7 +1250,7 @@ function homeCard() {
           rotate: "0",
           translateX: "0",
           translateY: "-90",
-          background: "#171717",
+          background: colour(false, false, false, true),
           zIndex: "1",
           easing: "linear",
           duration: "0001",
@@ -1043,7 +1323,7 @@ function homeCard() {
       .add(
         {
           targets: "#card-1",
-          background: "#212121",
+          background: colour(true),
           zIndex: "4",
         },
         "-=1950"
@@ -1051,7 +1331,7 @@ function homeCard() {
       .add(
         {
           targets: "#card-2",
-          background: "#1d1d1d",
+          background: colour(false, true),
           zIndex: "3",
         },
         "-=1950"
@@ -1063,7 +1343,7 @@ function homeCard() {
           rotate: "0",
           translateX: "0",
           translateY: "-90",
-          background: "#1a1a1a",
+          background: colour(false, false, true),
           zIndex: "2",
           easing: "linear",
           duration: "0001",
@@ -1077,7 +1357,7 @@ function homeCard() {
           rotate: "0",
           translateX: "0",
           translateY: "-90",
-          background: "#171717",
+          background: colour(false, false, false, true),
           zIndex: "1",
           easing: "linear",
           duration: "0001",
@@ -1127,7 +1407,7 @@ function homeCard() {
       .add(
         {
           targets: "#card-1",
-          background: "#212121",
+          background: colour(true),
           zIndex: "4",
         },
         "-=1950"
@@ -1135,7 +1415,7 @@ function homeCard() {
       .add(
         {
           targets: "#card-2",
-          background: "#1d1d1d",
+          background: colour(false, true),
           zIndex: "3",
         },
         "-=1950"
@@ -1143,7 +1423,7 @@ function homeCard() {
       .add(
         {
           targets: "#card-3",
-          background: "#1a1a1a",
+          background: colour(false, false, true),
           zIndex: "2",
         },
         "-=1950"
@@ -1155,7 +1435,7 @@ function homeCard() {
           rotate: "0",
           translateX: "0",
           translateY: "-90",
-          background: "#171717",
+          background: colour(false, false, false, true),
           zIndex: "1",
           easing: "linear",
           duration: "0001",
