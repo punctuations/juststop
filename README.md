@@ -15,7 +15,7 @@ This website was made by:
 
 ## Contributing
 
-If you seem to notice something wrong or think something is to be added you can make a [issue](https://github.com/punctuations/juststop/issues) and I will fix it as soon as I can, or send a message to me on my socials <a href="http://punctuation.cf/contact">here</a>
+If you seem to notice something wrong or think something is to be added you can make a [issue](https://github.com/punctuations/juststop/issues) and I will fix it as soon as I can, or send a message to me on my socials <a href="http://punctuation.cf/">here</a>.
 
 ##### Credit
 
