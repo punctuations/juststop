@@ -684,14 +684,12 @@ themeButton.onclick = () => {
 // Apply the cached theme on reload
 
 const theme = localStorage.getItem("theme");
-const isDark = localStorage.getItem("dark");
-const isLight = localStorage.getItem("light");
 
 if (theme == "dark") {
-  html.classList = "dark js-focus-visible";
+  html.classList = "dark";
   moon.classList = "far fa-moon";
 } else if (theme == "light") {
-  html.classList = "light js-focus-visible";
+  html.classList = "light";
   moon.classList = "fas fa-moon";
 }
 
@@ -821,25 +819,25 @@ const light = document.querySelector("html");
 
 function colour(first, second, third, fourth) {
   if (first == true) {
-    if (light.classList == "light js-focus-visible") {
+    if (light.classList == "light") {
       return "#dedede";
     } else {
       return "#212121";
     }
   } else if (second == true) {
-    if (light.classList == "light js-focus-visible") {
+    if (light.classList == "light") {
       return "#c7c7c7";
     } else {
       return "#1d1d1d";
     }
   } else if (third == true) {
-    if (light.classList == "light js-focus-visible") {
+    if (light.classList == "light") {
       return "#b3b3b3";
     } else {
       return "#1a1a1a";
     }
   } else if (fourth == true) {
-    if (light.classList == "light js-focus-visible") {
+    if (light.classList == "light") {
       return "#a1a1a1";
     } else {
       return "#171717";
