@@ -414,6 +414,7 @@ function seePage() {
       "https://thumbs.gfycat.com/HonorablePhysicalKatydid-size_restricted.gif";
   } else {
   }
+  sideHover();
 }
 
 // end of page load mechanics, start of theme mechanics -----------------------------------------------------------
@@ -1463,20 +1464,27 @@ function homeCard() {
 
 // card mechanics above
 
-function langFlip() {
-  const tl = anime.timeline();
-  tl.add({
-    targets: "#card-2",
-    rotateY: "180deg",
-  });
-}
+let flipped = false;
+const cardFlip = document.querySelector("#card-flip");
+const navButtons = document.querySelector("#nav-buttons");
 
-function langUnFlip() {
-  const tl = anime.timeline();
-  tl.add({
-    targets: "#card-2",
-    rotateY: "360deg",
-  });
+function langFlip() {
+  switch (flipped) {
+    case true:
+      flipped = false;
+      cardFlip.innerHTML =
+        '<div><a class="block py-button" href="#"><i class="fab fa-python"></i>python</a></div>\n<div><a class="block html-button" href="#"><i class="fab fa-html5"></i>html</a></div>\n<div><a class="block css-button" href="#"><i class="fab fa-css3-alt"></i>css</a></div>\n<div><a class="block js-button" href="#"><i class="fab fa-js-square"></i>javascript</a></div>\n<div><a class="block lua-button" href="#"><i class="fas fa-file-alt"></i>lua</a></div>';
+      navButtons.classList = "mt-8 card-bottom text-left grid overflow-auto";
+      sideHover();
+      break;
+    case false:
+      flipped = true;
+      cardFlip.innerHTML =
+        "<div><a class='block node-button' href='#'><i class='fab fa-node-js'></i>node.js</a></div>\n<div><a class='block sql-button' href='#'><i class='fas fa-database'></i>SQL</a></div>";
+      navButtons.classList = "mt-32 card-bottom text-left grid overflow-auto";
+      sideHover();
+      break;
+  }
 }
 
 // flip mechanics above
@@ -1533,300 +1541,359 @@ function showHint() {
 }
 
 // Side info ------------------------------------------------------------------------------------------------------
+function sideHover() {
+  const sideInfo = document.getElementById("side-info");
+  const sideDesc = document.getElementById("info");
+  if (!flipped) {
+    console.log("ok");
+    const utButton = document.querySelector(".utile-button");
+    const misButton = document.querySelector(".miscord-button");
+    const gitPrButton = document.querySelector(".github-proj-button");
+    const pyButton = document.querySelector(".py-button");
+    const htmlButton = document.querySelector(".html-button");
+    const cssButton = document.querySelector(".css-button");
+    const jsButton = document.querySelector(".js-button");
+    const luaButton = document.querySelector(".lua-button");
 
-const sideInfo = document.getElementById("side-info");
-const sideDesc = document.getElementById("info");
-const utButton = document.querySelector(".utile-button");
-const misButton = document.querySelector(".miscord-button");
-const gitPrButton = document.querySelector(".github-proj-button");
-const pyButton = document.querySelector(".py-button");
-const htmlButton = document.querySelector(".html-button");
-const cssButton = document.querySelector(".css-button");
-const jsButton = document.querySelector(".js-button");
-const luaButton = document.querySelector(".lua-button");
-const sideExit = document.querySelector(".side-exit");
-let override = 0;
+    utButton.onclick = () => {
+      override = 1;
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "The Utile project is a discord bot made by <a class='info-link' href='https://github.com/tilda/' target='_blank'>tilda</a>, <a class='info-link' href='https://github.com/iAlex11/' target='_blank'>alex</a>, and <a class='info-link' href='https://github.com/punctuations/' target='_blank'>me</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-utButton.onclick = () => {
-  override = 1;
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "The Utile project is a discord bot made by <a class='info-link' href='https://github.com/tilda/' target='_blank'>tilda</a>, <a class='info-link' href='https://github.com/iAlex11/' target='_blank'>alex</a>, and <a class='info-link' href='https://github.com/punctuations/' target='_blank'>me</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    utButton.onmouseover = () => {
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "The Utile project is a discord bot made by <a class='info-link' href='https://github.com/tilda/' target='_blank'>tilda</a>, <a class='info-link' href='https://github.com/iAlex11/' target='_blank'>alex</a>, and <a class='info-link' href='https://github.com/punctuations/' target='_blank'>me</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-utButton.onmouseover = () => {
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "The Utile project is a discord bot made by <a class='info-link' href='https://github.com/tilda/' target='_blank'>tilda</a>, <a class='info-link' href='https://github.com/iAlex11/' target='_blank'>alex</a>, and <a class='info-link' href='https://github.com/punctuations/' target='_blank'>me</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    utButton.onmouseout = () => {
+      sideHide();
+    };
 
-utButton.onmouseout = () => {
-  sideHide();
-};
+    misButton.onclick = () => {
+      override = 1;
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        'The Miscord Project is a project that was developed during discord\'s <a class="info-link" href="https://blog.discord.com/discord-community-hack-week-category-winners-bd0364360f92" target=\'_blank\'>Hack Week</a>, which is the reason we made this other discord bot, Miscord has lots of features which you can see <a class="info-link" href="https://miscord.utile.cf/" target=\'_blank\'>here</a>. Miscord was made by <a class="info-link" href="https://github.com/ifisq" target=\'_blank\'>blue</a>, <a class="info-link" href="https://github.com/iAlex11/" target=\'_blank\'>alex</a>, <a class="info-link" href="https://github.com/tilda/" target=\'_blank\'>tilda</a>, and <a class="info-link" href="https://github.com/punctuations/" target=\'_blank\'>me</a>.';
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-misButton.onclick = () => {
-  override = 1;
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    'The Miscord Project is a project that was developed during discord\'s <a class="info-link" href="https://blog.discord.com/discord-community-hack-week-category-winners-bd0364360f92" target=\'_blank\'>Hack Week</a>, which is the reason we made this other discord bot, Miscord has lots of features which you can see <a class="info-link" href="https://miscord.utile.cf/" target=\'_blank\'>here</a>. Miscord was made by <a class="info-link" href="https://github.com/ifisq" target=\'_blank\'>blue</a>, <a class="info-link" href="https://github.com/iAlex11/" target=\'_blank\'>alex</a>, <a class="info-link" href="https://github.com/tilda/" target=\'_blank\'>tilda</a>, and <a class="info-link" href="https://github.com/punctuations/" target=\'_blank\'>me</a>.';
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    misButton.onmouseover = () => {
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        'The Miscord Project is a project that was developed during discord\'s <a class="info-link" href="https://blog.discord.com/discord-community-hack-week-category-winners-bd0364360f92" target=\'_blank\'>Hack Week</a>, which is the reason we made this other discord bot, Miscord has lots of features which you can see <a class="info-link" href="https://miscord.utile.cf/" target=\'_blank\'>here</a>. Miscord was made by <a class="info-link" href="https://github.com/ifisq" target=\'_blank\'>blue</a>, <a class="info-link" href="https://github.com/iAlex11/" target=\'_blank\'>alex</a>, <a class="info-link" href="https://github.com/tilda/" target=\'_blank\'>tilda</a>, and <a class="info-link" href="https://github.com/punctuations/" target=\'_blank\'>me</a>.';
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-misButton.onmouseover = () => {
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    'The Miscord Project is a project that was developed during discord\'s <a class="info-link" href="https://blog.discord.com/discord-community-hack-week-category-winners-bd0364360f92" target=\'_blank\'>Hack Week</a>, which is the reason we made this other discord bot, Miscord has lots of features which you can see <a class="info-link" href="https://miscord.utile.cf/" target=\'_blank\'>here</a>. Miscord was made by <a class="info-link" href="https://github.com/ifisq" target=\'_blank\'>blue</a>, <a class="info-link" href="https://github.com/iAlex11/" target=\'_blank\'>alex</a>, <a class="info-link" href="https://github.com/tilda/" target=\'_blank\'>tilda</a>, and <a class="info-link" href="https://github.com/punctuations/" target=\'_blank\'>me</a>.';
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    misButton.onmouseout = () => {
+      sideHide();
+    };
 
-misButton.onmouseout = () => {
-  sideHide();
-};
+    gitPrButton.onclick = () => {
+      override = 1;
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "Using github I have tons of my projects open source and easily avaliabe to me, I have most if not all of my projects hosted <a class='info-link' href='https://github.com/punctuations/' target='_blank'>there</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-gitPrButton.onclick = () => {
-  override = 1;
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "Using github I have tons of my projects open source and easily avaliabe to me, I have most if not all of my projects hosted <a class='info-link' href='https://github.com/punctuations/' target='_blank'>there</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    gitPrButton.onmouseover = () => {
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "Using github I have tons of my projects open source and easily avaliabe to me, I have most if not all of my projects hosted <a class='info-link' href='https://github.com/punctuations/' target='_blank'>there</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-gitPrButton.onmouseover = () => {
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "Using github I have tons of my projects open source and easily avaliabe to me, I have most if not all of my projects hosted <a class='info-link' href='https://github.com/punctuations/' target='_blank'>there</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    gitPrButton.onmouseout = () => {
+      sideHide();
+    };
 
-gitPrButton.onmouseout = () => {
-  sideHide();
-};
+    pyButton.onclick = () => {
+      override = 1;
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "Using <a class='info-link' href='https://docs.python.org/3/' target='_blank'>python</a> I have made tons of projects, an example would be <a class='info-link' href='https://github.com/utilefordiscord' target='https://github.com/utilefordiscord'>Utile</a> the discord bot, and a few others you can see <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-pyButton.onclick = () => {
-  override = 1;
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "Using <a class='info-link' href='https://docs.python.org/3/' target='_blank'>python</a> I have made tons of projects, an example would be <a class='info-link' href='https://github.com/utilefordiscord' target='https://github.com/utilefordiscord'>Utile</a> the discord bot, and a few others you can see <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    pyButton.onmouseover = () => {
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "Using <a class='info-link' href='https://docs.python.org/3/' target='_blank'>python</a> I have made tons of projects, an example would be <a class='info-link' href='https://github.com/utilefordiscord' target='https://github.com/utilefordiscord'>Utile</a> the discord bot, and a few others you can see <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-pyButton.onmouseover = () => {
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "Using <a class='info-link' href='https://docs.python.org/3/' target='_blank'>python</a> I have made tons of projects, an example would be <a class='info-link' href='https://github.com/utilefordiscord' target='https://github.com/utilefordiscord'>Utile</a> the discord bot, and a few others you can see <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    pyButton.onmouseout = () => {
+      sideHide();
+    };
 
-pyButton.onmouseout = () => {
-  sideHide();
-};
+    htmlButton.onclick = () => {
+      override = 1;
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "Using <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</a> I was able to basically layout what I'd call the framework of the website with all the text and things. An example of things I've done with this would be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-htmlButton.onclick = () => {
-  override = 1;
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "Using <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</a> I was able to basically layout what I'd call the framework of the website with all the text and things. An example of things I've done with this would be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    htmlButton.onmouseover = () => {
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "Using <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</a> I was able to basically layout what I'd call the framework of the website with all the text and things. An example of things I've done with this would be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-htmlButton.onmouseover = () => {
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "Using <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</a> I was able to basically layout what I'd call the framework of the website with all the text and things. An example of things I've done with this would be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    htmlButton.onmouseout = () => {
+      sideHide();
+    };
 
-htmlButton.onmouseout = () => {
-  sideHide();
-};
+    cssButton.onclick = () => {
+      override = 1;
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is like the fancy wallpaper added to a building where html is the blank wall and framework, <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is what makes it look fancy and nice. To see some of my work with <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> it'd be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-cssButton.onclick = () => {
-  override = 1;
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is like the fancy wallpaper added to a building where html is the blank wall and framework, <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is what makes it look fancy and nice. To see some of my work with <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> it'd be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    cssButton.onmouseover = () => {
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is like the fancy wallpaper added to a building where html is the blank wall and framework, <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is what makes it look fancy and nice. To see some of my work with <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> it'd be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-cssButton.onmouseover = () => {
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is like the fancy wallpaper added to a building where html is the blank wall and framework, <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is what makes it look fancy and nice. To see some of my work with <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> it'd be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    cssButton.onmouseout = () => {
+      sideHide();
+    };
 
-cssButton.onmouseout = () => {
-  sideHide();
-};
+    jsButton.onclick = () => {
+      override = 1;
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language with tons of libraries and capabilities to utilize, I used a lot of <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> in this project, overall <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language to see some of it in action go <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-jsButton.onclick = () => {
-  override = 1;
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language with tons of libraries and capabilities to utilize, I used a lot of <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> in this project, overall <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language to see some of it in action go <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    jsButton.onmouseover = () => {
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language with tons of libraries and capabilities to utilize, I used a lot of <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> in this project, overall <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language to see some of it in action go <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-jsButton.onmouseover = () => {
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language with tons of libraries and capabilities to utilize, I used a lot of <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> in this project, overall <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language to see some of it in action go <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    jsButton.onmouseout = () => {
+      sideHide();
+    };
 
-jsButton.onmouseout = () => {
-  sideHide();
-};
+    luaButton.onclick = () => {
+      override = 1;
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> is a language that I used quite a bit, it is a great language, however I have not personally used <a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> in a long time.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-luaButton.onclick = () => {
-  override = 1;
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "<a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> is a language that I used quite a bit, it is a great language, however I have not personally used <a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> in a long time.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    luaButton.onmouseover = () => {
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> is a language that I used quite a bit, it is a great language, however I have not personally used <a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> in a long time.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-luaButton.onmouseover = () => {
-  const tl = anime.timeline();
-  sideDesc.innerHTML =
-    "<a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> is a language that I used quite a bit, it is a great language, however I have not personally used <a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> in a long time.";
-  tl.add({
-    targets: "#side-info",
-    opacity: "1",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-auto";
-};
+    luaButton.onmouseout = () => {
+      sideHide();
+    };
+  } else {
+    console.log("no");
+    const nodeButton = document.querySelector(".node-button");
+    const sqlButton = document.querySelector(".sql-button");
 
-luaButton.onmouseout = () => {
-  sideHide();
-};
+    nodeButton.onclick = () => {
+      override = 1;
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a language that I use in combination with <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> to program databases.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-sideExit.onclick = () => {
-  override = 0;
-  const tl = anime.timeline();
-  tl.add({
-    targets: "#side-info",
-    opacity: "0",
-    easing: "easeInOutSine",
-  });
-  sideExit.classList =
-    "fas fa-times text-right cursor-pointer side-exit pointer-events-none";
-  sideDesc.classList =
-    "text-sm cursor-default cursor-pointer pointer-events-none";
-};
+    nodeButton.onmouseover = () => {
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a language that I use in combination with <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> to program databases.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
 
-function sideHide() {
-  if (override == 0) {
+    nodeButton.onmouseout = () => {
+      sideHide();
+    };
+
+    sqlButton.onclick = () => {
+      override = 1;
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> is the language I choose to program databases.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
+
+    sqlButton.onmouseover = () => {
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> is the language I choose to program databases.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
+
+    sqlButton.onmouseout = () => {
+      sideHide();
+    };
+  }
+  const sideExit = document.querySelector(".side-exit");
+  let override = 0;
+
+  sideExit.onclick = () => {
+    override = 0;
     const tl = anime.timeline();
     tl.add({
       targets: "#side-info",
@@ -1837,6 +1904,21 @@ function sideHide() {
       "fas fa-times text-right cursor-pointer side-exit pointer-events-none";
     sideDesc.classList =
       "text-sm cursor-default cursor-pointer pointer-events-none";
-  } else if (override !== 0) {
+  };
+
+  function sideHide() {
+    if (override == 0) {
+      const tl = anime.timeline();
+      tl.add({
+        targets: "#side-info",
+        opacity: "0",
+        easing: "easeInOutSine",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-none";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-none";
+    } else if (override !== 0) {
+    }
   }
 }
