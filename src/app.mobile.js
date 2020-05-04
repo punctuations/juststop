@@ -444,6 +444,8 @@ const html = document.getElementsByClassName("html");
 const css = document.getElementsByClassName("css");
 const js = document.getElementsByClassName("js");
 const lua = document.getElementsByClassName("lua");
+const node = document.getElementsByClassName("node");
+const sql = document.getElementsByClassName("sql");
 const utile = document.getElementsByClassName("utile");
 const miscord = document.getElementsByClassName("miscord");
 const githubProj = document.getElementsByClassName("github-projects");
@@ -453,6 +455,8 @@ html[0].addEventListener("click", htmlAppear);
 css[0].addEventListener("click", cssAppear);
 js[0].addEventListener("click", jsAppear);
 lua[0].addEventListener("click", luaAppear);
+node[0].addEventListener("click", nodeAppear);
+sql[0].addEventListener("click", sqlAppear);
 utile[0].addEventListener("click", utileAppear);
 miscord[0].addEventListener("click", miscordAppear);
 githubProj[0].addEventListener("click", githubProjAppear);
@@ -480,6 +484,16 @@ function jsAppear() {
 function luaAppear() {
   bottomInfo[0].innerHTML =
     "<a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> is a language that I used quite a bit, it is a great language, however I have not personally used <a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> in a long time.";
+}
+
+function nodeAppear() {
+  bottomInfo[0].innerHTML =
+    "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a language that I use in combination with <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> to program databases.";
+}
+
+function sqlAppear() {
+  bottomInfo[0].innerHTML =
+    "<a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> is the language I choose to program databases.";
 }
 
 function utileAppear() {

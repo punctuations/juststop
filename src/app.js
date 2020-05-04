@@ -1545,7 +1545,6 @@ function sideHover() {
   const sideInfo = document.getElementById("side-info");
   const sideDesc = document.getElementById("info");
   if (!flipped) {
-    console.log("ok");
     const utButton = document.querySelector(".utile-button");
     const misButton = document.querySelector(".miscord-button");
     const gitPrButton = document.querySelector(".github-proj-button");
@@ -1819,7 +1818,6 @@ function sideHover() {
       sideHide();
     };
   } else {
-    console.log("no");
     const nodeButton = document.querySelector(".node-button");
     const sqlButton = document.querySelector(".sql-button");
 
