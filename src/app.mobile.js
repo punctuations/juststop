@@ -439,74 +439,63 @@ function back() {
 // extra info
 
 const bottomInfo = document.getElementsByClassName("bottom-info");
-const py = document.getElementsByClassName("py");
-const html = document.getElementsByClassName("html");
-const css = document.getElementsByClassName("css");
-const js = document.getElementsByClassName("js");
-const lua = document.getElementsByClassName("lua");
-const node = document.getElementsByClassName("node");
-const sql = document.getElementsByClassName("sql");
-const utile = document.getElementsByClassName("utile");
-const miscord = document.getElementsByClassName("miscord");
-const githubProj = document.getElementsByClassName("github-projects");
+const py = document.querySelector(".py");
+const html = document.querySelector(".html");
+const css = document.querySelector(".css");
+const js = document.querySelector(".js");
+const lua = document.querySelector(".lua");
+const node = document.querySelector(".node");
+const sql = document.querySelector(".sql");
+const utile = document.querySelector(".utile");
+const miscord = document.querySelector(".miscord");
+const githubProj = document.querySelector(".github-projects");
 
-py[0].addEventListener("click", pyAppear);
-html[0].addEventListener("click", htmlAppear);
-css[0].addEventListener("click", cssAppear);
-js[0].addEventListener("click", jsAppear);
-lua[0].addEventListener("click", luaAppear);
-node[0].addEventListener("click", nodeAppear);
-sql[0].addEventListener("click", sqlAppear);
-utile[0].addEventListener("click", utileAppear);
-miscord[0].addEventListener("click", miscordAppear);
-githubProj[0].addEventListener("click", githubProjAppear);
-
-function pyAppear() {
+py.onclick = () => {
   bottomInfo[0].innerHTML =
     "Using <a class='info-link' href='https://docs.python.org/3/' target='_blank'>python</a> I have made tons of projects, an example would be <a class='info-link' href='https://github.com/utilefordiscord' target='https://github.com/utilefordiscord'>Utile</a> the discord bot, and a few others you can see <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
-}
+};
 
-function htmlAppear() {
+html.onclick = () => {
   bottomInfo[0].innerHTML =
     "Using <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>HTML</a> I was able to basically layout what I'd call the framework of the website with all the text and things. An example of things I've done with this would be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
-}
+};
 
-function cssAppear() {
+css.onclick = () => {
   bottomInfo[0].innerHTML =
     "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is like the fancy wallpaper added to a building where html is the blank wall and framework, <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> is what makes it look fancy and nice. To see some of my work with <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/CSS/Reference' target='_blank'>CSS</a> it'd be on <a class='info-link' href='https://github.com/punctuations' target='_blank'>Github</a>.";
-}
+};
 
-function jsAppear() {
+js.onclick = () => {
   bottomInfo[0].innerHTML =
     "<a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language with tons of libraries and capabilities to utilize, I used a lot of <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> in this project, overall <a class='info-link' href='https://developer.mozilla.org/en-US/docs/Web/javascript' target='_blank'>Javascript</a> is a great language to see some of it in action go <a class='info-link' href='https://github.com/punctuations' target='_blank'>here</a>.";
-}
+};
 
-function luaAppear() {
+lua.onclick = () => {
   bottomInfo[0].innerHTML =
     "<a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> is a language that I used quite a bit, it is a great language, however I have not personally used <a class='info-link' href='https://www.lua.org/docs.html' target='_blank'>Lua</a> in a long time.";
-}
+};
 
-function nodeAppear() {
+node.onclick = () => {
   bottomInfo[0].innerHTML =
     "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a language that I use in combination with <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> to program databases.";
-}
+};
 
-function sqlAppear() {
+sql.onclick = () => {
   bottomInfo[0].innerHTML =
     "<a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> is the language I choose to program databases.";
-}
+};
 
-function utileAppear() {
+utile.onclick = () => {
   bottomInfo[1].innerHTML =
     "The Utile project is a discord bot made by <a class='info-link' href='https://github.com/tilda/' target='_blank'>tilda</a>, <a class='info-link' href='https://github.com/iAlex11/' target='_blank'>alex</a>, and <a class='info-link' href='https://github.com/punctuations/' target='_blank'>me</a>.";
-}
+};
 
-function miscordAppear() {
+miscord.onclick = () => {
   bottomInfo[1].innerHTML =
     'The Miscord Project is a project that was developed during discord\'s <a class="info-link" href="https://blog.discord.com/discord-community-hack-week-category-winners-bd0364360f92" target=\'_blank\'>Hack Week</a>, which is the reason we made this other discord bot, Miscord has lots of features which you can see <a class="info-link" href="https://miscord.utile.cf/" target=\'_blank\'>here</a>. Miscord was made by <a class="info-link" href="https://github.com/ifisq" target=\'_blank\'>blue</a>, <a class="info-link" href="https://github.com/iAlex11/" target=\'_blank\'>alex</a>, <a class="info-link" href="https://github.com/tilda/" target=\'_blank\'>tilda</a>, and <a class="info-link" href="https://github.com/punctuations/" target=\'_blank\'>me</a>.';
-}
+};
 
-function githubProjAppear() {
+githubProj.onclick = () => {
   bottomInfo[1].innerHTML =
     "Using github I have tons of my projects open source and easily avaliabe to me, I have most if not all of my projects hosted <a class='info-link' href='https://github.com/punctuations/' target='_blank'>there</a>.";
-}
+};
