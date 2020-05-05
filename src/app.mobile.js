@@ -4,6 +4,12 @@ if (window.screen.width > 828) {
   window.location.replace("../");
 }
 
+window.onresize = () => {
+  if (window.screen.width > 828) {
+    window.location.replace("../");
+  }
+};
+
 // particles --
 
 var confetti = {
