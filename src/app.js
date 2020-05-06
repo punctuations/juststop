@@ -429,7 +429,13 @@ const themeButton = document.querySelector("#theme-switcher");
 const html = document.querySelector("html");
 const moon = document.querySelector(".fa-moon");
 
-let themes = 1;
+let themes;
+
+if (localStorage.getItem("theme") == "light") {
+  themes = 2;
+} else {
+  themes = 1;
+}
 
 themeButton.onclick = () => {
   if (themes == 1) {
