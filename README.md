@@ -4,7 +4,7 @@
 
 ## Why Me?
 
-🤷‍♂️ _I mean you can always see my past experiences on [the website.](https://punctuation.cf/)_
+🤷‍♂️ _I mean you can always see my past experiences on [the website.](https://dont-ping.me/)_
 
 ## Team
 
@@ -15,7 +15,7 @@ This website was made by:
 
 ## Contributing
 
-If you seem to notice something wrong or think something is to be added you can make a [issue](https://github.com/punctuations/juststop/issues) and I will fix it as soon as I can, or send a message to me on my socials <a href="http://punctuation.cf/">here</a>.
+If you seem to notice something wrong or think something is to be added you can make a [issue](https://github.com/punctuations/juststop/issues) and I will fix it as soon as I can, or send a message to me on my socials <a href="http://dont-ping.me/">here</a>.
 
 ##### Credit
 
