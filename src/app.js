@@ -1837,7 +1837,7 @@ function sideHover() {
       override = 1;
       const tl = anime.timeline();
       sideDesc.innerHTML =
-        "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a language that I use in combination with <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> to program databases.";
+        "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a JavaScript runtime environment that executes JavaScript code outside of a web browser. I use it a lot in combination with  <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a>.";
       tl.add({
         targets: "#side-info",
         opacity: "1",
@@ -1851,7 +1851,7 @@ function sideHover() {
     nodeButton.onmouseover = () => {
       const tl = anime.timeline();
       sideDesc.innerHTML =
-        "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a language that I use in combination with <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> to program databases.";
+        "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a JavaScript runtime environment that executes JavaScript code outside of a web browser. I use it a lot in combination with  <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a>.";
       tl.add({
         targets: "#side-info",
         opacity: "1",
