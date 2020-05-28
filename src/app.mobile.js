@@ -452,6 +452,7 @@ const js = document.querySelector(".js");
 const lua = document.querySelector(".lua");
 const node = document.querySelector(".node");
 const sql = document.querySelector(".sql");
+const vue = document.querySelector(".vue");
 const utile = document.querySelector(".utile");
 const miscord = document.querySelector(".miscord");
 const githubProj = document.querySelector(".github-projects");
@@ -489,6 +490,11 @@ node.onclick = () => {
 sql.onclick = () => {
   bottomInfo[0].innerHTML =
     "<a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> is the language I choose to program databases.";
+};
+
+vue.onclick = () => {
+  bottomInfo[0].innerHTML =
+    "<a class='info-link' href='https://vuejs.org/' target='_blank'>Vue</a> is a wonderful Javascript framework, it is extremely versatile and I could just keep going on and on, I love it.";
 };
 
 utile.onclick = () => {

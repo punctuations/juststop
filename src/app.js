@@ -1492,8 +1492,8 @@ function langFlip() {
     case false:
       flipped = true;
       cardFlip.innerHTML =
-        "<div><a class='block node-button' href='#'><i class='fab fa-node-js'></i>node.js</a></div>\n<div><a class='block sql-button' href='#'><i class='fas fa-database'></i>SQL</a></div>";
-      navButtons.classList = "mt-32 card-bottom text-left grid overflow-auto";
+        "<div><a class='block node-button' href='#'><i class='fab fa-node-js'></i>node.js</a></div>\n<div><a class='block sql-button' href='#'><i class='fas fa-database'></i>SQL</a></div>\n<div><a class='block vue-button' href='#'><i class='fab fa-vuejs'></i>Vue</a></div>";
+      navButtons.classList = "mt-24 card-bottom text-left grid overflow-auto";
       sideHover();
       break;
   }
@@ -1554,7 +1554,6 @@ function showHint() {
 
 // Side info ------------------------------------------------------------------------------------------------------
 function sideHover() {
-  const sideInfo = document.getElementById("side-info");
   const sideDesc = document.getElementById("info");
   if (!flipped) {
     const utButton = document.querySelector(".utile-button");
@@ -1832,6 +1831,7 @@ function sideHover() {
   } else {
     const nodeButton = document.querySelector(".node-button");
     const sqlButton = document.querySelector(".sql-button");
+    const vueButton = document.querySelector(".vue-button");
 
     nodeButton.onclick = () => {
       override = 1;
@@ -1896,6 +1896,39 @@ function sideHover() {
     };
 
     sqlButton.onmouseout = () => {
+      sideHide();
+    };
+
+    vueButton.onclick = () => {
+      override = 1;
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://vuejs.org/' target='_blank'>Vue</a> is a wonderful Javascript framework, it is extremely versatile and I could just keep going on and on, I love it.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
+
+    vueButton.onmouseover = () => {
+      const tl = anime.timeline();
+      sideDesc.innerHTML =
+        "<a class='info-link' href='https://vuejs.org/' target='_blank'>Vue</a> is a wonderful Javascript framework, it is extremely versatile and I could just keep going on and on, I love it.";
+      tl.add({
+        targets: "#side-info",
+        opacity: "1",
+      });
+      sideExit.classList =
+        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+      sideDesc.classList =
+        "text-sm cursor-default cursor-pointer pointer-events-auto";
+    };
+
+    vueButton.onmouseout = () => {
       sideHide();
     };
   }
