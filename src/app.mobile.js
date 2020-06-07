@@ -375,7 +375,7 @@ let e = 0;
 
 if (
   d.getMonth() == new Date("Dec 21, 2020 00:00:00").getMonth() &&
-  d.getDay() == new Date("Dec 21, 2020 00:00:00").getDay()
+  d.getDate() == new Date("Dec 21, 2020 00:00:00").getDate()
 ) {
   if (e !== 1) {
     e = 1;
@@ -392,7 +392,7 @@ if (d.getMonth() == new Date("Dec 03, 2020 00:00:00").getMonth()) {
 } //June 28																										  	//June 28
 if (
   d.getMonth() == new Date("June 28, 2020 00:000:00").getMonth() &&
-  d.getDay() == new Date("June 28, 2020 00:00:00").getDay()
+  d.getDate() == new Date("June 28, 2020 00:00:00").getDate()
 ) {
   if (e !== 1) {
     e = 1;
