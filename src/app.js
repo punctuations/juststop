@@ -442,7 +442,7 @@ themeButton.onclick = () => {
     themes = 2;
     html.classList = "light";
     localStorage.setItem("theme", "light");
-    moon.classList = "fas fa-moon";
+    moon.classList = "fad fa-moon";
     if (i == 1) {
       const tl = anime.timeline();
       tl.add(
@@ -703,7 +703,7 @@ if (theme == "dark") {
   moon.classList = "far fa-moon";
 } else if (theme == "light") {
   html.classList = "light";
-  moon.classList = "fas fa-moon";
+  moon.classList = "fad fa-moon";
 }
 
 // end of theme mechanics, start of load mechanics ----------------------------------------------------------------
@@ -1485,14 +1485,14 @@ function langFlip() {
     case true:
       flipped = false;
       cardFlip.innerHTML =
-        '<div><a class="block py-button" href="#"><i class="fab fa-python"></i>python</a></div>\n<div><a class="block html-button" href="#"><i class="fab fa-html5"></i>html</a></div>\n<div><a class="block css-button" href="#"><i class="fab fa-css3-alt"></i>css</a></div>\n<div><a class="block js-button" href="#"><i class="fab fa-js-square"></i>javascript</a></div>\n<div><a class="block lua-button" href="#"><i class="fas fa-file-alt"></i>lua</a></div>';
+        '<div><a class="block py-button" href="#"><i class="fab fa-python"></i>python</a></div>\n<div><a class="block html-button" href="#"><i class="fab fa-html5"></i>html</a></div>\n<div><a class="block css-button" href="#"><i class="fab fa-css3-alt"></i>css</a></div>\n<div><a class="block js-button" href="#"><i class="fab fa-js-square"></i>javascript</a></div>\n<div><a class="block lua-button" href="#"><i class="fad fa-file-alt"></i>lua</a></div>';
       navButtons.classList = "mt-8 card-bottom text-left grid overflow-auto";
       sideHover();
       break;
     case false:
       flipped = true;
       cardFlip.innerHTML =
-        "<div><a class='block node-button' href='#'><i class='fab fa-node-js'></i>node.js</a></div>\n<div><a class='block sql-button' href='#'><i class='fas fa-database'></i>SQL</a></div>\n<div><a class='block vue-button' href='#'><i class='fab fa-vuejs'></i>Vue</a></div>";
+        "<div><a class='block node-button' href='#'><i class='fab fa-node-js'></i>node.js</a></div>\n<div><a class='block sql-button' href='#'><i class='fad fa-database'></i>SQL</a></div>\n<div><a class='block vue-button' href='#'><i class='fab fa-vuejs'></i>Vue</a></div>";
       navButtons.classList = "mt-24 card-bottom text-left grid overflow-auto";
       sideHover();
       break;
@@ -1575,7 +1575,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1589,7 +1589,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1608,7 +1608,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1622,7 +1622,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1641,7 +1641,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1655,7 +1655,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1674,7 +1674,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1688,7 +1688,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1707,7 +1707,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1721,7 +1721,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1740,7 +1740,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1754,7 +1754,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1773,7 +1773,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1787,7 +1787,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1806,7 +1806,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1820,7 +1820,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1843,7 +1843,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1857,7 +1857,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1876,7 +1876,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1890,7 +1890,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1909,7 +1909,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1923,7 +1923,7 @@ function sideHover() {
         opacity: "1",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-auto";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-auto";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-auto";
     };
@@ -1944,7 +1944,7 @@ function sideHover() {
       easing: "easeInOutSine",
     });
     sideExit.classList =
-      "fas fa-times text-right cursor-pointer side-exit pointer-events-none";
+      "fal fa-times text-right cursor-pointer side-exit pointer-events-none";
     sideDesc.classList =
       "text-sm cursor-default cursor-pointer pointer-events-none";
   };
@@ -1958,7 +1958,7 @@ function sideHover() {
         easing: "easeInOutSine",
       });
       sideExit.classList =
-        "fas fa-times text-right cursor-pointer side-exit pointer-events-none";
+        "fal fa-times text-right cursor-pointer side-exit pointer-events-none";
       sideDesc.classList =
         "text-sm cursor-default cursor-pointer pointer-events-none";
     } else if (override !== 0) {
