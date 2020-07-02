@@ -166,6 +166,11 @@ a:hover {
   opacity: 0;
 }
 
+.grad-border {
+  background: linear-gradient(to right, #93f9b9, #50c9c3);
+  padding: 2px;
+}
+
 .info-link {
   color: #4bc2c5;
   cursor: pointer;

@@ -1965,3 +1965,50 @@ function sideHover() {
     }
   }
 }
+
+const parseResponse = (res) => {
+  const track = res.recenttracks.track[0];
+  const artist = track.artist["#text"];
+  const image = track.image[3]["#text"];
+  const name = track.name;
+  const url = track.url;
+
+  const np = track["@attr"] ? track["@attr"]["nowplaying"] === "true" : false;
+
+  return {
+    artist,
+    name,
+    image,
+    np,
+    url,
+  };
+};
+
+const setResponse = (res) => {
+  if (res.np === true) {
+    document.querySelector("#spotify").innerHTML = `<img
+          class="absolute right-0 top-0 rounded-full mt-4 mr-18 grad-border"
+          width="32"
+          height="32"
+          onclick="window.location.href = '${res.url}';"
+          src="${res.image}"
+          alt="${res.name}"
+          title="${res.name} - ${res.artist}"
+        />
+        <!-- credit goes to jack for providing this solution for grabbing spotify tracks, great guy https://lafond.dev/ -->`;
+  } else {
+    document.querySelector("#spotify").innerHTML = ``;
+  }
+};
+
+const getSong = () => {
+  fetch(
+    "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=alloutofmatt&api_key=d24f709bb63d11301924e2738b3607ef&format=json&limit=1"
+  )
+    .then((res) => res.json())
+    .then(parseResponse)
+    .then(setResponse);
+};
+
+setInterval(getSong, 15 * 1000);
+getSong();
