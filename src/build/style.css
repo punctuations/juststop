@@ -3895,6 +3895,10 @@ video {
   height: 16rem;
 }
 
+.h-66 {
+  height: 17rem;
+}
+
 .h-70 {
   height: 19rem;
 }
@@ -4215,6 +4219,10 @@ video {
   margin: 16rem;
 }
 
+.m-66 {
+  margin: 17rem;
+}
+
 .m-70 {
   margin: 19rem;
 }
@@ -4445,6 +4453,10 @@ video {
 
 .-m-64 {
   margin: -16rem;
+}
+
+.-m-66 {
+  margin: -17rem;
 }
 
 .-m-70 {
@@ -4797,6 +4809,16 @@ video {
 .mx-64 {
   margin-left: 16rem;
   margin-right: 16rem;
+}
+
+.my-66 {
+  margin-top: 17rem;
+  margin-bottom: 17rem;
+}
+
+.mx-66 {
+  margin-left: 17rem;
+  margin-right: 17rem;
 }
 
 .my-70 {
@@ -5377,6 +5399,16 @@ video {
 .-mx-64 {
   margin-left: -16rem;
   margin-right: -16rem;
+}
+
+.-my-66 {
+  margin-top: -17rem;
+  margin-bottom: -17rem;
+}
+
+.-mx-66 {
+  margin-left: -17rem;
+  margin-right: -17rem;
 }
 
 .-my-70 {
@@ -6077,6 +6109,22 @@ video {
 
 .ml-64 {
   margin-left: 16rem;
+}
+
+.mt-66 {
+  margin-top: 17rem;
+}
+
+.mr-66 {
+  margin-right: 17rem;
+}
+
+.mb-66 {
+  margin-bottom: 17rem;
+}
+
+.ml-66 {
+  margin-left: 17rem;
 }
 
 .mt-70 {
@@ -7005,6 +7053,22 @@ video {
 
 .-ml-64 {
   margin-left: -16rem;
+}
+
+.-mt-66 {
+  margin-top: -17rem;
+}
+
+.-mr-66 {
+  margin-right: -17rem;
+}
+
+.-mb-66 {
+  margin-bottom: -17rem;
+}
+
+.-ml-66 {
+  margin-left: -17rem;
 }
 
 .-mt-70 {
@@ -7981,6 +8045,10 @@ video {
   padding: 16rem;
 }
 
+.p-66 {
+  padding: 17rem;
+}
+
 .p-70 {
   padding: 19rem;
 }
@@ -8331,6 +8399,16 @@ video {
 .px-64 {
   padding-left: 16rem;
   padding-right: 16rem;
+}
+
+.py-66 {
+  padding-top: 17rem;
+  padding-bottom: 17rem;
+}
+
+.px-66 {
+  padding-left: 17rem;
+  padding-right: 17rem;
 }
 
 .py-70 {
@@ -9031,6 +9109,22 @@ video {
 
 .pl-64 {
   padding-left: 16rem;
+}
+
+.pt-66 {
+  padding-top: 17rem;
+}
+
+.pr-66 {
+  padding-right: 17rem;
+}
+
+.pb-66 {
+  padding-bottom: 17rem;
+}
+
+.pl-66 {
+  padding-left: 17rem;
 }
 
 .pt-70 {
@@ -15065,6 +15159,10 @@ video {
   width: 16rem;
 }
 
+.w-66 {
+  width: 17rem;
+}
+
 .w-70 {
   width: 19rem;
 }
@@ -15461,6 +15559,11 @@ video {
   gap: 16rem;
 }
 
+.gap-66 {
+  grid-gap: 17rem;
+  gap: 17rem;
+}
+
 .gap-70 {
   grid-gap: 19rem;
   gap: 19rem;
@@ -15769,6 +15872,12 @@ video {
   grid-column-gap: 16rem;
   -moz-column-gap: 16rem;
        column-gap: 16rem;
+}
+
+.col-gap-66 {
+  grid-column-gap: 17rem;
+  -moz-column-gap: 17rem;
+       column-gap: 17rem;
 }
 
 .col-gap-70 {
@@ -16097,6 +16206,11 @@ video {
 .row-gap-64 {
   grid-row-gap: 16rem;
   row-gap: 16rem;
+}
+
+.row-gap-66 {
+  grid-row-gap: 17rem;
+  row-gap: 17rem;
 }
 
 .row-gap-70 {
@@ -17246,6 +17360,10 @@ video {
   --transform-translate-x: 16rem;
 }
 
+.translate-x-66 {
+  --transform-translate-x: 17rem;
+}
+
 .translate-x-70 {
   --transform-translate-x: 19rem;
 }
@@ -17472,6 +17590,10 @@ video {
 
 .-translate-x-64 {
   --transform-translate-x: -16rem;
+}
+
+.-translate-x-66 {
+  --transform-translate-x: -17rem;
 }
 
 .-translate-x-70 {
@@ -17722,6 +17844,10 @@ video {
   --transform-translate-y: 16rem;
 }
 
+.translate-y-66 {
+  --transform-translate-y: 17rem;
+}
+
 .translate-y-70 {
   --transform-translate-y: 19rem;
 }
@@ -17948,6 +18074,10 @@ video {
 
 .-translate-y-64 {
   --transform-translate-y: -16rem;
+}
+
+.-translate-y-66 {
+  --transform-translate-y: -17rem;
 }
 
 .-translate-y-70 {
@@ -18198,6 +18328,10 @@ video {
   --transform-translate-x: 16rem;
 }
 
+.hover\:translate-x-66:hover {
+  --transform-translate-x: 17rem;
+}
+
 .hover\:translate-x-70:hover {
   --transform-translate-x: 19rem;
 }
@@ -18424,6 +18558,10 @@ video {
 
 .hover\:-translate-x-64:hover {
   --transform-translate-x: -16rem;
+}
+
+.hover\:-translate-x-66:hover {
+  --transform-translate-x: -17rem;
 }
 
 .hover\:-translate-x-70:hover {
@@ -18674,6 +18812,10 @@ video {
   --transform-translate-y: 16rem;
 }
 
+.hover\:translate-y-66:hover {
+  --transform-translate-y: 17rem;
+}
+
 .hover\:translate-y-70:hover {
   --transform-translate-y: 19rem;
 }
@@ -18900,6 +19042,10 @@ video {
 
 .hover\:-translate-y-64:hover {
   --transform-translate-y: -16rem;
+}
+
+.hover\:-translate-y-66:hover {
+  --transform-translate-y: -17rem;
 }
 
 .hover\:-translate-y-70:hover {
@@ -19150,6 +19296,10 @@ video {
   --transform-translate-x: 16rem;
 }
 
+.focus\:translate-x-66:focus {
+  --transform-translate-x: 17rem;
+}
+
 .focus\:translate-x-70:focus {
   --transform-translate-x: 19rem;
 }
@@ -19376,6 +19526,10 @@ video {
 
 .focus\:-translate-x-64:focus {
   --transform-translate-x: -16rem;
+}
+
+.focus\:-translate-x-66:focus {
+  --transform-translate-x: -17rem;
 }
 
 .focus\:-translate-x-70:focus {
@@ -19626,6 +19780,10 @@ video {
   --transform-translate-y: 16rem;
 }
 
+.focus\:translate-y-66:focus {
+  --transform-translate-y: 17rem;
+}
+
 .focus\:translate-y-70:focus {
   --transform-translate-y: 19rem;
 }
@@ -19852,6 +20010,10 @@ video {
 
 .focus\:-translate-y-64:focus {
   --transform-translate-y: -16rem;
+}
+
+.focus\:-translate-y-66:focus {
+  --transform-translate-y: -17rem;
 }
 
 .focus\:-translate-y-70:focus {
@@ -23907,6 +24069,10 @@ a:hover {
     height: 16rem;
   }
 
+  .sm\:h-66 {
+    height: 17rem;
+  }
+
   .sm\:h-70 {
     height: 19rem;
   }
@@ -24227,6 +24393,10 @@ a:hover {
     margin: 16rem;
   }
 
+  .sm\:m-66 {
+    margin: 17rem;
+  }
+
   .sm\:m-70 {
     margin: 19rem;
   }
@@ -24457,6 +24627,10 @@ a:hover {
 
   .sm\:-m-64 {
     margin: -16rem;
+  }
+
+  .sm\:-m-66 {
+    margin: -17rem;
   }
 
   .sm\:-m-70 {
@@ -24809,6 +24983,16 @@ a:hover {
   .sm\:mx-64 {
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .sm\:my-66 {
+    margin-top: 17rem;
+    margin-bottom: 17rem;
+  }
+
+  .sm\:mx-66 {
+    margin-left: 17rem;
+    margin-right: 17rem;
   }
 
   .sm\:my-70 {
@@ -25389,6 +25573,16 @@ a:hover {
   .sm\:-mx-64 {
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .sm\:-my-66 {
+    margin-top: -17rem;
+    margin-bottom: -17rem;
+  }
+
+  .sm\:-mx-66 {
+    margin-left: -17rem;
+    margin-right: -17rem;
   }
 
   .sm\:-my-70 {
@@ -26089,6 +26283,22 @@ a:hover {
 
   .sm\:ml-64 {
     margin-left: 16rem;
+  }
+
+  .sm\:mt-66 {
+    margin-top: 17rem;
+  }
+
+  .sm\:mr-66 {
+    margin-right: 17rem;
+  }
+
+  .sm\:mb-66 {
+    margin-bottom: 17rem;
+  }
+
+  .sm\:ml-66 {
+    margin-left: 17rem;
   }
 
   .sm\:mt-70 {
@@ -27017,6 +27227,22 @@ a:hover {
 
   .sm\:-ml-64 {
     margin-left: -16rem;
+  }
+
+  .sm\:-mt-66 {
+    margin-top: -17rem;
+  }
+
+  .sm\:-mr-66 {
+    margin-right: -17rem;
+  }
+
+  .sm\:-mb-66 {
+    margin-bottom: -17rem;
+  }
+
+  .sm\:-ml-66 {
+    margin-left: -17rem;
   }
 
   .sm\:-mt-70 {
@@ -27993,6 +28219,10 @@ a:hover {
     padding: 16rem;
   }
 
+  .sm\:p-66 {
+    padding: 17rem;
+  }
+
   .sm\:p-70 {
     padding: 19rem;
   }
@@ -28343,6 +28573,16 @@ a:hover {
   .sm\:px-64 {
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .sm\:py-66 {
+    padding-top: 17rem;
+    padding-bottom: 17rem;
+  }
+
+  .sm\:px-66 {
+    padding-left: 17rem;
+    padding-right: 17rem;
   }
 
   .sm\:py-70 {
@@ -29043,6 +29283,22 @@ a:hover {
 
   .sm\:pl-64 {
     padding-left: 16rem;
+  }
+
+  .sm\:pt-66 {
+    padding-top: 17rem;
+  }
+
+  .sm\:pr-66 {
+    padding-right: 17rem;
+  }
+
+  .sm\:pb-66 {
+    padding-bottom: 17rem;
+  }
+
+  .sm\:pl-66 {
+    padding-left: 17rem;
   }
 
   .sm\:pt-70 {
@@ -35077,6 +35333,10 @@ a:hover {
     width: 16rem;
   }
 
+  .sm\:w-66 {
+    width: 17rem;
+  }
+
   .sm\:w-70 {
     width: 19rem;
   }
@@ -35473,6 +35733,11 @@ a:hover {
     gap: 16rem;
   }
 
+  .sm\:gap-66 {
+    grid-gap: 17rem;
+    gap: 17rem;
+  }
+
   .sm\:gap-70 {
     grid-gap: 19rem;
     gap: 19rem;
@@ -35781,6 +36046,12 @@ a:hover {
     grid-column-gap: 16rem;
     -moz-column-gap: 16rem;
          column-gap: 16rem;
+  }
+
+  .sm\:col-gap-66 {
+    grid-column-gap: 17rem;
+    -moz-column-gap: 17rem;
+         column-gap: 17rem;
   }
 
   .sm\:col-gap-70 {
@@ -36109,6 +36380,11 @@ a:hover {
   .sm\:row-gap-64 {
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .sm\:row-gap-66 {
+    grid-row-gap: 17rem;
+    row-gap: 17rem;
   }
 
   .sm\:row-gap-70 {
@@ -37258,6 +37534,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .sm\:translate-x-66 {
+    --transform-translate-x: 17rem;
+  }
+
   .sm\:translate-x-70 {
     --transform-translate-x: 19rem;
   }
@@ -37484,6 +37764,10 @@ a:hover {
 
   .sm\:-translate-x-64 {
     --transform-translate-x: -16rem;
+  }
+
+  .sm\:-translate-x-66 {
+    --transform-translate-x: -17rem;
   }
 
   .sm\:-translate-x-70 {
@@ -37734,6 +38018,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .sm\:translate-y-66 {
+    --transform-translate-y: 17rem;
+  }
+
   .sm\:translate-y-70 {
     --transform-translate-y: 19rem;
   }
@@ -37960,6 +38248,10 @@ a:hover {
 
   .sm\:-translate-y-64 {
     --transform-translate-y: -16rem;
+  }
+
+  .sm\:-translate-y-66 {
+    --transform-translate-y: -17rem;
   }
 
   .sm\:-translate-y-70 {
@@ -38210,6 +38502,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .sm\:hover\:translate-x-66:hover {
+    --transform-translate-x: 17rem;
+  }
+
   .sm\:hover\:translate-x-70:hover {
     --transform-translate-x: 19rem;
   }
@@ -38436,6 +38732,10 @@ a:hover {
 
   .sm\:hover\:-translate-x-64:hover {
     --transform-translate-x: -16rem;
+  }
+
+  .sm\:hover\:-translate-x-66:hover {
+    --transform-translate-x: -17rem;
   }
 
   .sm\:hover\:-translate-x-70:hover {
@@ -38686,6 +38986,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .sm\:hover\:translate-y-66:hover {
+    --transform-translate-y: 17rem;
+  }
+
   .sm\:hover\:translate-y-70:hover {
     --transform-translate-y: 19rem;
   }
@@ -38912,6 +39216,10 @@ a:hover {
 
   .sm\:hover\:-translate-y-64:hover {
     --transform-translate-y: -16rem;
+  }
+
+  .sm\:hover\:-translate-y-66:hover {
+    --transform-translate-y: -17rem;
   }
 
   .sm\:hover\:-translate-y-70:hover {
@@ -39162,6 +39470,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .sm\:focus\:translate-x-66:focus {
+    --transform-translate-x: 17rem;
+  }
+
   .sm\:focus\:translate-x-70:focus {
     --transform-translate-x: 19rem;
   }
@@ -39388,6 +39700,10 @@ a:hover {
 
   .sm\:focus\:-translate-x-64:focus {
     --transform-translate-x: -16rem;
+  }
+
+  .sm\:focus\:-translate-x-66:focus {
+    --transform-translate-x: -17rem;
   }
 
   .sm\:focus\:-translate-x-70:focus {
@@ -39638,6 +39954,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .sm\:focus\:translate-y-66:focus {
+    --transform-translate-y: 17rem;
+  }
+
   .sm\:focus\:translate-y-70:focus {
     --transform-translate-y: 19rem;
   }
@@ -39864,6 +40184,10 @@ a:hover {
 
   .sm\:focus\:-translate-y-64:focus {
     --transform-translate-y: -16rem;
+  }
+
+  .sm\:focus\:-translate-y-66:focus {
+    --transform-translate-y: -17rem;
   }
 
   .sm\:focus\:-translate-y-70:focus {
@@ -43550,6 +43874,10 @@ a:hover {
     height: 16rem;
   }
 
+  .md\:h-66 {
+    height: 17rem;
+  }
+
   .md\:h-70 {
     height: 19rem;
   }
@@ -43870,6 +44198,10 @@ a:hover {
     margin: 16rem;
   }
 
+  .md\:m-66 {
+    margin: 17rem;
+  }
+
   .md\:m-70 {
     margin: 19rem;
   }
@@ -44100,6 +44432,10 @@ a:hover {
 
   .md\:-m-64 {
     margin: -16rem;
+  }
+
+  .md\:-m-66 {
+    margin: -17rem;
   }
 
   .md\:-m-70 {
@@ -44452,6 +44788,16 @@ a:hover {
   .md\:mx-64 {
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .md\:my-66 {
+    margin-top: 17rem;
+    margin-bottom: 17rem;
+  }
+
+  .md\:mx-66 {
+    margin-left: 17rem;
+    margin-right: 17rem;
   }
 
   .md\:my-70 {
@@ -45032,6 +45378,16 @@ a:hover {
   .md\:-mx-64 {
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .md\:-my-66 {
+    margin-top: -17rem;
+    margin-bottom: -17rem;
+  }
+
+  .md\:-mx-66 {
+    margin-left: -17rem;
+    margin-right: -17rem;
   }
 
   .md\:-my-70 {
@@ -45732,6 +46088,22 @@ a:hover {
 
   .md\:ml-64 {
     margin-left: 16rem;
+  }
+
+  .md\:mt-66 {
+    margin-top: 17rem;
+  }
+
+  .md\:mr-66 {
+    margin-right: 17rem;
+  }
+
+  .md\:mb-66 {
+    margin-bottom: 17rem;
+  }
+
+  .md\:ml-66 {
+    margin-left: 17rem;
   }
 
   .md\:mt-70 {
@@ -46660,6 +47032,22 @@ a:hover {
 
   .md\:-ml-64 {
     margin-left: -16rem;
+  }
+
+  .md\:-mt-66 {
+    margin-top: -17rem;
+  }
+
+  .md\:-mr-66 {
+    margin-right: -17rem;
+  }
+
+  .md\:-mb-66 {
+    margin-bottom: -17rem;
+  }
+
+  .md\:-ml-66 {
+    margin-left: -17rem;
   }
 
   .md\:-mt-70 {
@@ -47636,6 +48024,10 @@ a:hover {
     padding: 16rem;
   }
 
+  .md\:p-66 {
+    padding: 17rem;
+  }
+
   .md\:p-70 {
     padding: 19rem;
   }
@@ -47986,6 +48378,16 @@ a:hover {
   .md\:px-64 {
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .md\:py-66 {
+    padding-top: 17rem;
+    padding-bottom: 17rem;
+  }
+
+  .md\:px-66 {
+    padding-left: 17rem;
+    padding-right: 17rem;
   }
 
   .md\:py-70 {
@@ -48686,6 +49088,22 @@ a:hover {
 
   .md\:pl-64 {
     padding-left: 16rem;
+  }
+
+  .md\:pt-66 {
+    padding-top: 17rem;
+  }
+
+  .md\:pr-66 {
+    padding-right: 17rem;
+  }
+
+  .md\:pb-66 {
+    padding-bottom: 17rem;
+  }
+
+  .md\:pl-66 {
+    padding-left: 17rem;
   }
 
   .md\:pt-70 {
@@ -54720,6 +55138,10 @@ a:hover {
     width: 16rem;
   }
 
+  .md\:w-66 {
+    width: 17rem;
+  }
+
   .md\:w-70 {
     width: 19rem;
   }
@@ -55116,6 +55538,11 @@ a:hover {
     gap: 16rem;
   }
 
+  .md\:gap-66 {
+    grid-gap: 17rem;
+    gap: 17rem;
+  }
+
   .md\:gap-70 {
     grid-gap: 19rem;
     gap: 19rem;
@@ -55424,6 +55851,12 @@ a:hover {
     grid-column-gap: 16rem;
     -moz-column-gap: 16rem;
          column-gap: 16rem;
+  }
+
+  .md\:col-gap-66 {
+    grid-column-gap: 17rem;
+    -moz-column-gap: 17rem;
+         column-gap: 17rem;
   }
 
   .md\:col-gap-70 {
@@ -55752,6 +56185,11 @@ a:hover {
   .md\:row-gap-64 {
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .md\:row-gap-66 {
+    grid-row-gap: 17rem;
+    row-gap: 17rem;
   }
 
   .md\:row-gap-70 {
@@ -56901,6 +57339,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .md\:translate-x-66 {
+    --transform-translate-x: 17rem;
+  }
+
   .md\:translate-x-70 {
     --transform-translate-x: 19rem;
   }
@@ -57127,6 +57569,10 @@ a:hover {
 
   .md\:-translate-x-64 {
     --transform-translate-x: -16rem;
+  }
+
+  .md\:-translate-x-66 {
+    --transform-translate-x: -17rem;
   }
 
   .md\:-translate-x-70 {
@@ -57377,6 +57823,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .md\:translate-y-66 {
+    --transform-translate-y: 17rem;
+  }
+
   .md\:translate-y-70 {
     --transform-translate-y: 19rem;
   }
@@ -57603,6 +58053,10 @@ a:hover {
 
   .md\:-translate-y-64 {
     --transform-translate-y: -16rem;
+  }
+
+  .md\:-translate-y-66 {
+    --transform-translate-y: -17rem;
   }
 
   .md\:-translate-y-70 {
@@ -57853,6 +58307,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .md\:hover\:translate-x-66:hover {
+    --transform-translate-x: 17rem;
+  }
+
   .md\:hover\:translate-x-70:hover {
     --transform-translate-x: 19rem;
   }
@@ -58079,6 +58537,10 @@ a:hover {
 
   .md\:hover\:-translate-x-64:hover {
     --transform-translate-x: -16rem;
+  }
+
+  .md\:hover\:-translate-x-66:hover {
+    --transform-translate-x: -17rem;
   }
 
   .md\:hover\:-translate-x-70:hover {
@@ -58329,6 +58791,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .md\:hover\:translate-y-66:hover {
+    --transform-translate-y: 17rem;
+  }
+
   .md\:hover\:translate-y-70:hover {
     --transform-translate-y: 19rem;
   }
@@ -58555,6 +59021,10 @@ a:hover {
 
   .md\:hover\:-translate-y-64:hover {
     --transform-translate-y: -16rem;
+  }
+
+  .md\:hover\:-translate-y-66:hover {
+    --transform-translate-y: -17rem;
   }
 
   .md\:hover\:-translate-y-70:hover {
@@ -58805,6 +59275,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .md\:focus\:translate-x-66:focus {
+    --transform-translate-x: 17rem;
+  }
+
   .md\:focus\:translate-x-70:focus {
     --transform-translate-x: 19rem;
   }
@@ -59031,6 +59505,10 @@ a:hover {
 
   .md\:focus\:-translate-x-64:focus {
     --transform-translate-x: -16rem;
+  }
+
+  .md\:focus\:-translate-x-66:focus {
+    --transform-translate-x: -17rem;
   }
 
   .md\:focus\:-translate-x-70:focus {
@@ -59281,6 +59759,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .md\:focus\:translate-y-66:focus {
+    --transform-translate-y: 17rem;
+  }
+
   .md\:focus\:translate-y-70:focus {
     --transform-translate-y: 19rem;
   }
@@ -59507,6 +59989,10 @@ a:hover {
 
   .md\:focus\:-translate-y-64:focus {
     --transform-translate-y: -16rem;
+  }
+
+  .md\:focus\:-translate-y-66:focus {
+    --transform-translate-y: -17rem;
   }
 
   .md\:focus\:-translate-y-70:focus {
@@ -63193,6 +63679,10 @@ a:hover {
     height: 16rem;
   }
 
+  .lg\:h-66 {
+    height: 17rem;
+  }
+
   .lg\:h-70 {
     height: 19rem;
   }
@@ -63513,6 +64003,10 @@ a:hover {
     margin: 16rem;
   }
 
+  .lg\:m-66 {
+    margin: 17rem;
+  }
+
   .lg\:m-70 {
     margin: 19rem;
   }
@@ -63743,6 +64237,10 @@ a:hover {
 
   .lg\:-m-64 {
     margin: -16rem;
+  }
+
+  .lg\:-m-66 {
+    margin: -17rem;
   }
 
   .lg\:-m-70 {
@@ -64095,6 +64593,16 @@ a:hover {
   .lg\:mx-64 {
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .lg\:my-66 {
+    margin-top: 17rem;
+    margin-bottom: 17rem;
+  }
+
+  .lg\:mx-66 {
+    margin-left: 17rem;
+    margin-right: 17rem;
   }
 
   .lg\:my-70 {
@@ -64675,6 +65183,16 @@ a:hover {
   .lg\:-mx-64 {
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .lg\:-my-66 {
+    margin-top: -17rem;
+    margin-bottom: -17rem;
+  }
+
+  .lg\:-mx-66 {
+    margin-left: -17rem;
+    margin-right: -17rem;
   }
 
   .lg\:-my-70 {
@@ -65375,6 +65893,22 @@ a:hover {
 
   .lg\:ml-64 {
     margin-left: 16rem;
+  }
+
+  .lg\:mt-66 {
+    margin-top: 17rem;
+  }
+
+  .lg\:mr-66 {
+    margin-right: 17rem;
+  }
+
+  .lg\:mb-66 {
+    margin-bottom: 17rem;
+  }
+
+  .lg\:ml-66 {
+    margin-left: 17rem;
   }
 
   .lg\:mt-70 {
@@ -66303,6 +66837,22 @@ a:hover {
 
   .lg\:-ml-64 {
     margin-left: -16rem;
+  }
+
+  .lg\:-mt-66 {
+    margin-top: -17rem;
+  }
+
+  .lg\:-mr-66 {
+    margin-right: -17rem;
+  }
+
+  .lg\:-mb-66 {
+    margin-bottom: -17rem;
+  }
+
+  .lg\:-ml-66 {
+    margin-left: -17rem;
   }
 
   .lg\:-mt-70 {
@@ -67279,6 +67829,10 @@ a:hover {
     padding: 16rem;
   }
 
+  .lg\:p-66 {
+    padding: 17rem;
+  }
+
   .lg\:p-70 {
     padding: 19rem;
   }
@@ -67629,6 +68183,16 @@ a:hover {
   .lg\:px-64 {
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .lg\:py-66 {
+    padding-top: 17rem;
+    padding-bottom: 17rem;
+  }
+
+  .lg\:px-66 {
+    padding-left: 17rem;
+    padding-right: 17rem;
   }
 
   .lg\:py-70 {
@@ -68329,6 +68893,22 @@ a:hover {
 
   .lg\:pl-64 {
     padding-left: 16rem;
+  }
+
+  .lg\:pt-66 {
+    padding-top: 17rem;
+  }
+
+  .lg\:pr-66 {
+    padding-right: 17rem;
+  }
+
+  .lg\:pb-66 {
+    padding-bottom: 17rem;
+  }
+
+  .lg\:pl-66 {
+    padding-left: 17rem;
   }
 
   .lg\:pt-70 {
@@ -74363,6 +74943,10 @@ a:hover {
     width: 16rem;
   }
 
+  .lg\:w-66 {
+    width: 17rem;
+  }
+
   .lg\:w-70 {
     width: 19rem;
   }
@@ -74759,6 +75343,11 @@ a:hover {
     gap: 16rem;
   }
 
+  .lg\:gap-66 {
+    grid-gap: 17rem;
+    gap: 17rem;
+  }
+
   .lg\:gap-70 {
     grid-gap: 19rem;
     gap: 19rem;
@@ -75067,6 +75656,12 @@ a:hover {
     grid-column-gap: 16rem;
     -moz-column-gap: 16rem;
          column-gap: 16rem;
+  }
+
+  .lg\:col-gap-66 {
+    grid-column-gap: 17rem;
+    -moz-column-gap: 17rem;
+         column-gap: 17rem;
   }
 
   .lg\:col-gap-70 {
@@ -75395,6 +75990,11 @@ a:hover {
   .lg\:row-gap-64 {
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .lg\:row-gap-66 {
+    grid-row-gap: 17rem;
+    row-gap: 17rem;
   }
 
   .lg\:row-gap-70 {
@@ -76544,6 +77144,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .lg\:translate-x-66 {
+    --transform-translate-x: 17rem;
+  }
+
   .lg\:translate-x-70 {
     --transform-translate-x: 19rem;
   }
@@ -76770,6 +77374,10 @@ a:hover {
 
   .lg\:-translate-x-64 {
     --transform-translate-x: -16rem;
+  }
+
+  .lg\:-translate-x-66 {
+    --transform-translate-x: -17rem;
   }
 
   .lg\:-translate-x-70 {
@@ -77020,6 +77628,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .lg\:translate-y-66 {
+    --transform-translate-y: 17rem;
+  }
+
   .lg\:translate-y-70 {
     --transform-translate-y: 19rem;
   }
@@ -77246,6 +77858,10 @@ a:hover {
 
   .lg\:-translate-y-64 {
     --transform-translate-y: -16rem;
+  }
+
+  .lg\:-translate-y-66 {
+    --transform-translate-y: -17rem;
   }
 
   .lg\:-translate-y-70 {
@@ -77496,6 +78112,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .lg\:hover\:translate-x-66:hover {
+    --transform-translate-x: 17rem;
+  }
+
   .lg\:hover\:translate-x-70:hover {
     --transform-translate-x: 19rem;
   }
@@ -77722,6 +78342,10 @@ a:hover {
 
   .lg\:hover\:-translate-x-64:hover {
     --transform-translate-x: -16rem;
+  }
+
+  .lg\:hover\:-translate-x-66:hover {
+    --transform-translate-x: -17rem;
   }
 
   .lg\:hover\:-translate-x-70:hover {
@@ -77972,6 +78596,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .lg\:hover\:translate-y-66:hover {
+    --transform-translate-y: 17rem;
+  }
+
   .lg\:hover\:translate-y-70:hover {
     --transform-translate-y: 19rem;
   }
@@ -78198,6 +78826,10 @@ a:hover {
 
   .lg\:hover\:-translate-y-64:hover {
     --transform-translate-y: -16rem;
+  }
+
+  .lg\:hover\:-translate-y-66:hover {
+    --transform-translate-y: -17rem;
   }
 
   .lg\:hover\:-translate-y-70:hover {
@@ -78448,6 +79080,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .lg\:focus\:translate-x-66:focus {
+    --transform-translate-x: 17rem;
+  }
+
   .lg\:focus\:translate-x-70:focus {
     --transform-translate-x: 19rem;
   }
@@ -78674,6 +79310,10 @@ a:hover {
 
   .lg\:focus\:-translate-x-64:focus {
     --transform-translate-x: -16rem;
+  }
+
+  .lg\:focus\:-translate-x-66:focus {
+    --transform-translate-x: -17rem;
   }
 
   .lg\:focus\:-translate-x-70:focus {
@@ -78924,6 +79564,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .lg\:focus\:translate-y-66:focus {
+    --transform-translate-y: 17rem;
+  }
+
   .lg\:focus\:translate-y-70:focus {
     --transform-translate-y: 19rem;
   }
@@ -79150,6 +79794,10 @@ a:hover {
 
   .lg\:focus\:-translate-y-64:focus {
     --transform-translate-y: -16rem;
+  }
+
+  .lg\:focus\:-translate-y-66:focus {
+    --transform-translate-y: -17rem;
   }
 
   .lg\:focus\:-translate-y-70:focus {
@@ -82836,6 +83484,10 @@ a:hover {
     height: 16rem;
   }
 
+  .xl\:h-66 {
+    height: 17rem;
+  }
+
   .xl\:h-70 {
     height: 19rem;
   }
@@ -83156,6 +83808,10 @@ a:hover {
     margin: 16rem;
   }
 
+  .xl\:m-66 {
+    margin: 17rem;
+  }
+
   .xl\:m-70 {
     margin: 19rem;
   }
@@ -83386,6 +84042,10 @@ a:hover {
 
   .xl\:-m-64 {
     margin: -16rem;
+  }
+
+  .xl\:-m-66 {
+    margin: -17rem;
   }
 
   .xl\:-m-70 {
@@ -83738,6 +84398,16 @@ a:hover {
   .xl\:mx-64 {
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .xl\:my-66 {
+    margin-top: 17rem;
+    margin-bottom: 17rem;
+  }
+
+  .xl\:mx-66 {
+    margin-left: 17rem;
+    margin-right: 17rem;
   }
 
   .xl\:my-70 {
@@ -84318,6 +84988,16 @@ a:hover {
   .xl\:-mx-64 {
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .xl\:-my-66 {
+    margin-top: -17rem;
+    margin-bottom: -17rem;
+  }
+
+  .xl\:-mx-66 {
+    margin-left: -17rem;
+    margin-right: -17rem;
   }
 
   .xl\:-my-70 {
@@ -85018,6 +85698,22 @@ a:hover {
 
   .xl\:ml-64 {
     margin-left: 16rem;
+  }
+
+  .xl\:mt-66 {
+    margin-top: 17rem;
+  }
+
+  .xl\:mr-66 {
+    margin-right: 17rem;
+  }
+
+  .xl\:mb-66 {
+    margin-bottom: 17rem;
+  }
+
+  .xl\:ml-66 {
+    margin-left: 17rem;
   }
 
   .xl\:mt-70 {
@@ -85946,6 +86642,22 @@ a:hover {
 
   .xl\:-ml-64 {
     margin-left: -16rem;
+  }
+
+  .xl\:-mt-66 {
+    margin-top: -17rem;
+  }
+
+  .xl\:-mr-66 {
+    margin-right: -17rem;
+  }
+
+  .xl\:-mb-66 {
+    margin-bottom: -17rem;
+  }
+
+  .xl\:-ml-66 {
+    margin-left: -17rem;
   }
 
   .xl\:-mt-70 {
@@ -86922,6 +87634,10 @@ a:hover {
     padding: 16rem;
   }
 
+  .xl\:p-66 {
+    padding: 17rem;
+  }
+
   .xl\:p-70 {
     padding: 19rem;
   }
@@ -87272,6 +87988,16 @@ a:hover {
   .xl\:px-64 {
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .xl\:py-66 {
+    padding-top: 17rem;
+    padding-bottom: 17rem;
+  }
+
+  .xl\:px-66 {
+    padding-left: 17rem;
+    padding-right: 17rem;
   }
 
   .xl\:py-70 {
@@ -87972,6 +88698,22 @@ a:hover {
 
   .xl\:pl-64 {
     padding-left: 16rem;
+  }
+
+  .xl\:pt-66 {
+    padding-top: 17rem;
+  }
+
+  .xl\:pr-66 {
+    padding-right: 17rem;
+  }
+
+  .xl\:pb-66 {
+    padding-bottom: 17rem;
+  }
+
+  .xl\:pl-66 {
+    padding-left: 17rem;
   }
 
   .xl\:pt-70 {
@@ -94006,6 +94748,10 @@ a:hover {
     width: 16rem;
   }
 
+  .xl\:w-66 {
+    width: 17rem;
+  }
+
   .xl\:w-70 {
     width: 19rem;
   }
@@ -94402,6 +95148,11 @@ a:hover {
     gap: 16rem;
   }
 
+  .xl\:gap-66 {
+    grid-gap: 17rem;
+    gap: 17rem;
+  }
+
   .xl\:gap-70 {
     grid-gap: 19rem;
     gap: 19rem;
@@ -94710,6 +95461,12 @@ a:hover {
     grid-column-gap: 16rem;
     -moz-column-gap: 16rem;
          column-gap: 16rem;
+  }
+
+  .xl\:col-gap-66 {
+    grid-column-gap: 17rem;
+    -moz-column-gap: 17rem;
+         column-gap: 17rem;
   }
 
   .xl\:col-gap-70 {
@@ -95038,6 +95795,11 @@ a:hover {
   .xl\:row-gap-64 {
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .xl\:row-gap-66 {
+    grid-row-gap: 17rem;
+    row-gap: 17rem;
   }
 
   .xl\:row-gap-70 {
@@ -96187,6 +96949,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .xl\:translate-x-66 {
+    --transform-translate-x: 17rem;
+  }
+
   .xl\:translate-x-70 {
     --transform-translate-x: 19rem;
   }
@@ -96413,6 +97179,10 @@ a:hover {
 
   .xl\:-translate-x-64 {
     --transform-translate-x: -16rem;
+  }
+
+  .xl\:-translate-x-66 {
+    --transform-translate-x: -17rem;
   }
 
   .xl\:-translate-x-70 {
@@ -96663,6 +97433,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .xl\:translate-y-66 {
+    --transform-translate-y: 17rem;
+  }
+
   .xl\:translate-y-70 {
     --transform-translate-y: 19rem;
   }
@@ -96889,6 +97663,10 @@ a:hover {
 
   .xl\:-translate-y-64 {
     --transform-translate-y: -16rem;
+  }
+
+  .xl\:-translate-y-66 {
+    --transform-translate-y: -17rem;
   }
 
   .xl\:-translate-y-70 {
@@ -97139,6 +97917,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .xl\:hover\:translate-x-66:hover {
+    --transform-translate-x: 17rem;
+  }
+
   .xl\:hover\:translate-x-70:hover {
     --transform-translate-x: 19rem;
   }
@@ -97365,6 +98147,10 @@ a:hover {
 
   .xl\:hover\:-translate-x-64:hover {
     --transform-translate-x: -16rem;
+  }
+
+  .xl\:hover\:-translate-x-66:hover {
+    --transform-translate-x: -17rem;
   }
 
   .xl\:hover\:-translate-x-70:hover {
@@ -97615,6 +98401,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .xl\:hover\:translate-y-66:hover {
+    --transform-translate-y: 17rem;
+  }
+
   .xl\:hover\:translate-y-70:hover {
     --transform-translate-y: 19rem;
   }
@@ -97841,6 +98631,10 @@ a:hover {
 
   .xl\:hover\:-translate-y-64:hover {
     --transform-translate-y: -16rem;
+  }
+
+  .xl\:hover\:-translate-y-66:hover {
+    --transform-translate-y: -17rem;
   }
 
   .xl\:hover\:-translate-y-70:hover {
@@ -98091,6 +98885,10 @@ a:hover {
     --transform-translate-x: 16rem;
   }
 
+  .xl\:focus\:translate-x-66:focus {
+    --transform-translate-x: 17rem;
+  }
+
   .xl\:focus\:translate-x-70:focus {
     --transform-translate-x: 19rem;
   }
@@ -98317,6 +99115,10 @@ a:hover {
 
   .xl\:focus\:-translate-x-64:focus {
     --transform-translate-x: -16rem;
+  }
+
+  .xl\:focus\:-translate-x-66:focus {
+    --transform-translate-x: -17rem;
   }
 
   .xl\:focus\:-translate-x-70:focus {
@@ -98567,6 +99369,10 @@ a:hover {
     --transform-translate-y: 16rem;
   }
 
+  .xl\:focus\:translate-y-66:focus {
+    --transform-translate-y: 17rem;
+  }
+
   .xl\:focus\:translate-y-70:focus {
     --transform-translate-y: 19rem;
   }
@@ -98793,6 +99599,10 @@ a:hover {
 
   .xl\:focus\:-translate-y-64:focus {
     --transform-translate-y: -16rem;
+  }
+
+  .xl\:focus\:-translate-y-66:focus {
+    --transform-translate-y: -17rem;
   }
 
   .xl\:focus\:-translate-y-70:focus {

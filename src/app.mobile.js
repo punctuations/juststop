@@ -533,7 +533,7 @@ const parseResponse = (res) => {
 const setResponse = (res) => {
   if (res.np === true) {
     document.querySelector("#spotify").innerHTML = `<img
-          class="absolute right-0 top-0 rounded-full mr-74 grad-border"
+          class="absolute right-0 top-0 rounded-full mr-32 xl:mr-74 lg:mr-74 md:mr-74 sm:mr-74 grad-border"
           width="32"
           height="32"
           onclick="window.open('${res.url}','_blank');"
