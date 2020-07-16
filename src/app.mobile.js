@@ -484,12 +484,12 @@ lua.onclick = () => {
 
 node.onclick = () => {
   bottomInfo[0].innerHTML =
-    "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a JavaScript runtime environment that executes JavaScript code outside of a web browser. I use it a lot in combination with  <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a>.";
+    "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a JavaScript runtime environment that executes JavaScript code outside of a web browser. I use it a lot in combination with  <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>MySQL</a>.";
 };
 
 sql.onclick = () => {
   bottomInfo[0].innerHTML =
-    "<a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> is the language I choose to program databases.";
+    "<a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>MySQL</a> is the language I choose to program databases.";
 };
 
 vue.onclick = () => {

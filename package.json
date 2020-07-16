@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/toolboxxt/landing.git"
+    "url": "git+https://github.com/punctuations/juststop.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/toolboxxt/landing/issues"
+    "url": "https://github.com/punctuations/juststop/issues"
   },
-  "homepage": "https://github.com/toolboxxt/landing#readme"
+  "homepage": "https://github.com/punctuations/juststop#readme"
 }

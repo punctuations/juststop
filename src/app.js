@@ -1492,7 +1492,7 @@ function langFlip() {
     case false:
       flipped = true;
       cardFlip.innerHTML =
-        "<div><a class='block node-button' href='#'><i class='fab fa-node-js'></i>node.js</a></div>\n<div><a class='block sql-button' href='#'><i class='fad fa-database'></i>SQL</a></div>\n<div><a class='block vue-button' href='#'><i class='fab fa-vuejs'></i>Vue</a></div>";
+        "<div><a class='block node-button' href='#'><i class='fab fa-node-js'></i>node.js</a></div>\n<div><a class='block sql-button' href='#'><i class='fad fa-database'></i>MySQL</a></div>\n<div><a class='block vue-button' href='#'><i class='fab fa-vuejs'></i>Vue</a></div>";
       navButtons.classList = "mt-24 card-bottom text-left grid overflow-auto";
       sideHover();
       break;
@@ -1837,7 +1837,7 @@ function sideHover() {
       override = 1;
       const tl = anime.timeline();
       sideDesc.innerHTML =
-        "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a JavaScript runtime environment that executes JavaScript code outside of a web browser. I use it a lot in combination with  <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a>.";
+        "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a JavaScript runtime environment that executes JavaScript code outside of a web browser. I use it a lot in combination with  <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>MySQL</a>.";
       tl.add({
         targets: "#side-info",
         opacity: "1",
@@ -1851,7 +1851,7 @@ function sideHover() {
     nodeButton.onmouseover = () => {
       const tl = anime.timeline();
       sideDesc.innerHTML =
-        "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a JavaScript runtime environment that executes JavaScript code outside of a web browser. I use it a lot in combination with  <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a>.";
+        "<a class='info-link' href='https://nodejs.org' target='_blank'>Node.js</a> is a JavaScript runtime environment that executes JavaScript code outside of a web browser. I use it a lot in combination with  <a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>MySQL</a>.";
       tl.add({
         targets: "#side-info",
         opacity: "1",
@@ -1870,7 +1870,7 @@ function sideHover() {
       override = 1;
       const tl = anime.timeline();
       sideDesc.innerHTML =
-        "<a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> is the language I choose to program databases.";
+        "<a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>MySQL</a> is the language I choose to program databases.";
       tl.add({
         targets: "#side-info",
         opacity: "1",
@@ -1884,7 +1884,7 @@ function sideHover() {
     sqlButton.onmouseover = () => {
       const tl = anime.timeline();
       sideDesc.innerHTML =
-        "<a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>SQL</a> is the language I choose to program databases.";
+        "<a class='info-link' href='https://dev.mysql.com/doc/' target='_blank'>MySQL</a> is the language I choose to program databases.";
       tl.add({
         targets: "#side-info",
         opacity: "1",
@@ -1993,7 +1993,7 @@ const setResponse = (res) => {
           onclick="window.location.href = '${res.url}';"
           src="${res.image}"
           alt="${res.name}"
-          title="${res.name} - ${res.artist}"
+          title="Listening to ${res.name} by ${res.artist} on Spotify"
         />
         <!-- credit goes to jack for providing this solution for grabbing spotify tracks, great guy https://lafond.dev/ -->`;
   } else {
