@@ -1990,7 +1990,7 @@ const setResponse = (res) => {
           class="absolute right-0 top-0 rounded-full mt-4 mr-18 grad-border"
           width="32"
           height="32"
-          onclick="window.location.href = '${res.url}';"
+          onclick="window.open('${res.url}','_blank');"
           src="${res.image}"
           alt="${res.name}"
           title="Listening to ${res.name} by ${res.artist} on Spotify"
