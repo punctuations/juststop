@@ -1984,18 +1984,35 @@ const parseResponse = (res) => {
   };
 };
 
+let songName;
+
 const setResponse = (res) => {
   if (res.np === true) {
-    document.querySelector("#spotify").innerHTML = `<img
+    if (res.name.length >= 20) {
+      songName = `${res.name.slice(0, 20)}...`;
+      document.querySelector("#spotify").innerHTML = `<img
           class="absolute right-0 top-0 rounded-full mt-4 mr-18 grad-border"
           width="32"
           height="32"
           onclick="window.open('${res.url}','_blank');"
           src="${res.image}"
           alt="${res.name}"
-          title="Listening to ${res.name} by ${res.artist} on Spotify"
+          title="Listening to ${songName} by ${res.artist} on Spotify"
         />
         <!-- credit goes to jack for providing this solution for grabbing spotify tracks, great guy https://lafond.dev/ -->`;
+    } else {
+      songName = `${res.name}`;
+      document.querySelector("#spotify").innerHTML = `<img
+          class="absolute right-0 top-0 rounded-full mt-4 mr-18 grad-border"
+          width="32"
+          height="32"
+          onclick="window.open('${res.url}','_blank');"
+          src="${res.image}"
+          alt="${res.name}"
+          title="Listening to ${songName} by ${res.artist} on Spotify"
+        />
+        <!-- credit goes to jack for providing this solution for grabbing spotify tracks, great guy https://lafond.dev/ -->`;
+    }
   } else {
     document.querySelector("#spotify").innerHTML = ``;
   }
