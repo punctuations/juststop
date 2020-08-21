@@ -19,7 +19,7 @@ If you seem to notice something wrong or think something is to be added you can 
 
 ##### Credit
 
-I got a lot of help from:
+I got help from:
 
 - **Tilda** | <a href="https://github.com/tilda" rel="some text"><img href="example.com" src="https://i.ibb.co/qMd86h7/github.png" width="16" height="16" title="500px" alt="500px"></a> <a href="https://www.reddit.com/u/RShotZz" rel="some text"><img href="example.com" src="https://i.ibb.co/rwdHBtx/reddit.png" width="16" height="16" title="500px" alt="500px"></a>
 - **Semiak** | <a href="https://github.com/iAlex11" rel="some text"><img href="example.com" src="https://i.ibb.co/qMd86h7/github.png" width="16" height="16" title="500px" alt="500px"></a> <a href="https://www.reddit.com/u/iAlex11" rel="some text"><img href="example.com" src="https://i.ibb.co/rwdHBtx/reddit.png" width="16" height="16" title="500px" alt="500px"></a> <a href="https://twitter.com/semiak_" rel="some text"><img href="example.com" src="https://i.ibb.co/k9ssgyB/twitterlogo.png" width="16" height="16" title="500px" alt="500px"></a>
