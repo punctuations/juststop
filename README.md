@@ -10,7 +10,7 @@
 
 This website was made by:
 
-- **Matt** | <a href="https://github.com/punctuations" rel="some text"><img href="example.com" src="https://i.ibb.co/qMd86h7/github.png" width="16" height="16" title="GitHub" alt="500px"></a> <a href="https://www.reddit.com/u/yetanothersemicolon" rel="some text"><img href="example.com" src="https://i.ibb.co/rwdHBtx/reddit.png" width="16" height="16" title="Reddit" alt="500px"></a> <a href="https://twitter.com/alloutofmatt" rel="some text"><img href="example.com" src="https://i.ibb.co/k9ssgyB/twitterlogo.png" width="16" height="16" title="Twitter" alt="500px"></a>
+- **Matt** | <a href="https://github.com/punctuations" rel="some text"><img href="example.com" src="https://i.ibb.co/qMd86h7/github.png" width="16" height="16" title="GitHub" alt="500px"></a> <a href="https://www.reddit.com/u/yetanothersemicolon" rel="some text"><img href="example.com" src="https://i.ibb.co/rwdHBtx/reddit.png" width="16" height="16" title="Reddit" alt="500px"></a> <a href="https://twitter.com/wwwdotca" rel="some text"><img href="example.com" src="https://i.ibb.co/k9ssgyB/twitterlogo.png" width="16" height="16" title="Twitter" alt="500px"></a>
 <p align="left">just me</p>
 
 ## Contributing
