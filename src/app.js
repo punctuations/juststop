@@ -1,12 +1,12 @@
 // mobile detection -----------------------------------------------------------------------------------------------
 
 if (window.screen.width <= 828) {
-  window.location.replace("/mobile/");
+  window.location.replace("/mobile");
 }
 
 window.onresize = () => {
   if (window.screen.width <= 828) {
-    window.location.replace("/mobile/");
+    window.location.replace("/mobile");
   }
 };
 
